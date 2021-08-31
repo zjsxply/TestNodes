@@ -1,615 +1,33 @@
 proxies:
 - cipher: aes-256-gcm
-  name: 尼日利亚 1 13Mbps 784ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 102.165.23.38
-  type: ss
-- cipher: aes-256-gcm
-  name: 马来西亚 1 12Mbps 994ms
-  password: x23Z4LGkGDkThZ9Kaz4DURQp
-  port: 40093
-  server: 42.0.30.209
-  type: ss
-- cipher: aes-256-gcm
-  name: 波斯尼亚和黑塞哥维那 1 50Mbps 601ms
-  password: BdRWC38L5JUDMTYNNxJGcUwB
-  port: 49396
-  server: 185.212.111.59
-  type: ss
-- cipher: aes-256-gcm
-  name: 希腊 1 2Mbps 1460ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 194.150.167.36
-  type: ss
-- cipher: aes-256-gcm
-  name: 希腊 2 2Mbps 1464ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 194.150.167.28
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 新加坡 1 106Mbps 347ms
-  password: G!yBwPWH3Vao
-  port: 800
-  server: 185.128.24.34
-  type: ss
-- cipher: aes-256-gcm
-  name: 新加坡 2 95Mbps 93ms
-  password: kD9vkjnE6dsUzwQfvKkPkQAd
-  port: 37588
-  server: 156.146.56.137
-  type: ss
-- cipher: aes-256-gcm
-  name: 葡萄牙 1 45Mbps 673ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 185.188.61.123
-  type: ss
-- cipher: aes-256-gcm
-  name: 葡萄牙 2 45Mbps 644ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 185.188.61.119
-  type: ss
-- cipher: aes-256-gcm
-  name: 葡萄牙 3 43Mbps 766ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 194.39.127.23
-  type: ss
-- cipher: aes-256-gcm
-  name: 葡萄牙 4 43Mbps 844ms
-  password: aYNeKDMzYQYw4KbUbJA8Wszq
-  port: 31944
-  server: 194.39.127.181
-  type: ss
-- cipher: aes-256-gcm
-  name: 葡萄牙 5 12Mbps 766ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 194.39.127.233
-  type: ss
-- cipher: aes-256-gcm
-  name: 葡萄牙 6 2Mbps 1414ms
-  password: J9Y2ncrdPEC38gwydNFFGBna
-  port: 35294
-  server: 5.154.174.189
-  type: ss
-- cipher: aes-256-gcm
-  name: 葡萄牙 7 2Mbps 1541ms
-  password: aYNeKDMzYQYw4KbUbJA8Wszq
-  port: 31944
-  server: 5.154.174.67
-  type: ss
-- cipher: aes-256-gcm
-  name: 葡萄牙 8 1Mbps 1490ms
-  password: kD9vkjnE6dsUzwQfvKkPkQAd
-  port: 37588
-  server: 91.205.230.160
-  type: ss
-- cipher: aes-256-gcm
-  name: 葡萄牙 9 1Mbps 1292ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 91.205.230.152
-  type: ss
-- cipher: aes-256-gcm
-  name: 葡萄牙 10 1Mbps 1462ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 91.205.230.158
-  type: ss
-- cipher: aes-256-gcm
-  name: 塞浦路斯 1 51Mbps 758ms
-  password: kD9vkjnE6dsUzwQfvKkPkQAd
-  port: 37588
-  server: 195.47.194.64
-  type: ss
-- cipher: aes-256-gcm
-  name: 瑞士 1 66Mbps 512ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 45.12.222.245
-  type: ss
-- cipher: aes-256-gcm
-  name: 瑞士 2 65Mbps 652ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 84.17.53.86
-  type: ss
-- cipher: aes-256-gcm
-  name: 瑞士 3 53Mbps 482ms
-  password: H9Dbn3szZMqLR3NpgEFEPCKb
-  port: 42166
-  server: 156.146.62.46
-  type: ss
-- cipher: aes-256-gcm
-  name: 瑞士 4 52Mbps 529ms
-  password: CMduaFXddcQbwNAAs7xFDnc8
-  port: 33148
-  server: 156.146.62.39
-  type: ss
-- cipher: aes-256-gcm
-  name: 瑞士 5 52Mbps 452ms
-  password: b2jDPHUQxCNa2KmGHZjy7C4B
-  port: 50024
-  server: 156.146.62.34
-  type: ss
-- cipher: aes-256-gcm
-  name: 瑞士 6 52Mbps 567ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 156.146.62.54
-  type: ss
-- cipher: aes-256-gcm
-  name: 瑞士 7 51Mbps 463ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 156.146.62.51
-  type: ss
-- cipher: aes-256-gcm
-  name: 瑞士 8 51Mbps 461ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 156.146.62.36
-  type: ss
-- cipher: aes-256-gcm
-  name: 瑞士 9 48Mbps 503ms
-  password: WCuz7yrfZSCQQXSNrtGPz2HT
-  port: 50168
-  server: 84.17.53.210
-  type: ss
-- cipher: aes-256-gcm
-  name: 瑞士 10 22Mbps 500ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 37.120.213.5
-  type: ss
-- cipher: aes-256-gcm
-  name: 英国 1 62Mbps 612ms
-  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
-  port: 48938
-  server: 86.106.136.85
-  type: ss
-- cipher: aes-256-gcm
-  name: 英国 2 54Mbps 635ms
-  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
-  port: 48938
-  server: 194.37.96.213
-  type: ss
-- cipher: aes-256-gcm
-  name: 英国 3 50Mbps 546ms
-  password: BdRWC38L5JUDMTYNNxJGcUwB
-  port: 49396
-  server: 84.39.114.86
-  type: ss
-- cipher: aes-256-gcm
-  name: 英国 4 50Mbps 681ms
-  password: suucSeVLmt6PQKAP77NtGw9x
-  port: 49339
-  server: 89.238.130.227
-  type: ss
-- cipher: aes-256-gcm
-  name: 英国 5 48Mbps 523ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 89.238.130.253
-  type: ss
-- cipher: aes-256-gcm
-  name: 英国 6 13Mbps 589ms
-  password: n8w4StnbVD9dmXYn4Ajt87EA
-  port: 31572
-  server: 185.108.105.55
-  type: ss
-- cipher: aes-256-gcm
-  name: 美国 1 96Mbps 200ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 185.242.5.147
-  type: ss
-- cipher: aes-256-gcm
-  name: 美国 2 95Mbps 223ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 212.102.44.83
-  type: ss
-- cipher: aes-256-gcm
-  name: 美国 3 95Mbps 199ms
-  password: Y9GcTPemHMKEkrfGQPJqFDNr
-  port: 49653
-  server: 185.124.240.171
-  type: ss
-- cipher: aes-256-gcm
-  name: 美国 4 94Mbps 192ms
-  password: x23Z4LGkGDkThZ9Kaz4DURQp
-  port: 40093
-  server: 79.110.54.115
-  type: ss
-- cipher: aes-256-gcm
-  name: 美国 5 93Mbps 222ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 212.102.44.66
-  type: ss
-- cipher: aes-256-gcm
-  name: 美国 6 93Mbps 223ms
-  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
-  port: 48938
-  server: 212.102.44.86
-  type: ss
-- cipher: aes-256-gcm
-  name: 美国 7 92Mbps 254ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 104.200.131.170
-  type: ss
-- cipher: aes-256-gcm
-  name: 美国 8 92Mbps 264ms
-  password: x23Z4LGkGDkThZ9Kaz4DURQp
-  port: 40093
-  server: 104.200.131.172
-  type: ss
-- cipher: aes-256-gcm
-  name: 美国 9 91Mbps 255ms
-  password: aYNeKDMzYQYw4KbUbJA8Wszq
-  port: 31944
-  server: 104.200.131.245
-  type: ss
-- cipher: aes-256-gcm
-  name: 美国 10 90Mbps 237ms
-  password: Vt5pBJFwdtNB26cJbTXxm88Z
-  port: 47027
-  server: 212.102.44.71
-  type: ss
-- cipher: aes-256-gcm
-  name: 巴西 1 17Mbps 767ms
-  password: yUXad7DGF8L5cTShEpnp2N6z
-  port: 36460
-  server: 191.96.13.200
-  type: ss
-- cipher: aes-256-gcm
-  name: 加拿大 1 75Mbps 492ms
-  password: BdRWC38L5JUDMTYNNxJGcUwB
-  port: 49396
-  server: 198.8.92.67
-  type: ss
-- cipher: aes-256-gcm
-  name: 加拿大 2 51Mbps 479ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 66.115.147.89
-  type: ss
-- cipher: aes-256-gcm
-  name: 加拿大 3 51Mbps 611ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 146.70.27.37
-  type: ss
-- cipher: aes-256-gcm
-  name: 加拿大 4 50Mbps 464ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 208.78.41.202
-  type: ss
-- cipher: aes-256-gcm
-  name: 加拿大 5 50Mbps 436ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 66.115.147.87
-  type: ss
-- cipher: aes-256-gcm
-  name: 加拿大 6 49Mbps 449ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 66.115.147.82
-  type: ss
-- cipher: aes-256-gcm
-  name: 加拿大 7 48Mbps 436ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 66.115.147.77
-  type: ss
-- cipher: aes-256-gcm
-  name: 加拿大 8 43Mbps 677ms
-  password: x23Z4LGkGDkThZ9Kaz4DURQp
-  port: 40093
-  server: 198.8.92.84
-  type: ss
-- cipher: aes-256-gcm
-  name: 加拿大 9 37Mbps 436ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 66.115.147.69
-  type: ss
-- cipher: aes-256-gcm
-  name: 加拿大 10 37Mbps 435ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 66.115.147.79
-  type: ss
-- cipher: aes-256-gcm
-  name: 爱沙尼亚 1 1Mbps 841ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 185.174.159.136
-  type: ss
-- cipher: aes-256-gcm
-  name: 中国香港 1 42Mbps 437ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 45.130.137.36
-  type: ss
-- cipher: aes-256-gcm
-  name: 中国香港 2 40Mbps 431ms
-  password: x23Z4LGkGDkThZ9Kaz4DURQp
-  port: 40093
-  server: 45.130.137.34
-  type: ss
-- cipher: aes-256-gcm
-  name: 中国香港 3 26Mbps 436ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 45.130.137.14
-  type: ss
-- cipher: aes-256-gcm
-  name: 中国香港 4 18Mbps 782ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 45.134.224.18
-  type: ss
-- cipher: aes-256-gcm
-  name: 中国香港 5 17Mbps 748ms
-  password: NHwQTPLCfaTMSqTnU3mjcSxe
-  port: 33998
-  server: 45.134.224.20
-  type: ss
-- cipher: aes-256-gcm
-  name: 意大利 1 53Mbps 575ms
-  password: zHKYS9DeAjvv43EwgDfyEg4d
-  port: 44102
-  server: 185.217.71.245
-  type: ss
-- cipher: aes-256-gcm
-  name: 意大利 2 51Mbps 513ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 37.120.207.5
-  type: ss
-- cipher: aes-256-gcm
-  name: 意大利 3 51Mbps 618ms
-  password: Kquv5UhvZXNMemAQy8DxZ7qn
-  port: 38620
-  server: 185.128.27.35
-  type: ss
-- cipher: aes-256-gcm
-  name: 意大利 4 50Mbps 583ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 217.138.219.227
-  type: ss
-- cipher: aes-256-gcm
-  name: 意大利 5 48Mbps 477ms
-  password: CXSjgD7u7Ar7GxkZ4CgTMUsj
-  port: 45329
-  server: 82.102.26.60
-  type: ss
-- cipher: aes-256-gcm
-  name: 意大利 6 48Mbps 473ms
-  password: CMduaFXddcQbwNAAs7xFDnc8
-  port: 33148
-  server: 82.102.26.117
-  type: ss
-- cipher: aes-256-gcm
-  name: 意大利 7 48Mbps 479ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 82.102.26.51
-  type: ss
-- cipher: aes-256-gcm
-  name: 意大利 8 47Mbps 464ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 82.102.26.101
-  type: ss
-- cipher: aes-256-gcm
-  name: 意大利 9 47Mbps 454ms
-  password: NHwQTPLCfaTMSqTnU3mjcSxe
-  port: 33998
-  server: 82.102.26.99
-  type: ss
-- cipher: aes-256-gcm
-  name: 意大利 10 47Mbps 482ms
-  password: Vt5pBJFwdtNB26cJbTXxm88Z
-  port: 47027
-  server: 82.102.26.53
-  type: ss
-- cipher: aes-256-gcm
-  name: 西班牙 1 59Mbps 539ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 89.37.95.15
-  type: ss
-- cipher: aes-256-gcm
-  name: 西班牙 2 53Mbps 548ms
-  password: WCuz7yrfZSCQQXSNrtGPz2HT
-  port: 50168
-  server: 84.17.62.165
-  type: ss
-- cipher: aes-256-gcm
-  name: 西班牙 3 49Mbps 552ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 82.102.17.181
-  type: ss
-- cipher: aes-256-gcm
-  name: 西班牙 4 41Mbps 516ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 37.120.148.227
-  type: ss
-- cipher: aes-256-gcm
-  name: 西班牙 5 35Mbps 601ms
-  password: DKXfWwc4ebscpXTKpbt85rSH
-  port: 38742
-  server: 82.102.26.237
-  type: ss
-- cipher: aes-256-gcm
-  name: 西班牙 6 2Mbps 1470ms
-  password: x23Z4LGkGDkThZ9Kaz4DURQp
-  port: 40093
-  server: 185.153.150.54
-  type: ss
-- cipher: aes-256-gcm
-  name: 越南 1 5Mbps 1029ms
-  password: kD9vkjnE6dsUzwQfvKkPkQAd
-  port: 37588
-  server: 202.143.110.32
-  type: ss
-- cipher: aes-256-gcm
-  name: 德国 1 71Mbps 457ms
-  password: wEsFcHCvbL4eJkL4DZQa7RgR
-  port: 45746
-  server: 193.29.106.219
-  type: ss
-- cipher: aes-256-gcm
-  name: 德国 2 68Mbps 650ms
-  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
-  port: 48938
-  server: 37.120.196.53
-  type: ss
-- cipher: aes-256-gcm
-  name: 德国 3 66Mbps 444ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 193.29.106.29
-  type: ss
-- cipher: aes-256-gcm
-  name: 德国 4 62Mbps 534ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 37.120.217.179
-  type: ss
-- cipher: aes-256-gcm
-  name: 德国 5 60Mbps 505ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 193.29.106.5
-  type: ss
-- cipher: aes-256-gcm
-  name: 德国 6 51Mbps 489ms
-  password: NHwQTPLCfaTMSqTnU3mjcSxe
-  port: 33998
-  server: 37.120.217.149
-  type: ss
-- cipher: aes-256-gcm
-  name: 德国 7 51Mbps 506ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 193.29.106.61
-  type: ss
-- cipher: aes-256-gcm
-  name: 德国 8 50Mbps 471ms
-  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
-  port: 48938
-  server: 193.29.106.179
-  type: ss
-- cipher: aes-256-gcm
-  name: 德国 9 50Mbps 534ms
-  password: txmK9WhwP6WPhP7hqSBLVxpN
-  port: 34687
-  server: 193.29.106.181
-  type: ss
-- cipher: aes-256-gcm
-  name: 德国 10 49Mbps 483ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 193.29.106.100
-  type: ss
-- cipher: aes-256-gcm
-  name: 丹麦 1 64Mbps 549ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 193.29.107.163
-  type: ss
-- cipher: aes-256-gcm
-  name: 丹麦 2 34Mbps 653ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 37.120.194.93
-  type: ss
-- cipher: aes-256-gcm
-  name: 丹麦 3 32Mbps 647ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 37.120.194.115
-  type: ss
-- cipher: aes-256-gcm
-  name: 丹麦 4 31Mbps 704ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 37.120.194.125
-  type: ss
-- cipher: aes-256-gcm
-  name: 丹麦 5 31Mbps 649ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 2.58.46.5
-  type: ss
-- cipher: aes-256-gcm
-  name: 丹麦 6 30Mbps 672ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 193.29.107.237
-  type: ss
-- cipher: aes-256-gcm
-  name: 丹麦 7 30Mbps 660ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 37.120.194.101
-  type: ss
-- cipher: aes-256-gcm
-  name: 丹麦 8 30Mbps 703ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 193.29.107.91
-  type: ss
-- cipher: aes-256-gcm
-  name: 丹麦 9 29Mbps 662ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 193.29.107.125
-  type: ss
-- cipher: aes-256-gcm
-  name: 丹麦 10 27Mbps 720ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 193.29.107.101
-  type: ss
-- cipher: aes-256-gcm
-  name: 印度尼西亚 1 45Mbps 626ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 103.120.66.214
-  type: ss
-- cipher: aes-256-gcm
   name: 哈萨克斯坦 1 29Mbps 810ms
   password: X6yMGXnfUsuKTvEDYZSLPk4d
   port: 41738
   server: 5.189.202.16
   type: ss
 - cipher: aes-256-gcm
-  name: 克罗地亚 1 50Mbps 767ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 85.10.50.164
+  name: 阿拉伯联合酋长国 1 19Mbps 1034ms
+  password: DKXfWwc4ebscpXTKpbt85rSH
+  port: 38742
+  server: 176.125.231.5
   type: ss
 - cipher: aes-256-gcm
-  name: 泰国 1 105Mbps 274ms
-  password: CjchzpwdSjRtDjezYMwx9BKM
-  port: 50232
-  server: 27.131.164.92
+  name: 阿拉伯联合酋长国 2 15Mbps 1010ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 176.125.231.3
+  type: ss
+- cipher: aes-256-gcm
+  name: 阿拉伯联合酋长国 3 12Mbps 1151ms
+  password: YgusH2MWA8PWc3p2VDsR7AVv
+  port: 31764
+  server: 45.9.249.245
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 阿拉伯联合酋长国 4 2Mbps 809ms
+  password: G!yBwPWH3Vao
+  port: 805
+  server: 109.169.72.249
   type: ss
 - cipher: aes-256-gcm
   name: 中国台湾 1 104Mbps 129ms
@@ -672,88 +90,10 @@ proxies:
   server: 103.152.151.85
   type: ss
 - cipher: aes-256-gcm
-  name: 芬兰 1 12Mbps 895ms
-  password: ZKEsXkFbUZ2z667YA8A7cEDP
-  port: 48970
-  server: 196.244.191.91
-  type: ss
-- cipher: aes-256-gcm
-  name: 芬兰 2 12Mbps 869ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 196.244.191.45
-  type: ss
-- cipher: aes-256-gcm
-  name: 芬兰 3 12Mbps 867ms
-  password: LkFAzkzXkSCRYa2CsRdL8cGb
-  port: 34815
-  server: 196.244.191.165
-  type: ss
-- cipher: aes-256-gcm
-  name: 芬兰 4 12Mbps 859ms
-  password: DKXfWwc4ebscpXTKpbt85rSH
-  port: 38742
-  server: 196.244.191.93
-  type: ss
-- cipher: aes-256-gcm
-  name: 比利时 1 64Mbps 878ms
-  password: BdRWC38L5JUDMTYNNxJGcUwB
-  port: 49396
-  server: 37.120.143.117
-  type: ss
-- cipher: aes-256-gcm
-  name: 比利时 2 62Mbps 459ms
-  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
-  port: 48938
-  server: 217.138.211.221
-  type: ss
-- cipher: aes-256-gcm
-  name: 比利时 3 56Mbps 737ms
-  password: BdRWC38L5JUDMTYNNxJGcUwB
-  port: 49396
-  server: 217.138.211.219
-  type: ss
-- cipher: aes-256-gcm
-  name: 比利时 4 43Mbps 943ms
-  password: suucSeVLmt6PQKAP77NtGw9x
-  port: 49339
-  server: 5.253.205.229
-  type: ss
-- cipher: aes-256-gcm
-  name: 比利时 5 33Mbps 607ms
-  password: LkFAzkzXkSCRYa2CsRdL8cGb
-  port: 34815
-  server: 91.90.123.115
-  type: ss
-- cipher: aes-256-gcm
-  name: 比利时 6 13Mbps 687ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 185.232.21.53
-  type: ss
-- cipher: aes-256-gcm
-  name: 比利时 7 7Mbps 637ms
-  password: BdRWC38L5JUDMTYNNxJGcUwB
-  port: 49396
-  server: 194.110.115.77
-  type: ss
-- cipher: aes-256-gcm
-  name: 比利时 8 6Mbps 1303ms
-  password: suucSeVLmt6PQKAP77NtGw9x
-  port: 49339
-  server: 185.232.21.51
-  type: ss
-- cipher: aes-256-gcm
-  name: 比利时 9 5Mbps 967ms
-  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
-  port: 48938
-  server: 5.253.205.227
-  type: ss
-- cipher: aes-256-gcm
-  name: 比利时 10 2Mbps 636ms
-  password: suucSeVLmt6PQKAP77NtGw9x
-  port: 49339
-  server: 5.253.205.179
+  name: 塞浦路斯 1 51Mbps 758ms
+  password: kD9vkjnE6dsUzwQfvKkPkQAd
+  port: 37588
+  server: 195.47.194.64
   type: ss
 - cipher: aes-256-gcm
   name: 法国 1 62Mbps 1044ms
@@ -815,273 +155,65 @@ proxies:
   port: 39772
   server: 185.108.106.176
   type: ss
-- cipher: aes-256-gcm
-  name: 塞尔维亚 1 50Mbps 655ms
-  password: NHwQTPLCfaTMSqTnU3mjcSxe
-  port: 33998
-  server: 152.89.160.213
+- cipher: chacha20-ietf-poly1305
+  name: 新加坡 1 106Mbps 347ms
+  password: G!yBwPWH3Vao
+  port: 800
+  server: 185.128.24.34
   type: ss
 - cipher: aes-256-gcm
-  name: 印度 1 60Mbps 469ms
-  password: kD9vkjnE6dsUzwQfvKkPkQAd
-  port: 37588
-  server: 103.39.132.189
-  type: ss
-- cipher: aes-256-gcm
-  name: 印度 2 24Mbps 804ms
-  password: x23Z4LGkGDkThZ9Kaz4DURQp
-  port: 40093
-  server: 137.59.52.107
-  type: ss
-- cipher: aes-256-gcm
-  name: 印度 3 12Mbps 899ms
-  password: NHwQTPLCfaTMSqTnU3mjcSxe
-  port: 33998
-  server: 165.231.253.147
-  type: ss
-- cipher: aes-256-gcm
-  name: 新西兰 1 14Mbps 978ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 180.149.231.69
-  type: ss
-- cipher: aes-256-gcm
-  name: 新西兰 2 14Mbps 898ms
-  password: kD9vkjnE6dsUzwQfvKkPkQAd
-  port: 37588
-  server: 180.149.231.67
-  type: ss
-- cipher: aes-256-gcm
-  name: 阿拉伯联合酋长国 1 19Mbps 1034ms
-  password: DKXfWwc4ebscpXTKpbt85rSH
-  port: 38742
-  server: 176.125.231.5
-  type: ss
-- cipher: aes-256-gcm
-  name: 阿拉伯联合酋长国 2 12Mbps 1151ms
+  name: 新加坡 2 96Mbps 375ms
   password: YgusH2MWA8PWc3p2VDsR7AVv
   port: 31764
-  server: 45.9.249.245
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 阿拉伯联合酋长国 3 2Mbps 809ms
-  password: G!yBwPWH3Vao
-  port: 805
-  server: 109.169.72.249
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 日本 1 0Mbps 503ms
-  password: 96a15b984cd95acc
-  port: 35654
-  server: 137.220.161.216
+  server: 156.146.56.135
   type: ss
 - cipher: aes-256-gcm
-  name: 阿尔巴尼亚 1 50Mbps 626ms
-  password: suucSeVLmt6PQKAP77NtGw9x
-  port: 49339
-  server: 31.171.155.37
-  type: ss
-- cipher: aes-256-gcm
-  name: 阿尔巴尼亚 2 15Mbps 713ms
-  password: BdRWC38L5JUDMTYNNxJGcUwB
-  port: 49396
-  server: 31.171.154.101
-  type: ss
-- cipher: aes-256-gcm
-  name: 阿尔巴尼亚 3 15Mbps 713ms
-  password: BdRWC38L5JUDMTYNNxJGcUwB
-  port: 49396
-  server: 31.171.154.99
-  type: ss
-- cipher: aes-256-gcm
-  name: 阿尔巴尼亚 4 15Mbps 714ms
-  password: BdRWC38L5JUDMTYNNxJGcUwB
-  port: 49396
-  server: 31.171.153.83
-  type: ss
-- cipher: aes-256-gcm
-  name: 卢森堡 1 32Mbps 621ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 185.153.151.75
-  type: ss
-- cipher: aes-256-gcm
-  name: 卢森堡 2 32Mbps 725ms
-  password: J9Y2ncrdPEC38gwydNFFGBna
-  port: 35294
-  server: 185.153.151.100
-  type: ss
-- cipher: aes-256-gcm
-  name: 卢森堡 3 31Mbps 659ms
-  password: WCuz7yrfZSCQQXSNrtGPz2HT
-  port: 50168
-  server: 185.153.151.193
-  type: ss
-- cipher: aes-256-gcm
-  name: 卢森堡 4 31Mbps 629ms
-  password: WCuz7yrfZSCQQXSNrtGPz2HT
-  port: 50168
-  server: 185.153.151.187
-  type: ss
-- cipher: aes-256-gcm
-  name: 卢森堡 5 30Mbps 624ms
-  password: CXSjgD7u7Ar7GxkZ4CgTMUsj
-  port: 45329
-  server: 185.153.151.78
-  type: ss
-- cipher: aes-256-gcm
-  name: 卢森堡 6 29Mbps 743ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 185.153.151.104
-  type: ss
-- cipher: aes-256-gcm
-  name: 卢森堡 7 29Mbps 627ms
-  password: RtbLkxbJZpUQ6m8y4qAeLYZj
-  port: 38747
-  server: 185.153.151.89
-  type: ss
-- cipher: aes-256-gcm
-  name: 卢森堡 8 28Mbps 633ms
-  password: WCuz7yrfZSCQQXSNrtGPz2HT
-  port: 50168
-  server: 185.153.151.175
-  type: ss
-- cipher: aes-256-gcm
-  name: 卢森堡 9 27Mbps 634ms
-  password: WCuz7yrfZSCQQXSNrtGPz2HT
-  port: 50168
-  server: 185.153.151.191
-  type: ss
-- cipher: aes-256-gcm
-  name: 卢森堡 10 27Mbps 621ms
-  password: WCuz7yrfZSCQQXSNrtGPz2HT
-  port: 50168
-  server: 185.153.151.173
-  type: ss
-- cipher: aes-256-gcm
-  name: 奥地利 1 52Mbps 680ms
-  password: suucSeVLmt6PQKAP77NtGw9x
-  port: 49339
-  server: 5.253.207.83
-  type: ss
-- cipher: aes-256-gcm
-  name: 奥地利 2 51Mbps 620ms
-  password: BdRWC38L5JUDMTYNNxJGcUwB
-  port: 49396
-  server: 5.253.207.85
-  type: ss
-- cipher: aes-256-gcm
-  name: 奥地利 3 50Mbps 750ms
-  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
-  port: 48938
-  server: 37.120.212.131
-  type: ss
-- cipher: aes-256-gcm
-  name: 奥地利 4 49Mbps 484ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 89.187.168.51
-  type: ss
-- cipher: aes-256-gcm
-  name: 奥地利 5 49Mbps 486ms
-  password: x23Z4LGkGDkThZ9Kaz4DURQp
-  port: 40093
-  server: 89.187.168.44
-  type: ss
-- cipher: aes-256-gcm
-  name: 奥地利 6 48Mbps 482ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 89.187.168.46
-  type: ss
-- cipher: aes-256-gcm
-  name: 奥地利 7 48Mbps 492ms
+  name: 新加坡 3 95Mbps 93ms
   password: kD9vkjnE6dsUzwQfvKkPkQAd
   port: 37588
-  server: 89.187.168.39
+  server: 156.146.56.137
   type: ss
 - cipher: aes-256-gcm
-  name: 奥地利 8 12Mbps 641ms
-  password: x23Z4LGkGDkThZ9Kaz4DURQp
-  port: 40093
-  server: 37.120.221.5
+  name: 英国 1 62Mbps 612ms
+  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
+  port: 48938
+  server: 86.106.136.85
   type: ss
 - cipher: aes-256-gcm
-  name: 俄罗斯联邦 1 55Mbps 594ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 92.38.138.53
-  type: ss
-- cipher: aes-128-gcm
-  name: 俄罗斯联邦 2 14Mbps 1396ms
-  password: suo.yt/ssrsub
-  plugin: obfs
-  plugin-opts:
-    host: n46hm52773.wns.windows.com
-    mode: tls
-  port: 9443
-  server: ss11.ssrsub.one
+  name: 英国 2 54Mbps 635ms
+  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
+  port: 48938
+  server: 194.37.96.213
   type: ss
 - cipher: aes-256-gcm
-  name: 澳大利亚 1 46Mbps 556ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 45.125.247.91
+  name: 英国 3 50Mbps 546ms
+  password: BdRWC38L5JUDMTYNNxJGcUwB
+  port: 49396
+  server: 84.39.114.86
   type: ss
 - cipher: aes-256-gcm
-  name: 澳大利亚 2 45Mbps 671ms
-  password: J9Y2ncrdPEC38gwydNFFGBna
-  port: 35294
-  server: 45.125.247.157
+  name: 英国 4 50Mbps 681ms
+  password: suucSeVLmt6PQKAP77NtGw9x
+  port: 49339
+  server: 89.238.130.227
   type: ss
 - cipher: aes-256-gcm
-  name: 澳大利亚 3 45Mbps 484ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 45.125.247.43
-  type: ss
-- cipher: aes-256-gcm
-  name: 澳大利亚 4 43Mbps 486ms
+  name: 英国 5 48Mbps 523ms
   password: CUndSZnYsPKcu6Kj8THVMBHD
   port: 39772
-  server: 45.125.247.155
+  server: 89.238.130.253
   type: ss
 - cipher: aes-256-gcm
-  name: 澳大利亚 5 42Mbps 475ms
+  name: 英国 6 13Mbps 589ms
   password: n8w4StnbVD9dmXYn4Ajt87EA
   port: 31572
-  server: 45.125.247.45
+  server: 185.108.105.55
   type: ss
 - cipher: aes-256-gcm
-  name: 澳大利亚 6 41Mbps 553ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 144.48.38.183
-  type: ss
-- cipher: aes-256-gcm
-  name: 澳大利亚 7 41Mbps 546ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 144.48.38.19
-  type: ss
-- cipher: aes-256-gcm
-  name: 澳大利亚 8 40Mbps 508ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 45.125.247.93
-  type: ss
-- cipher: aes-256-gcm
-  name: 澳大利亚 9 40Mbps 585ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 45.248.77.237
-  type: ss
-- cipher: aes-256-gcm
-  name: 澳大利亚 10 39Mbps 591ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 45.248.77.235
+  name: 南非 1 2Mbps 938ms
+  password: BdRWC38L5JUDMTYNNxJGcUwB
+  port: 49396
+  server: 102.165.47.132
   type: ss
 - cipher: aes-256-gcm
   name: 哥伦比亚 1 25Mbps 739ms
@@ -1144,6 +276,12 @@ proxies:
   server: 91.206.168.39
   type: ss
 - cipher: aes-256-gcm
+  name: 尼日利亚 1 13Mbps 784ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 102.165.23.38
+  type: ss
+- cipher: aes-256-gcm
   name: 波兰 1 53Mbps 502ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
@@ -1162,16 +300,190 @@ proxies:
   server: 5.133.8.117
   type: ss
 - cipher: aes-256-gcm
-  name: 斯洛文尼亚 1 4Mbps 914ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 195.158.249.40
+  name: 以色列 1 7Mbps 907ms
+  password: DKXfWwc4ebscpXTKpbt85rSH
+  port: 38742
+  server: 87.239.255.119
   type: ss
 - cipher: aes-256-gcm
-  name: 斯洛文尼亚 2 4Mbps 713ms
+  name: 以色列 2 3Mbps 949ms
+  password: DKXfWwc4ebscpXTKpbt85rSH
+  port: 38742
+  server: 87.239.255.116
+  type: ss
+- cipher: aes-256-gcm
+  name: 巴西 1 17Mbps 767ms
+  password: yUXad7DGF8L5cTShEpnp2N6z
+  port: 36460
+  server: 191.96.13.200
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 日本 1 0Mbps 503ms
+  password: 96a15b984cd95acc
+  port: 35654
+  server: 137.220.161.216
+  type: ss
+- cipher: rc4-md5
+  name: 日本 2 0Mbps 442ms
+  password: passfw2xs4e!
+  port: 8333
+  server: p8.22332e.com
+  type: ss
+- cipher: aes-256-gcm
+  name: 丹麦 1 64Mbps 549ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 193.29.107.163
+  type: ss
+- cipher: aes-256-gcm
+  name: 丹麦 2 34Mbps 653ms
   password: CUndSZnYsPKcu6Kj8THVMBHD
   port: 39772
-  server: 195.158.249.36
+  server: 37.120.194.93
+  type: ss
+- cipher: aes-256-gcm
+  name: 丹麦 3 32Mbps 647ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 37.120.194.115
+  type: ss
+- cipher: aes-256-gcm
+  name: 丹麦 4 31Mbps 704ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 37.120.194.125
+  type: ss
+- cipher: aes-256-gcm
+  name: 丹麦 5 31Mbps 649ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 2.58.46.5
+  type: ss
+- cipher: aes-256-gcm
+  name: 丹麦 6 30Mbps 672ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 193.29.107.237
+  type: ss
+- cipher: aes-256-gcm
+  name: 丹麦 7 30Mbps 660ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 37.120.194.101
+  type: ss
+- cipher: aes-256-gcm
+  name: 丹麦 8 30Mbps 703ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 193.29.107.91
+  type: ss
+- cipher: aes-256-gcm
+  name: 丹麦 9 29Mbps 662ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 193.29.107.125
+  type: ss
+- cipher: aes-256-gcm
+  name: 丹麦 10 27Mbps 720ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 193.29.107.101
+  type: ss
+- cipher: aes-256-gcm
+  name: 捷克 1 63Mbps 581ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 217.138.220.131
+  type: ss
+- cipher: aes-256-gcm
+  name: 捷克 2 54Mbps 619ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 217.138.199.179
+  type: ss
+- cipher: aes-256-gcm
+  name: 捷克 3 32Mbps 718ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 217.138.220.163
+  type: ss
+- cipher: aes-256-gcm
+  name: 奥地利 1 52Mbps 680ms
+  password: suucSeVLmt6PQKAP77NtGw9x
+  port: 49339
+  server: 5.253.207.83
+  type: ss
+- cipher: aes-256-gcm
+  name: 奥地利 2 51Mbps 620ms
+  password: BdRWC38L5JUDMTYNNxJGcUwB
+  port: 49396
+  server: 5.253.207.85
+  type: ss
+- cipher: aes-256-gcm
+  name: 奥地利 3 50Mbps 750ms
+  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
+  port: 48938
+  server: 37.120.212.131
+  type: ss
+- cipher: aes-256-gcm
+  name: 奥地利 4 49Mbps 484ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 89.187.168.51
+  type: ss
+- cipher: aes-256-gcm
+  name: 奥地利 5 49Mbps 486ms
+  password: x23Z4LGkGDkThZ9Kaz4DURQp
+  port: 40093
+  server: 89.187.168.44
+  type: ss
+- cipher: aes-256-gcm
+  name: 奥地利 6 48Mbps 482ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 89.187.168.46
+  type: ss
+- cipher: aes-256-gcm
+  name: 奥地利 7 48Mbps 492ms
+  password: kD9vkjnE6dsUzwQfvKkPkQAd
+  port: 37588
+  server: 89.187.168.39
+  type: ss
+- cipher: aes-256-gcm
+  name: 奥地利 8 12Mbps 641ms
+  password: x23Z4LGkGDkThZ9Kaz4DURQp
+  port: 40093
+  server: 37.120.221.5
+  type: ss
+- cipher: aes-256-gcm
+  name: 阿尔巴尼亚 1 50Mbps 626ms
+  password: suucSeVLmt6PQKAP77NtGw9x
+  port: 49339
+  server: 31.171.155.37
+  type: ss
+- cipher: aes-256-gcm
+  name: 阿尔巴尼亚 2 20Mbps 637ms
+  password: x23Z4LGkGDkThZ9Kaz4DURQp
+  port: 40093
+  server: 31.171.155.35
+  type: ss
+- cipher: aes-256-gcm
+  name: 阿尔巴尼亚 3 15Mbps 713ms
+  password: BdRWC38L5JUDMTYNNxJGcUwB
+  port: 49396
+  server: 31.171.154.101
+  type: ss
+- cipher: aes-256-gcm
+  name: 阿尔巴尼亚 4 15Mbps 713ms
+  password: BdRWC38L5JUDMTYNNxJGcUwB
+  port: 49396
+  server: 31.171.154.99
+  type: ss
+- cipher: aes-256-gcm
+  name: 阿尔巴尼亚 5 15Mbps 714ms
+  password: BdRWC38L5JUDMTYNNxJGcUwB
+  port: 49396
+  server: 31.171.153.83
   type: ss
 - cipher: aes-256-gcm
   name: 爱尔兰 1 52Mbps 758ms
@@ -1204,34 +516,446 @@ proxies:
   server: 217.138.222.53
   type: ss
 - cipher: aes-256-gcm
-  name: 爱尔兰 6 37Mbps 584ms
+  name: 爱尔兰 6 38Mbps 543ms
+  password: WCuz7yrfZSCQQXSNrtGPz2HT
+  port: 50168
+  server: 5.157.13.69
+  type: ss
+- cipher: aes-256-gcm
+  name: 爱尔兰 7 37Mbps 584ms
   password: YyCBeDdYX4cadHpCkkmdJLq8
   port: 43893
   server: 37.120.235.221
   type: ss
 - cipher: aes-256-gcm
-  name: 爱尔兰 7 36Mbps 588ms
+  name: 爱尔兰 8 36Mbps 588ms
   password: WCuz7yrfZSCQQXSNrtGPz2HT
   port: 50168
   server: 37.120.235.77
   type: ss
 - cipher: aes-256-gcm
-  name: 爱尔兰 8 35Mbps 598ms
+  name: 爱尔兰 9 35Mbps 598ms
   password: CUndSZnYsPKcu6Kj8THVMBHD
   port: 39772
   server: 217.138.222.45
   type: ss
 - cipher: aes-256-gcm
-  name: 爱尔兰 9 35Mbps 582ms
+  name: 爱尔兰 10 35Mbps 582ms
   password: YyCBeDdYX4cadHpCkkmdJLq8
   port: 43893
   server: 37.120.235.59
   type: ss
 - cipher: aes-256-gcm
-  name: 爱尔兰 10 35Mbps 575ms
+  name: 德国 1 71Mbps 457ms
+  password: wEsFcHCvbL4eJkL4DZQa7RgR
+  port: 45746
+  server: 193.29.106.219
+  type: ss
+- cipher: aes-256-gcm
+  name: 德国 2 68Mbps 650ms
+  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
+  port: 48938
+  server: 37.120.196.53
+  type: ss
+- cipher: aes-256-gcm
+  name: 德国 3 66Mbps 444ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 193.29.106.29
+  type: ss
+- cipher: aes-256-gcm
+  name: 德国 4 62Mbps 534ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 37.120.217.179
+  type: ss
+- cipher: aes-256-gcm
+  name: 德国 5 60Mbps 505ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 193.29.106.5
+  type: ss
+- cipher: aes-256-gcm
+  name: 德国 6 51Mbps 489ms
+  password: NHwQTPLCfaTMSqTnU3mjcSxe
+  port: 33998
+  server: 37.120.217.149
+  type: ss
+- cipher: aes-256-gcm
+  name: 德国 7 51Mbps 506ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 193.29.106.61
+  type: ss
+- cipher: aes-256-gcm
+  name: 德国 8 50Mbps 471ms
+  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
+  port: 48938
+  server: 193.29.106.179
+  type: ss
+- cipher: aes-256-gcm
+  name: 德国 9 50Mbps 534ms
+  password: txmK9WhwP6WPhP7hqSBLVxpN
+  port: 34687
+  server: 193.29.106.181
+  type: ss
+- cipher: aes-256-gcm
+  name: 德国 10 49Mbps 483ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 193.29.106.100
+  type: ss
+- cipher: aes-256-gcm
+  name: 俄罗斯联邦 1 55Mbps 594ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 92.38.138.53
+  type: ss
+- cipher: aes-128-gcm
+  name: 俄罗斯联邦 2 14Mbps 1396ms
+  password: suo.yt/ssrsub
+  plugin: obfs
+  plugin-opts:
+    host: n46hm52773.wns.windows.com
+    mode: tls
+  port: 9443
+  server: ss11.ssrsub.one
+  type: ss
+- cipher: aes-256-gcm
+  name: 加拿大 1 75Mbps 492ms
+  password: BdRWC38L5JUDMTYNNxJGcUwB
+  port: 49396
+  server: 198.8.92.67
+  type: ss
+- cipher: aes-256-gcm
+  name: 加拿大 2 74Mbps 464ms
+  password: suucSeVLmt6PQKAP77NtGw9x
+  port: 49339
+  server: 198.8.92.74
+  type: ss
+- cipher: aes-256-gcm
+  name: 加拿大 3 65Mbps 476ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 198.8.92.69
+  type: ss
+- cipher: aes-256-gcm
+  name: 加拿大 4 56Mbps 505ms
+  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
+  port: 48938
+  server: 208.78.41.195
+  type: ss
+- cipher: aes-256-gcm
+  name: 加拿大 5 51Mbps 479ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 66.115.147.89
+  type: ss
+- cipher: aes-256-gcm
+  name: 加拿大 6 51Mbps 611ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 146.70.27.37
+  type: ss
+- cipher: aes-256-gcm
+  name: 加拿大 7 50Mbps 464ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 208.78.41.202
+  type: ss
+- cipher: aes-256-gcm
+  name: 加拿大 8 50Mbps 436ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 66.115.147.87
+  type: ss
+- cipher: aes-256-gcm
+  name: 加拿大 9 49Mbps 449ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 66.115.147.82
+  type: ss
+- cipher: aes-256-gcm
+  name: 加拿大 10 48Mbps 436ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 66.115.147.77
+  type: ss
+- cipher: aes-256-gcm
+  name: 意大利 1 53Mbps 575ms
+  password: zHKYS9DeAjvv43EwgDfyEg4d
+  port: 44102
+  server: 185.217.71.245
+  type: ss
+- cipher: aes-256-gcm
+  name: 意大利 2 51Mbps 513ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 37.120.207.5
+  type: ss
+- cipher: aes-256-gcm
+  name: 意大利 3 51Mbps 618ms
+  password: Kquv5UhvZXNMemAQy8DxZ7qn
+  port: 38620
+  server: 185.128.27.35
+  type: ss
+- cipher: aes-256-gcm
+  name: 意大利 4 50Mbps 583ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 217.138.219.227
+  type: ss
+- cipher: aes-256-gcm
+  name: 意大利 5 48Mbps 477ms
+  password: CXSjgD7u7Ar7GxkZ4CgTMUsj
+  port: 45329
+  server: 82.102.26.60
+  type: ss
+- cipher: aes-256-gcm
+  name: 意大利 6 48Mbps 473ms
+  password: CMduaFXddcQbwNAAs7xFDnc8
+  port: 33148
+  server: 82.102.26.117
+  type: ss
+- cipher: aes-256-gcm
+  name: 意大利 7 48Mbps 479ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 82.102.26.51
+  type: ss
+- cipher: aes-256-gcm
+  name: 意大利 8 47Mbps 464ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 82.102.26.101
+  type: ss
+- cipher: aes-256-gcm
+  name: 意大利 9 47Mbps 454ms
+  password: NHwQTPLCfaTMSqTnU3mjcSxe
+  port: 33998
+  server: 82.102.26.99
+  type: ss
+- cipher: aes-256-gcm
+  name: 意大利 10 47Mbps 482ms
+  password: Vt5pBJFwdtNB26cJbTXxm88Z
+  port: 47027
+  server: 82.102.26.53
+  type: ss
+- cipher: aes-256-gcm
+  name: 斯洛文尼亚 1 4Mbps 914ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 195.158.249.40
+  type: ss
+- cipher: aes-256-gcm
+  name: 斯洛文尼亚 2 4Mbps 713ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 195.158.249.36
+  type: ss
+- cipher: aes-256-gcm
+  name: 爱沙尼亚 1 1Mbps 841ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 185.174.159.136
+  type: ss
+- cipher: aes-256-gcm
+  name: 瑞士 1 66Mbps 512ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 45.12.222.245
+  type: ss
+- cipher: aes-256-gcm
+  name: 瑞士 2 65Mbps 652ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 84.17.53.86
+  type: ss
+- cipher: aes-256-gcm
+  name: 瑞士 3 53Mbps 482ms
+  password: H9Dbn3szZMqLR3NpgEFEPCKb
+  port: 42166
+  server: 156.146.62.46
+  type: ss
+- cipher: aes-256-gcm
+  name: 瑞士 4 52Mbps 529ms
+  password: CMduaFXddcQbwNAAs7xFDnc8
+  port: 33148
+  server: 156.146.62.39
+  type: ss
+- cipher: aes-256-gcm
+  name: 瑞士 5 52Mbps 452ms
+  password: b2jDPHUQxCNa2KmGHZjy7C4B
+  port: 50024
+  server: 156.146.62.34
+  type: ss
+- cipher: aes-256-gcm
+  name: 瑞士 6 52Mbps 567ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 156.146.62.54
+  type: ss
+- cipher: aes-256-gcm
+  name: 瑞士 7 51Mbps 463ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 156.146.62.51
+  type: ss
+- cipher: aes-256-gcm
+  name: 瑞士 8 51Mbps 461ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 156.146.62.36
+  type: ss
+- cipher: aes-256-gcm
+  name: 瑞士 9 48Mbps 503ms
   password: WCuz7yrfZSCQQXSNrtGPz2HT
   port: 50168
-  server: 37.120.235.229
+  server: 84.17.53.210
+  type: ss
+- cipher: aes-256-gcm
+  name: 瑞士 10 22Mbps 500ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 37.120.213.5
+  type: ss
+- cipher: aes-256-gcm
+  name: 葡萄牙 1 45Mbps 673ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 185.188.61.123
+  type: ss
+- cipher: aes-256-gcm
+  name: 葡萄牙 2 45Mbps 644ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 185.188.61.119
+  type: ss
+- cipher: aes-256-gcm
+  name: 葡萄牙 3 43Mbps 766ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 194.39.127.23
+  type: ss
+- cipher: aes-256-gcm
+  name: 葡萄牙 4 43Mbps 844ms
+  password: aYNeKDMzYQYw4KbUbJA8Wszq
+  port: 31944
+  server: 194.39.127.181
+  type: ss
+- cipher: aes-256-gcm
+  name: 葡萄牙 5 12Mbps 766ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 194.39.127.233
+  type: ss
+- cipher: aes-256-gcm
+  name: 葡萄牙 6 2Mbps 1414ms
+  password: J9Y2ncrdPEC38gwydNFFGBna
+  port: 35294
+  server: 5.154.174.189
+  type: ss
+- cipher: aes-256-gcm
+  name: 葡萄牙 7 2Mbps 1541ms
+  password: aYNeKDMzYQYw4KbUbJA8Wszq
+  port: 31944
+  server: 5.154.174.67
+  type: ss
+- cipher: aes-256-gcm
+  name: 葡萄牙 8 1Mbps 1490ms
+  password: kD9vkjnE6dsUzwQfvKkPkQAd
+  port: 37588
+  server: 91.205.230.160
+  type: ss
+- cipher: aes-256-gcm
+  name: 葡萄牙 9 1Mbps 1292ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 91.205.230.152
+  type: ss
+- cipher: aes-256-gcm
+  name: 葡萄牙 10 1Mbps 1462ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 91.205.230.158
+  type: ss
+- cipher: aes-256-gcm
+  name: 越南 1 5Mbps 1029ms
+  password: kD9vkjnE6dsUzwQfvKkPkQAd
+  port: 37588
+  server: 202.143.110.32
+  type: ss
+- cipher: aes-256-gcm
+  name: 克罗地亚 1 50Mbps 767ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 85.10.50.164
+  type: ss
+- cipher: aes-256-gcm
+  name: 印度 1 60Mbps 469ms
+  password: kD9vkjnE6dsUzwQfvKkPkQAd
+  port: 37588
+  server: 103.39.132.189
+  type: ss
+- cipher: aes-256-gcm
+  name: 印度 2 24Mbps 804ms
+  password: x23Z4LGkGDkThZ9Kaz4DURQp
+  port: 40093
+  server: 137.59.52.107
+  type: ss
+- cipher: aes-256-gcm
+  name: 印度 3 12Mbps 899ms
+  password: NHwQTPLCfaTMSqTnU3mjcSxe
+  port: 33998
+  server: 165.231.253.147
+  type: ss
+- cipher: aes-256-gcm
+  name: 新西兰 1 14Mbps 978ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 180.149.231.69
+  type: ss
+- cipher: aes-256-gcm
+  name: 新西兰 2 14Mbps 898ms
+  password: kD9vkjnE6dsUzwQfvKkPkQAd
+  port: 37588
+  server: 180.149.231.67
+  type: ss
+- cipher: aes-256-gcm
+  name: 中国香港 1 42Mbps 437ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 45.130.137.36
+  type: ss
+- cipher: aes-256-gcm
+  name: 中国香港 2 40Mbps 431ms
+  password: x23Z4LGkGDkThZ9Kaz4DURQp
+  port: 40093
+  server: 45.130.137.34
+  type: ss
+- cipher: aes-256-gcm
+  name: 中国香港 3 18Mbps 782ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 45.134.224.18
+  type: ss
+- cipher: aes-256-gcm
+  name: 中国香港 4 17Mbps 748ms
+  password: NHwQTPLCfaTMSqTnU3mjcSxe
+  port: 33998
+  server: 45.134.224.20
+  type: ss
+- cipher: aes-256-gcm
+  name: 中国香港 5 15Mbps 436ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 45.130.137.14
+  type: ss
+- cipher: aes-256-cfb
+  name: 中国香港 6 0Mbps 173ms
+  password: GUTGQJ
+  port: 43552
+  server: 103.115.67.147
   type: ss
 - cipher: aes-256-gcm
   name: 挪威 1 2Mbps 1418ms
@@ -1258,26 +982,386 @@ proxies:
   server: 91.219.215.69
   type: ss
 - cipher: aes-256-gcm
-  name: 捷克 1 63Mbps 581ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 217.138.220.131
+  name: 印度尼西亚 1 45Mbps 626ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 103.120.66.214
   type: ss
 - cipher: aes-256-gcm
-  name: 捷克 2 54Mbps 619ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 217.138.199.179
+  name: 塞尔维亚 1 50Mbps 655ms
+  password: NHwQTPLCfaTMSqTnU3mjcSxe
+  port: 33998
+  server: 152.89.160.213
   type: ss
 - cipher: aes-256-gcm
-  name: 捷克 3 32Mbps 718ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 217.138.220.163
+  name: 澳大利亚 1 46Mbps 556ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 45.125.247.91
   type: ss
 - cipher: aes-256-gcm
-  name: 以色列 1 7Mbps 907ms
+  name: 澳大利亚 2 45Mbps 671ms
+  password: J9Y2ncrdPEC38gwydNFFGBna
+  port: 35294
+  server: 45.125.247.157
+  type: ss
+- cipher: aes-256-gcm
+  name: 澳大利亚 3 45Mbps 484ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 45.125.247.43
+  type: ss
+- cipher: aes-256-gcm
+  name: 澳大利亚 4 43Mbps 486ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 45.125.247.155
+  type: ss
+- cipher: aes-256-gcm
+  name: 澳大利亚 5 42Mbps 475ms
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  port: 31572
+  server: 45.125.247.45
+  type: ss
+- cipher: aes-256-gcm
+  name: 澳大利亚 6 41Mbps 553ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 144.48.38.183
+  type: ss
+- cipher: aes-256-gcm
+  name: 澳大利亚 7 41Mbps 546ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 144.48.38.19
+  type: ss
+- cipher: aes-256-gcm
+  name: 澳大利亚 8 40Mbps 508ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 45.125.247.93
+  type: ss
+- cipher: aes-256-gcm
+  name: 澳大利亚 9 40Mbps 585ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 45.248.77.237
+  type: ss
+- cipher: aes-256-gcm
+  name: 澳大利亚 10 39Mbps 591ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 45.248.77.235
+  type: ss
+- cipher: aes-256-gcm
+  name: 比利时 1 64Mbps 878ms
+  password: BdRWC38L5JUDMTYNNxJGcUwB
+  port: 49396
+  server: 37.120.143.117
+  type: ss
+- cipher: aes-256-gcm
+  name: 比利时 2 62Mbps 459ms
+  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
+  port: 48938
+  server: 217.138.211.221
+  type: ss
+- cipher: aes-256-gcm
+  name: 比利时 3 56Mbps 737ms
+  password: BdRWC38L5JUDMTYNNxJGcUwB
+  port: 49396
+  server: 217.138.211.219
+  type: ss
+- cipher: aes-256-gcm
+  name: 比利时 4 43Mbps 943ms
+  password: suucSeVLmt6PQKAP77NtGw9x
+  port: 49339
+  server: 5.253.205.229
+  type: ss
+- cipher: aes-256-gcm
+  name: 比利时 5 33Mbps 607ms
+  password: LkFAzkzXkSCRYa2CsRdL8cGb
+  port: 34815
+  server: 91.90.123.115
+  type: ss
+- cipher: aes-256-gcm
+  name: 比利时 6 17Mbps 493ms
+  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
+  port: 48938
+  server: 185.210.217.107
+  type: ss
+- cipher: aes-256-gcm
+  name: 比利时 7 13Mbps 687ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 185.232.21.53
+  type: ss
+- cipher: aes-256-gcm
+  name: 比利时 8 7Mbps 637ms
+  password: BdRWC38L5JUDMTYNNxJGcUwB
+  port: 49396
+  server: 194.110.115.77
+  type: ss
+- cipher: aes-256-gcm
+  name: 比利时 9 6Mbps 1303ms
+  password: suucSeVLmt6PQKAP77NtGw9x
+  port: 49339
+  server: 185.232.21.51
+  type: ss
+- cipher: aes-256-gcm
+  name: 比利时 10 5Mbps 967ms
+  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
+  port: 48938
+  server: 5.253.205.227
+  type: ss
+- cipher: aes-256-gcm
+  name: 卢森堡 1 32Mbps 621ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 185.153.151.75
+  type: ss
+- cipher: aes-256-gcm
+  name: 卢森堡 2 32Mbps 725ms
+  password: J9Y2ncrdPEC38gwydNFFGBna
+  port: 35294
+  server: 185.153.151.100
+  type: ss
+- cipher: aes-256-gcm
+  name: 卢森堡 3 31Mbps 659ms
+  password: WCuz7yrfZSCQQXSNrtGPz2HT
+  port: 50168
+  server: 185.153.151.193
+  type: ss
+- cipher: aes-256-gcm
+  name: 卢森堡 4 31Mbps 629ms
+  password: WCuz7yrfZSCQQXSNrtGPz2HT
+  port: 50168
+  server: 185.153.151.187
+  type: ss
+- cipher: aes-256-gcm
+  name: 卢森堡 5 30Mbps 624ms
+  password: CXSjgD7u7Ar7GxkZ4CgTMUsj
+  port: 45329
+  server: 185.153.151.78
+  type: ss
+- cipher: aes-256-gcm
+  name: 卢森堡 6 29Mbps 743ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 185.153.151.104
+  type: ss
+- cipher: aes-256-gcm
+  name: 卢森堡 7 29Mbps 627ms
+  password: RtbLkxbJZpUQ6m8y4qAeLYZj
+  port: 38747
+  server: 185.153.151.89
+  type: ss
+- cipher: aes-256-gcm
+  name: 卢森堡 8 28Mbps 633ms
+  password: WCuz7yrfZSCQQXSNrtGPz2HT
+  port: 50168
+  server: 185.153.151.175
+  type: ss
+- cipher: aes-256-gcm
+  name: 卢森堡 9 27Mbps 634ms
+  password: WCuz7yrfZSCQQXSNrtGPz2HT
+  port: 50168
+  server: 185.153.151.191
+  type: ss
+- cipher: aes-256-gcm
+  name: 卢森堡 10 27Mbps 621ms
+  password: WCuz7yrfZSCQQXSNrtGPz2HT
+  port: 50168
+  server: 185.153.151.173
+  type: ss
+- cipher: aes-256-gcm
+  name: 美国 1 96Mbps 200ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 185.242.5.147
+  type: ss
+- cipher: aes-256-gcm
+  name: 美国 2 95Mbps 223ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 212.102.44.83
+  type: ss
+- cipher: aes-256-gcm
+  name: 美国 3 95Mbps 199ms
+  password: Y9GcTPemHMKEkrfGQPJqFDNr
+  port: 49653
+  server: 185.124.240.171
+  type: ss
+- cipher: aes-256-gcm
+  name: 美国 4 94Mbps 192ms
+  password: x23Z4LGkGDkThZ9Kaz4DURQp
+  port: 40093
+  server: 79.110.54.115
+  type: ss
+- cipher: aes-256-gcm
+  name: 美国 5 93Mbps 222ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 212.102.44.66
+  type: ss
+- cipher: aes-256-gcm
+  name: 美国 6 93Mbps 223ms
+  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
+  port: 48938
+  server: 212.102.44.86
+  type: ss
+- cipher: aes-256-gcm
+  name: 美国 7 92Mbps 254ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 104.200.131.170
+  type: ss
+- cipher: aes-256-gcm
+  name: 美国 8 92Mbps 264ms
+  password: x23Z4LGkGDkThZ9Kaz4DURQp
+  port: 40093
+  server: 104.200.131.172
+  type: ss
+- cipher: aes-256-gcm
+  name: 美国 9 91Mbps 255ms
+  password: aYNeKDMzYQYw4KbUbJA8Wszq
+  port: 31944
+  server: 104.200.131.245
+  type: ss
+- cipher: aes-256-gcm
+  name: 美国 10 90Mbps 237ms
+  password: Vt5pBJFwdtNB26cJbTXxm88Z
+  port: 47027
+  server: 212.102.44.71
+  type: ss
+- cipher: aes-256-gcm
+  name: 波斯尼亚和黑塞哥维那 1 50Mbps 601ms
+  password: BdRWC38L5JUDMTYNNxJGcUwB
+  port: 49396
+  server: 185.212.111.59
+  type: ss
+- cipher: aes-256-gcm
+  name: 波斯尼亚和黑塞哥维那 2 43Mbps 534ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 185.164.34.250
+  type: ss
+- cipher: aes-256-gcm
+  name: 波斯尼亚和黑塞哥维那 3 42Mbps 671ms
+  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
+  port: 48938
+  server: 185.99.3.102
+  type: ss
+- cipher: aes-256-gcm
+  name: 波斯尼亚和黑塞哥维那 4 37Mbps 717ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 185.212.111.41
+  type: ss
+- cipher: aes-256-gcm
+  name: 波斯尼亚和黑塞哥维那 5 35Mbps 682ms
+  password: suucSeVLmt6PQKAP77NtGw9x
+  port: 49339
+  server: 185.99.3.146
+  type: ss
+- cipher: aes-256-gcm
+  name: 波斯尼亚和黑塞哥维那 6 32Mbps 567ms
+  password: BdRWC38L5JUDMTYNNxJGcUwB
+  port: 49396
+  server: 185.212.111.6
+  type: ss
+- cipher: aes-256-gcm
+  name: 泰国 1 105Mbps 274ms
+  password: CjchzpwdSjRtDjezYMwx9BKM
+  port: 50232
+  server: 27.131.164.92
+  type: ss
+- cipher: aes-256-gcm
+  name: 马来西亚 1 12Mbps 994ms
+  password: x23Z4LGkGDkThZ9Kaz4DURQp
+  port: 40093
+  server: 42.0.30.209
+  type: ss
+- cipher: aes-256-gcm
+  name: 马来西亚 2 5Mbps 1034ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 42.0.30.150
+  type: ss
+- cipher: aes-256-gcm
+  name: 西班牙 1 62Mbps 579ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 89.37.95.23
+  type: ss
+- cipher: aes-256-gcm
+  name: 西班牙 2 59Mbps 539ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 89.37.95.15
+  type: ss
+- cipher: aes-256-gcm
+  name: 西班牙 3 53Mbps 548ms
+  password: WCuz7yrfZSCQQXSNrtGPz2HT
+  port: 50168
+  server: 84.17.62.165
+  type: ss
+- cipher: aes-256-gcm
+  name: 西班牙 4 49Mbps 552ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 82.102.17.181
+  type: ss
+- cipher: aes-256-gcm
+  name: 西班牙 5 41Mbps 516ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 37.120.148.227
+  type: ss
+- cipher: aes-256-gcm
+  name: 西班牙 6 35Mbps 601ms
   password: DKXfWwc4ebscpXTKpbt85rSH
   port: 38742
-  server: 87.239.255.119
+  server: 82.102.26.237
+  type: ss
+- cipher: aes-256-gcm
+  name: 西班牙 7 2Mbps 1470ms
+  password: x23Z4LGkGDkThZ9Kaz4DURQp
+  port: 40093
+  server: 185.153.150.54
+  type: ss
+- cipher: aes-256-gcm
+  name: 芬兰 1 12Mbps 895ms
+  password: ZKEsXkFbUZ2z667YA8A7cEDP
+  port: 48970
+  server: 196.244.191.91
+  type: ss
+- cipher: aes-256-gcm
+  name: 芬兰 2 12Mbps 869ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 196.244.191.45
+  type: ss
+- cipher: aes-256-gcm
+  name: 芬兰 3 12Mbps 867ms
+  password: LkFAzkzXkSCRYa2CsRdL8cGb
+  port: 34815
+  server: 196.244.191.165
+  type: ss
+- cipher: aes-256-gcm
+  name: 芬兰 4 12Mbps 859ms
+  password: DKXfWwc4ebscpXTKpbt85rSH
+  port: 38742
+  server: 196.244.191.93
+  type: ss
+- cipher: aes-256-gcm
+  name: 希腊 1 2Mbps 1460ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 194.150.167.36
+  type: ss
+- cipher: aes-256-gcm
+  name: 希腊 2 2Mbps 1464ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
+  server: 194.150.167.28
   type: ss
