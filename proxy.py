@@ -119,6 +119,14 @@ def initialDB():
            `time`              TIMESTAMP default (datetime('now', 'localtime')),
            FOREIGN KEY (`env-id`)
            REFERENCES networkEnvironment (`id`)       );''')
+    c.execute('''CREATE TABLE IF NOT EXISTS   `region`
+           (`id` INTEGER  PRIMARY KEY  AUTOINCREMENT,
+           `ip`             TEXT       NOT NULL,
+           `ip-version`     INT(1)     NOT NULL,
+           `result`         TEXT       NOT NULL,
+           `country-code`   TEXT,
+           `site`           TEXT       NOT NULL,
+           `time`           TIMESTAMP  default (datetime('now', 'localtime'))     );''')
 
 def importProxies(data): #Import proxies to DB, return existCount, insertCount
     global dbConn, c
@@ -133,18 +141,23 @@ def importProxies(data): #Import proxies to DB, return existCount, insertCount
         if 'protocol_param' in proxyDict: 
             proxyDict['protocol-param'] = proxyDict['protocol_param']
             del proxyDict['protocol_param']
-        sql = "select * from " + type + " where `"
+        if 'obfs_param' in proxyDict: 
+            proxyDict['obfs-param'] = proxyDict['obfs_param']
+            del proxyDict['obfs_param']
         list = []
         for key in proxyDict:
-            list.append(key + '`="' + str(proxyDict[key]))
-        sql += '" and `'.join(list)
-        sql += '"'
+            if proxyDict[key] in [True, False]:
+                list.append('`%s`='%key + '1' if proxyDict[key] else '0')
+            else:
+                list.append('`%s`='%key + "'" + str(proxyDict[key]).replace("'", "''") + "'")
+        sql = "select * from `%s` where " % type + ' and '.join(list)
         list = c.execute(sql).fetchall()
-        #print(sql, len(list), list)
         if len(list) > 0: 
             existCount += 1
             continue
-        sql = "INSERT INTO " + type + " (`" + '`, `'.join(proxyDict.keys()) + '`) VALUES ("' + '", "'.join([str(x) for x in proxyDict.values()]) +'")'
+        #print(sql)
+        sql = insertRecordSql(type, proxyDict)
+        #print(sql)
         insertCount += 1
         c.execute(sql)
     dbConn.commit()
@@ -185,7 +198,7 @@ def initClash():
     #Create clash process
     clashPopenObj = subprocess.Popen(clashPath + ' -f ' + configPath)
 
-def dumpProxies(Proxies, name = '{1} {0}', nameParams = None): #nameParams 4列
+def dumpProxies(Proxies, name = '{1} {0}', nameParams = None): #nameParams 5列
     import ast
     global attributes
     result = {'proxies': []}
@@ -196,7 +209,7 @@ def dumpProxies(Proxies, name = '{1} {0}', nameParams = None): #nameParams 4列
                 if nameParams == None:
                     dict['name'] = name.format(row[0], row[1])
                 else:
-                    dict['name'] = name.format(row[0], row[1], nameParams[k][0], nameParams[k][1], nameParams[k][2], nameParams[k][3])
+                    dict['name'] = name.format(row[0], row[1], nameParams[k][0], nameParams[k][1], nameParams[k][2], nameParams[k][3], nameParams[k][4])
                 continue
             if row[i] != None:
                 if attribute in ['plugin-opts', 'ws-headers', 'http-opts', 'h2-opts']:
@@ -226,15 +239,15 @@ def initCountryNameDict():
 
 def clash_getProxiesInfo(name=''):
     r = requests.get(externalController + '/proxies/' + name, proxies=proxySetNone)
-    return(json.loads(r.content.decode('UTF-8'))) #return all, now, udp, etc.
+    return r.json() #return all, now, udp, etc.
 
 def clash_getProxiesDelay(name, timeout = 2000, url = 'http://www.gstatic.com/generate_204'): #return json delay or message
     r = requests.get(externalController + '/proxies/' + name + '/delay', params={'timeout':timeout,'url':url}, proxies=proxySetNone)
-    return(json.loads(r.content.decode('UTF-8'))) #return delay or message
+    return r.json() #return delay or message
 
 def clash_switchProxy(name): 
     r = requests.put(externalController + '/proxies/' + 'GLOBAL', data=json.dumps({'name':name}), proxies=proxySetNone)
-    return(r.status_code == 204) #return 204: No Content
+    return r.status_code == 204 #return 204: No Content
 
 def getIPIPdotNet(times=3):
     try:
@@ -246,7 +259,7 @@ def getIPIPdotNet(times=3):
                 break
             else:
                 errorTimes += 1
-        return json.loads(r.content.decode('UTF-8')) if errorTimes<times else "Failed"
+        return r.json() if errorTimes<times else "Failed"
     except Exception:
         return "Failed"
 
@@ -260,7 +273,7 @@ def getIP(version, times=3):
                 break
             else:
                 errorTimes += 1
-        return json.loads(r.content.decode('UTF-8'))['data'] if errorTimes<times else "Failed"
+        return r.json()['data'] if errorTimes<times else "Failed"
     except Exception:
         return "Failed"
 
@@ -277,11 +290,11 @@ def tcping(host, port=80, timeout=1):
         sk.close()
         return False, timeout*1000
 
-def queryIPInfo(ip): #纯真网络
+def getIPInfo(ip): #纯真网络
     appcode = 'b6d2e6063aec445293258e531ae4137d'
     header = {'Authorization':'APPCODE ' + appcode}
     r = requests.get('http://cz88.rtbasia.com/search', params={'ip':ip}, proxies=proxySetNone,headers=header)
-    return(json.loads(r.content.decode('UTF-8')))
+    return r.json()
 
 def multithread(f, number, work): #f(data, &c)
     exitFlag = 0
@@ -343,7 +356,7 @@ def multithread(f, number, work): #f(data, &c)
 def testTcping(proxy, c):
     success, delay = tcping(proxy[2], proxy[3])
     print('Tcping {} {} ({}:{}) {}, {}ms'.format(proxy[1], proxy[0], proxy[2], proxy[3], success, delay))
-    sql = "INSERT INTO `tcping` (`proxy-type`, `proxy-id`, `env-id`, `success`, `delay`) VALUES ('{}', {}, {}, {}, {})".format(proxy[1], proxy[0], envId, 1 if success else 0, delay)
+    sql = insertRecordSql('tcping', {'proxy-type': proxy[1], 'proxy-id': proxy[0], 'env-id': envId, 'success': 1 if success else 0, 'delay': delay})
     #print(sql)
     c.execute(sql)
 
@@ -356,7 +369,7 @@ def testDelay(proxy, c, timeout = 2000, url = 'http://www.gstatic.com/generate_2
         success = 1
         delay = result['delay']
     print('delay test {} {} ({}:{}) {}, {}ms'.format(proxy[1], proxy[0], proxy[2], proxy[3], success, delay))
-    sql = "INSERT INTO `delay` (`proxy-type`, `proxy-id`, `env-id`, `success`, `delay`, `url`) VALUES ('{}', {}, {}, {}, {}, '{}')".format(proxy[1], proxy[0], envId, success, delay, url)
+    sql = insertRecordSql('delay', {'proxy-type': proxy[1], 'proxy-id': proxy[0], 'env-id': envId, 'success': success, 'delay': delay, 'url': url})
     #print(sql)
     c.execute(sql)
 
@@ -365,7 +378,7 @@ def isIPv6(ip):
 
 def insertRecordSql(table, dict): #return sql
     for key in dict:
-        dict[key] = "'" + dict[key] + "'" if isinstance(dict[key], str) else str(dict[key])
+        dict[key] = "'" + str(dict[key]).replace("'", "''") + "'" if not(isinstance(dict[key], int) or isinstance(dict[key], float) or isinstance(dict[key], bool)) else str(dict[key])
     return "INSERT INTO `%s` (`" % table + '`, `'.join(dict.keys()) + "`) VALUES (" + ', '.join(dict.values()) + ")"
 
 def getIPs(proxies):
@@ -497,26 +510,78 @@ def dumpSpeedProxies(IPnum = 10):
         proxy = c.execute("select distinct `proxy-type`,`proxy-id` from ip where ip='%s' and `ip-type`=1"%dict['ip']).fetchall()[0]
         proxies.append(c.execute("select * from `%s` where `id`=%s"%(proxy[0], proxy[1])).fetchall()[0])
         delays = c.execute("select delay from `delay` where success=1 and `proxy-type`='%s' and `proxy-id`=%s"%(proxy[0], proxy[1])).fetchall()
-        nameParams.append([(code2name[dict['country']] if dict['country'] in code2name else dict['country']), dict['rank'], int(dict['download']), (int(sum([x[0] for x in delays])/len(delays)) if len(delays)>0 else 0)])
-    result = dumpProxies(proxies, '{2} {3} {4}Mbps {5}ms', nameParams)
-    configPath = os.path.join(path, str(int(time.time())) + '.yaml')
+        nameParam = [(code2name[dict['country']] if dict['country'] in code2name else dict['country']), dict['rank'], int(dict['download']), (int(sum([x[0] for x in delays])/len(delays)) if len(delays)>0 else 0)]
+        netflix = c.execute("select result,`country-code` from `region` where ip='%s'"%dict['ip']).fetchall()
+        if len(netflix) == 0:
+            nameParam.append('')
+        else:
+            nameParam.append(' 奈飞自制剧' if netflix[0][0] == 'Originals Only' else (' 奈飞%s'%(code2name[netflix[0][1]] if netflix[0][1] in code2name else netflix[0][1]) if netflix[0][0] == 'Yes' else ''))
+        nameParams.append(nameParam)
+    result = dumpProxies(proxies, '{2}{3} {4}Mbps {5}ms{6}', nameParams)
+    configPath = os.path.join(path, 'ClashConfigRaw.yml')
     yaml.safe_dump(result, open(configPath, 'w', encoding='UTF-8'), allow_unicode=True)
+
+def testUnblockNefflix(proxies):
+    def test():
+        headers={
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0',
+        }
+        try:
+            r = requests.get("https://www.netflix.com/title/81215567", headers=headers, proxies=proxySet, timeout=(5, 10))
+        except Exception:
+            return "Failed", "Failed"
+        if r.status_code == 200:
+            try:
+                r2 = requests.get("https://www.netflix.com/title/80018499", headers=headers, proxies=proxySet, allow_redirects=False, timeout=(5, 10))
+            except Exception:
+                return 'Yes', 'Failed'
+            if 'location' in r2.headers:
+                return 'Yes', r2.headers['location'].split('/')[3].split('-')[0].upper()
+            else:
+                return 'Yes', 'US'
+        caseDict = {404: 'Originals Only', 403: 'No', 200: 'Yes', 0: 'Failed'}
+        return caseDict[r.status_code], "Failed"
+    global dbConn, c, envId
+    for proxy in proxies:
+        sql = "select ip from `ip` where `proxy-type`='{}' and `proxy-id`={} and `env-id`={} and `ip-version`={} and `ip-type`={}".format(proxy[1], proxy[0], envId, 0, 1)
+        result = c.execute(sql).fetchall()
+        sql = "select ip from `ip` where `proxy-type`='{}' and `proxy-id`={} and `env-id`={} and `ip-version`={} and `ip-type`={}".format(proxy[1], proxy[0], envId, 1, 1)
+        result2 = c.execute(sql).fetchall()
+        if len(result) > 0 and len(result2) == 0: 
+            ip = result[0][0]
+            sql = "select ip from `speedtest` where `ip`='{}' and `ip` not in (select ip from `region`)".format(ip)
+            result3 = c.execute(sql).fetchall()
+            if len(result3) == 0: continue
+            clash_switchProxy(proxy[1] + ' ' + str(proxy[0]))
+            print('Use:', clash_getProxiesInfo('GLOBAL')['now'])
+            result, country = test()
+            sql = insertRecordSql('region', {'ip': ip, 'ip-version': 0, 'result': result, 'country-code': country, 'site': 'Netflix'})
+            print(sql)
+            c2 = dbConn.cursor()
+            c2.execute(sql)
+            c2.close()
+            dbConn.commit()
+        else:
+            continue
+
+def getGithub():
+    return 'https://raw.githubusercontent.com/chfchf0306/jeidian4.18/455bc762b64d820be96651bf3cd2c40d8bde71c5/4.18'
 
 if __name__ == "__main__":
     setPaths()
     initialDB()
-    # print(importProxies(open(r'C:\Users\zjsxp\Desktop\proxypool\149.248.8.112.yaml', 'r', encoding='UTF-8')))
-    # print(importProxies(open(r'C:\Users\zjsxp\Desktop\proxypool\etproxypool.ga.yaml', 'r', encoding='UTF-8')))
-    # print(importProxies(open(r'C:\Users\zjsxp\Desktop\proxypool\fq.lonxin.net.yaml', 'r', encoding='UTF-8')))
-    # print(importProxies(open(r'C:\Users\zjsxp\Desktop\proxypool\herokuapp.yaml', 'r', encoding='UTF-8')))
-    # print(importProxies(open(r'C:\Users\zjsxp\Desktop\proxypool\linbaoz.com.yaml', 'r', encoding='UTF-8')))
-    # print(importProxies(open(r'C:\Users\zjsxp\Desktop\proxypool\herokuapp.yaml', 'r', encoding='UTF-8')))
-    # print(importProxies(open(r'C:\Users\zjsxp\Desktop\proxypool\proxy.51798.xyz.yaml', 'r', encoding='UTF-8')))
-    # print(importProxies(open(r'C:\Users\zjsxp\Desktop\proxypool\proxypool.ml.yaml', 'r', encoding='UTF-8')))
-    # print(importProxies(open(r'C:\Users\zjsxp\Desktop\proxypool\freefq.yaml', 'r', encoding='UTF-8')))
-    # print(importProxies(open(r'C:\Users\zjsxp\Desktop\proxypool\8du.yaml', 'r', encoding='UTF-8')))
-    #print(c.execute("select name  from sqlite_master").fetchall())
     
+    #clash订阅导入
+    urls = ['https://www.proxypool.ml/clash/proxies', 'https://hello.stgod.com/clash/proxies', 'https://193.123.234.61/clash/proxies', 'https://fq.lonxin.net/clash/proxies', 'https://free886.herokuapp.com/clash/proxies', 'https://149.248.8.112/clash/proxies', 'https://proxypool.fly.dev/clash/proxies', 'http://8.135.91.61/clash/proxies', 'http://antg.xyz/clash/proxies', 'https://proxy.51798.xyz/clash/proxies', 'https://sspool.herokuapp.com/clash/proxies', 'https://alexproxy003.herokuapp.com/clash/proxies', 'https://origamiboy.herokuapp.com/clash/proxies', 'https://hellopool.herokuapp.com/clash/proxies', 'http://guobang.herokuapp.com/clash/proxies', 'https://proxypool-guest997.herokuapp.com/clash/proxies', 'https://us-proxypool.herokuapp.com/clash/proxies', 'https://eu-proxypool.herokuapp.com/clash/proxies', 'https://proxypoolv2.herokuapp.com/clash/proxies']
+    setProxiesEnv('http://127.0.0.1:7890')
+    for url in urls:
+        print(url)
+        try:
+            r = requests.get(url, proxies=proxySet)
+        except Exception:
+            print('Failed')
+            continue
+        print(importProxies(r.text))
     
     attributes = {'ss': ['id', 'type', 'server', 'port', 'password', 'cipher', 'plugin', 'plugin-opts'], 
     'ssr': ['id', 'type', 'server', 'port', 'password', 'cipher', 'protocol', 'protocol-param', 'obfs', 'obfs-param'], 
@@ -530,7 +595,7 @@ if __name__ == "__main__":
     proxies += c.execute("select * from vmess where id not in (select `proxy-id` from tcping where `proxy-type`='vmess')").fetchall()
     proxies += c.execute("select * from ss where id not in (select `proxy-id` from tcping where `proxy-type`='ss')").fetchall()
     proxies += c.execute("select * from ssr where id not in (select `proxy-id` from tcping where `proxy-type`='ssr')").fetchall()
-    times = 10 #测 1 次
+    times = 10 #测 10 次
     print('Tcping: %d 个节点，每个 %d 次' % (len(proxies), times))
     proxyQueue = []
     for i in range(times):
@@ -548,7 +613,7 @@ if __name__ == "__main__":
     proxies += c.execute("select * from ssr where id in (select `proxy-id` from tcping where `proxy-type`='ssr' and success=1) and id not in (select `proxy-id` from delay where `proxy-type`='ssr')").fetchall()
     proxies += c.execute("select * from trojan where id in (select `proxy-id` from tcping where `proxy-type`='trojan' and success=1) and id not in (select `proxy-id` from delay where `proxy-type`='trojan')").fetchall()
     proxies += c.execute("select * from vmess where id in (select `proxy-id` from tcping where `proxy-type`='vmess' and success=1) and id not in (select `proxy-id` from delay where `proxy-type`='vmess')").fetchall()
-    times = 10 #测 1 次
+    times = 10 #测 10 次
     print('测延迟: %d 个节点，每个 %d 次' % (len(proxies), times))
     proxyQueue = []
     for i in range(times):
@@ -572,6 +637,15 @@ if __name__ == "__main__":
     proxies += c.execute("select * from vmess where id in (select `proxy-id` from ip where `proxy-type`='vmess')").fetchall()
     print('Speedtest: %d 个节点' % len(proxies))
     testSpeed(proxies)
+    dbConn.commit()
+    
+    #test testUnblockNefflix 
+    proxies = c.execute("select * from ss where id in (select `proxy-id` from ip where `proxy-type`='ss')").fetchall()
+    proxies += c.execute("select * from ssr where id in (select `proxy-id` from ip where `proxy-type`='ssr')").fetchall()
+    proxies += c.execute("select * from trojan where id in (select `proxy-id` from ip where `proxy-type`='trojan')").fetchall()
+    proxies += c.execute("select * from vmess where id in (select `proxy-id` from ip where `proxy-type`='vmess')").fetchall()
+    print('testUnblockNefflix: %d 个节点' % len(proxies))
+    testUnblockNefflix(proxies)
     dbConn.commit()
     
     initCountryNameDict()
