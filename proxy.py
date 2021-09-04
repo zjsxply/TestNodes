@@ -128,9 +128,8 @@ def initialDB():
            `site`           TEXT       NOT NULL,
            `time`           TIMESTAMP  default (datetime('now', 'localtime'))     );''')
 
-def importProxies(data): #Import proxies to DB, return existCount, insertCount
+def importProxies(config): #Import proxies to DB, return existCount, insertCount
     global dbConn, c
-    config = yaml.safe_load(data)
     existCount, insertCount = 0, 0
     for proxyDict in config['proxies']:
         del proxyDict['name']
@@ -156,10 +155,8 @@ def importProxies(data): #Import proxies to DB, return existCount, insertCount
             existCount += 1
             continue
         #print(sql)
-        sql = insertRecordSql(type, proxyDict)
-        #print(sql)
+        dbInsert(type, proxyDict)
         insertCount += 1
-        c.execute(sql)
     dbConn.commit()
     return existCount, insertCount
 
@@ -228,15 +225,6 @@ def setProxiesEnv(proxySetAddress):
     os.environ['http_proxy'] = proxySetAddress
     os.environ['https_proxy'] = proxySetAddress
 
-def initCountryNameDict(): 
-    global code2name, en2zhPath
-    import pycountry
-    code2name = {}
-    en2zh = yaml.safe_load(open(en2zhPath, 'r', encoding='UTF-8'))
-    #print(en2zh)
-    for country in pycountry.countries:
-        code2name[country.alpha_2] = en2zh[country.name] if country.name in en2zh else country.name
-
 def clash_getProxiesInfo(name=''):
     r = requests.get(externalController + '/proxies/' + name, proxies=proxySetNone)
     return r.json() #return all, now, udp, etc.
@@ -253,7 +241,7 @@ def getIPIPdotNet(times=3):
     try:
         errorTimes = 0
         for i in range(times):
-            r = requests.get("https://api.myip.la/cn?json", proxies=proxySet)
+            r = requests.get("https://api.myip.la/cn?json", proxies=proxySet, timeout=(5, 10))
             #{"ip":"141.164.35.170","location":{"city":"","country_code":"KR","country_name":"韩国","latitude":"37.553674","longitude":"126.991138","province":"首尔"}}
             if r.status_code == 200:
                 break
@@ -267,7 +255,7 @@ def getIP(version, times=3):
     try:
         errorTimes = 0
         for i in range(times):
-            r = requests.get('http://v%d.ip.zxinc.org/info.php?type=json'%(version), proxies=proxySet)
+            r = requests.get('http://v%d.ip.zxinc.org/info.php?type=json'%(version), proxies=proxySet, timeout=(5, 10))
             #{"code":0,"data":{"myip":"112.14.241.145","location":"浙江省绍兴市 移动","country":"浙江省绍兴市","local":"移动","ver4":"纯真网络 2021年08月18日IP数据","ver6":" ZX公网IPv6库\t20210726版","count4":530725,"count6":178724}}
             if r.status_code == 200:
                 break
@@ -293,10 +281,10 @@ def tcping(host, port=80, timeout=1):
 def getIPInfo(ip): #纯真网络
     appcode = 'b6d2e6063aec445293258e531ae4137d'
     header = {'Authorization':'APPCODE ' + appcode}
-    r = requests.get('http://cz88.rtbasia.com/search', params={'ip':ip}, proxies=proxySetNone,headers=header)
+    r = requests.get('http://cz88.rtbasia.com/search', params={'ip':ip}, proxies=proxySetNone,headers=header, timeout=(5, 10))
     return r.json()
 
-def multithread(f, number, work): #f(data, &c)
+def multiThread(f, number, work): #f(data, &c)
     exitFlag = 0
     
     class myThread (threading.Thread):
@@ -353,12 +341,54 @@ def multithread(f, number, work): #f(data, &c)
     for t in threads:
         t.join()
 
+def dbInsertThread(flag=True): # flag: start or end
+    if flag:
+        global path, dbInsertQueueLock, dbInsertQueue, globalExitFlag, thread
+        globalExitFlag = 0
+        
+        class myThread (threading.Thread):
+            def __init__(self, threadID, name, q):
+                threading.Thread.__init__(self)
+                self.threadID = threadID
+                self.name = name
+                self.q = q
+            def run(self):
+                process_data(self.name, self.q)
+        def process_data(threadName, q):
+            dbConn = sqlite3.connect(os.path.join(path, 'proxies.db'))
+            while not globalExitFlag:
+                dbInsertQueueLock.acquire()
+                sqls = []
+                while not dbInsertQueue.empty(): #取得队列全部 sql 语句
+                    sqls.append(q.get())
+                dbInsertQueueLock.release()
+                if len(sqls) != 0:
+                    c = dbConn.cursor()
+                    for sql in sqls:
+                        c.execute(sql)
+                    c.close()
+                    dbConn.commit()
+                    print('\n'.join(sqls)+'\n')
+                else:
+                    time.sleep(1) # 每 1 秒钟取得队列所有 sql 后立马释放锁，然后全部执行
+            dbConn.close()
+        dbInsertQueueLock = threading.Lock()
+        dbInsertQueue = queue.Queue(0)
+        
+        # 创建线程
+        thread = myThread(999, "Thread-{}".format(999), dbInsertQueue)
+        thread.start()
+    else:
+        # 通知线程是时候退出
+        globalExitFlag = 1
+
+        # 等待线程完成
+        thread.join()
+
 def testTcping(proxy, c):
     success, delay = tcping(proxy[2], proxy[3])
-    print('Tcping {} {} ({}:{}) {}, {}ms'.format(proxy[1], proxy[0], proxy[2], proxy[3], success, delay))
-    sql = insertRecordSql('tcping', {'proxy-type': proxy[1], 'proxy-id': proxy[0], 'env-id': envId, 'success': 1 if success else 0, 'delay': delay})
-    #print(sql)
-    c.execute(sql)
+    #print('Tcping {} {} ({}:{}) {}, {}ms'.format(proxy[1], proxy[0], proxy[2], proxy[3], success, delay))
+    dbInsert('tcping', {'proxy-type': proxy[1], 'proxy-id': proxy[0], 'env-id': envId, 'success': 1 if success else 0, 'delay': delay})
 
 def testDelay(proxy, c, timeout = 2000, url = 'http://www.gstatic.com/generate_204'):
     result = clash_getProxiesDelay(proxy[1]+' '+str(proxy[0]), timeout, url)
@@ -368,19 +398,25 @@ def testDelay(proxy, c, timeout = 2000, url = 'http://www.gstatic.com/generate_2
     else:
         success = 1
         delay = result['delay']
-    print('delay test {} {} ({}:{}) {}, {}ms'.format(proxy[1], proxy[0], proxy[2], proxy[3], success, delay))
-    sql = insertRecordSql('delay', {'proxy-type': proxy[1], 'proxy-id': proxy[0], 'env-id': envId, 'success': success, 'delay': delay, 'url': url})
-    #print(sql)
-    c.execute(sql)
+    #print('delay test {} {} ({}:{}) {}, {}ms'.format(proxy[1], proxy[0], proxy[2], proxy[3], success, delay))
+    dbInsert('delay', {'proxy-type': proxy[1], 'proxy-id': proxy[0], 'env-id': envId, 'success': success, 'delay': delay, 'url': url})
 
 def isIPv6(ip):
     return ip.find(':') != -1
 
-def insertRecordSql(table, dict): #return sql
+def dbRead(sql):
+    global c
+    return c.execute(sql).fetchall()
+
+def dbInsert(table, dict):
+    global dbInsertQueueLock, dbInsertQueue
     for key in dict:
         dict[key] = "'" + str(dict[key]).replace("'", "''") + "'" if not(isinstance(dict[key], int) or isinstance(dict[key], float) or isinstance(dict[key], bool)) else str(dict[key])
-    return "INSERT INTO `%s` (`" % table + '`, `'.join(dict.keys()) + "`) VALUES (" + ', '.join(dict.values()) + ")"
-
+    sql = "INSERT INTO `%s` (`" % table + '`, `'.join(dict.keys()) + "`) VALUES (" + ', '.join(dict.values()) + ")"
+    dbInsertQueueLock.acquire()
+    dbInsertQueue.put(sql)
+    dbInsertQueueLock.release()
+    
 def getIPs(proxies):
     global dbConn, c, envId
     for proxy in proxies:
@@ -389,60 +425,35 @@ def getIPs(proxies):
         #get request ip
         requestIP = socket.gethostbyname(proxy[2])
         sql = "select * from `ip` where `proxy-type`='{}' and `proxy-id`={} and `env-id`={} and `ip`='{}' and `ip-type`={}".format(proxy[1], proxy[0], envId, requestIP, 0)
-        if len(c.execute(sql).fetchall()) == 0: 
-            sql = "INSERT INTO `ip` (`proxy-type`, `proxy-id`, `env-id`, `ip`, `ip-version`, `ip-type`) VALUES ('{}', {}, {}, '{}', {}, {})".format(proxy[1], proxy[0], envId, requestIP, isIPv6(requestIP), 0)
-            print(sql)
-            c2 = dbConn.cursor()
-            c2.execute(sql)
-            c2.close()
+        if len(dbRead(sql)) == 0: 
+            dbInsert('ip', {'proxy-type': proxy[1], 'proxy-id': proxy[0], 'env-id': envId, 'ip': requestIP, 'ip-version': isIPv6(requestIP), 'ip-type': 0})
         else: continue
         
         #get respond ip
         sql = "select * from `ip` where `proxy-type`='{}' and `proxy-id`={} and `env-id`={} and `ip-type`={}".format(proxy[1], proxy[0], envId, 1)
-        if len(c.execute(sql).fetchall()) == 0: 
+        if len(dbRead(sql)) == 0: 
             print(proxy)
             result = getIPIPdotNet()
             #print(result)
             if result != "Failed":
-                sql = "INSERT INTO `ip` (`proxy-type`, `proxy-id`, `env-id`, `ip`, `ip-version`, `ip-type`) VALUES ('{}', {}, {}, '{}', {}, {})".format(proxy[1], proxy[0], envId, result['ip'], isIPv6(result['ip']), 1)
-                print(sql)
-                c2 = dbConn.cursor()
-                c2.execute(sql)
-                c2.close()
+                dbInsert('ip', {'proxy-type': proxy[1], 'proxy-id': proxy[0], 'env-id': envId, 'ip': result['ip'], 'ip-version': isIPv6(result['ip']), 'ip-type': 1})
                 
                 sql = "select * from `ip-info` where `ip`='{}' and `source`='{}'".format(result['ip'], 'myip.la')
-                if len(c.execute(sql).fetchall()) == 0: 
-                    sql = "INSERT INTO `ip-info` (`ip`, `ip-version`, `country-code`, `province`, `city`, `latitude`, `longitude`, `source`) VALUES ('{}', {}, '{}', '{}', '{}', '{}', '{}', '{}')".format(result['ip'], isIPv6(result['ip']), result['location']['country_code'], result['location']['province'], result['location']['city'], result['location']['latitude'], result['location']['longitude'], 'myip.la')
-                    print(sql)
-                    c2 = dbConn.cursor()
-                    c2.execute(sql)
-                    c2.close()
+                if len(dbRead(sql)) == 0: 
+                    dbInsert('ip-info', {'ip': result['ip'], 'ip-version': isIPv6(result['ip']), 'country-code': result['location']['country_code'], 'province': result['location']['province'], 'city': result['location']['city'], 'latitude': result['location']['latitude'], 'longitude': result['location']['longitude'], 'source': 'myip.la'})
                 
                 sql = "select * from `ip-info` where `ip`='{}' and `source`='{}'".format(result['ip'], '纯真网络')
-                if len(c.execute(sql).fetchall()) == 0: 
+                if len(dbRead(sql)) == 0: 
                     result = getIP(4 if isIPv6(result['ip']) else 6)
                     if result != "Failed":
-                        sql = "INSERT INTO `ip-info` (`ip`, `ip-version`, `city`, `isp`, `source`) VALUES ('{}', {}, '{}', '{}', '{}')".format(result['myip'], isIPv6(result['myip']), result['country'], result['local'], '纯真网络')
-                        print(sql)
-                        c2 = dbConn.cursor()
-                        c2.execute(sql)
-                        c2.close()
+                        dbInsert('ip-info', {'ip': result['myip'], 'ip-version': isIPv6(result['myip']), 'city': result['country'], 'isp': result['local'], 'source': '纯真网络'})
             else:
                 result = getIP(4)
                 if result != "Failed":
-                    sql = "INSERT INTO `ip-info` (`ip`, `ip-version`, `city`, `isp`, `source`) VALUES ('{}', {}, '{}', '{}', '{}')".format(result['myip'], isIPv6(result['myip']), result['country'], result['local'], '纯真网络')
-                    print(sql)
-                    c2 = dbConn.cursor()
-                    c2.execute(sql)
-                    c2.close()
+                    dbInsert('ip-info', {'ip': result['myip'], 'ip-version': isIPv6(result['myip']), 'city': result['country'], 'isp': result['local'], 'source': '纯真网络'})
                 result = getIP(6)
                 if result != "Failed":
-                    sql = "INSERT INTO `ip-info` (`ip`, `ip-version`, `city`, `isp`, `source`) VALUES ('{}', {}, '{}', '{}', '{}')".format(result['myip'], isIPv6(result['myip']), result['country'], result['local'], '纯真网络')
-                    print(sql)
-                    c2 = dbConn.cursor()
-                    c2.execute(sql)
-                    c2.close()
-            dbConn.commit()
+                    dbInsert('ip-info', {'ip': result['myip'], 'ip-version': isIPv6(result['myip']), 'city': result['country'], 'isp': result['local'], 'source': '纯真网络'})
 
 def testSpeed(proxies): #speedtest.net
     global dbConn, c, envId
@@ -468,64 +479,85 @@ def testSpeed(proxies): #speedtest.net
             except Exception:
                 continue
             D = s.results.dict()
-            sql = insertRecordSql('speedtest', {'ip': D['client']['ip'], 'env-id': envId, 'download': D['download']/1000000, 'upload': D['upload']/1000000, 'ping': D['ping'], 'share-pic': D['share'], 'download-tracffic': D['bytes_received']/1000000, 'upload-tracffic': D['bytes_sent']/1000000, 'source': 'speedtest.net'})
-            print(sql)
-            c2 = dbConn.cursor()
-            c2.execute(sql)
-            c2.close()
-            sql = insertRecordSql('ip-info', {'ip': D['client']['ip'], 'ip-version': isIPv6(D['client']['ip']), 'country-code': D['client']['country'], 'isp': D['client']['isp'], 'latitude': D['client']['lat'], 'longitude': D['client']['lon'], 'source': 'speedtest.net'})
-            print(sql)
-            c2 = dbConn.cursor()
-            c2.execute(sql)
-            c2.close()
-            
-            dbConn.commit()
+            dbInsert('speedtest', {'ip': D['client']['ip'], 'env-id': envId, 'download': D['download']/1000000, 'upload': D['upload']/1000000, 'ping': D['ping'], 'share-pic': D['share'], 'download-tracffic': D['bytes_received']/1000000, 'upload-tracffic': D['bytes_sent']/1000000, 'source': 'speedtest.net'})
+            dbInsert('ip-info', {'ip': D['client']['ip'], 'ip-version': isIPv6(D['client']['ip']), 'country-code': D['client']['country'], 'isp': D['client']['isp'], 'latitude': D['client']['lat'], 'longitude': D['client']['lon'], 'source': 'speedtest.net'})
 
-def dumpSpeedProxies(IPnum = 10):
-    global dbConn, c, code2name
-    results = c.execute("select distinct ip,`country-code`,`env-id`,download,upload,ping from `speed-result`").fetchall()
+def code2name(code):
+    global code2nameDict, en2zhPath
+    if 'code2nameDict' not in dir(): 
+        import pycountry
+        code2nameDict = {}
+        en2zh = yaml.safe_load(open(en2zhPath, 'r', encoding='UTF-8'))
+        #print(en2zh)
+        for country in pycountry.countries:
+            code2nameDict[country.alpha_2] = en2zh[country.name] if country.name in en2zh else country.name
+    return code2nameDict[code] if code in code2nameDict else code
+
+def dumpSpeedProxies(IPnum = 10): # 输出到 ClashConfigRaw.yml
+    # 以 IP 标识节点，对每个节点计算网速、延迟，按网速排序，对每个国家取前 10 个，并验证是否可用
+    IPs = [x[0] for x in dbRead("select distinct ip from `speedtest` where ip in (select ip from `ip-info`)")]
     
-    #取得国家列表
-    countryCodes = list(set([x[1] for x in results]))
+    country, download, netflix = {}, {}, {}
+    for ip in IPs:
+        # 查询 IP 国家
+        results = dbRead("select `country-code`,source,time,province,city from `ip-info` where ip='%s'"%ip)
+        for source in ['myip.la', 'speedtest.net']:
+            result = [x for x in results if x[1] == source]
+            if len(result) > 0:
+                country[ip] = result[0][0]
+                if country[ip] == 'CN': country[ip] = '中国' + str(result[0][4])
+                break
+        if ip not in country: country[ip] = 'Unknown'
+        
+        # 查询 IP 网速（平均值）
+        results = dbRead("select `download`,source,time from `speedtest` where ip='%s' and source='speedtest.net'"%ip)
+        speeds = [x[0] for x in results]
+        download[ip] = sum(speeds)/len(speeds) if len(speeds) > 0 else -1
+        
+        # 查询奈飞支持
+        results = dbRead("select result,`country-code` from `region` where ip='%s' and site='Netflix' order by time desc"%ip)
+        if len(results) == 0:
+            netflix[ip] = ''
+        else:
+            netflix[ip] = ' 奈飞自制剧' if results[0][0] == 'Originals Only' else (' 奈飞%s'%code2name(results[0][1]) if results[0][0] == 'Yes' else '')
+        
+    # 取得国家列表
+    countryCodes = list(set(country.values()))
     
-    #按国家取 IPnum 个节点的 IP
-    output = []
-    for countryCode in countryCodes:
-        IPs = list(set([x[0] for x in results if x[1] == countryCode]))
-        download = []
-        for ip in IPs:
-            data = [x[3] for x in results if x[0] == ip]
-            download.append({'ip': ip, 'download': sum(data)/len(data)})
-        download = sorted(download, key = lambda i: i['download'], reverse=True)
-        for i in range(IPnum):
-            if i >= len(download): break
-            download[i]['rank'] = i + 1
-            download[i]['country'] = countryCode
-            output.append(download[i])
+    # 按国家取 IPnum 个节点的 IP
+    IPs = sorted(IPs, key = lambda i: download[i], reverse=True)
+    output = {}
+    proxyTypeIdDelay = {}
+    for ip in IPs:
+        if country[ip] not in output: output[country[ip]] = []
+        if len(output[country[ip]]) >= IPnum and netflix[ip] == '': continue # 奈飞节点，不受额度限制
+        # 查询 IP 对应的节点及延时（平均值）
+        results = dbRead("select ip.`proxy-type`,ip.`proxy-id`,avg(delay) from ip,delay where ip='%s' and `ip-type`=1 and success=1 and ip.`proxy-type`=delay.`proxy-type` and ip.`proxy-id`=delay.`proxy-id` group by ip.`proxy-type`,ip.`proxy-id`"%ip)
+        #results = dbRead("select ip.`proxy-type`,ip.`proxy-id`,avg(delay) from ip,delay,(select C.`proxy-type`,C.`proxy-id`,C.success from delay as C order by C.time desc group by C.`proxy-type`,C.`proxy-id`) where ip='%s' and `ip-type`=1 and success=1 and C.success=1 and ip.`proxy-type`=delay.`proxy-type` and ip.`proxy-id`=delay.`proxy-id` and ip.`proxy-type`=C.`proxy-type` and ip.`proxy-id`=C.`proxy-id` group by ip.`proxy-type`,ip.`proxy-id`"%ip)
+        if len(results) == 0: continue
+        results = sorted(results, key = lambda i: i[2])
+        for result in results: # 如果最新一次 delay 测试 Failed，则跳过
+            results2 = dbRead("select success from delay where `proxy-type`='%s' and `proxy-id`=%d order by time desc"%(result[0],result[1]))
+            if results2[0][0] == 1: break
+        if results2[0][0] == 1: 
+            proxyTypeIdDelay[ip] = result
+            output[country[ip]].append(ip)
     
-    #查询 IP 对应的节点
     nameParams = []
     proxies = []
-    for dict in output:
-        proxy = c.execute("select distinct `proxy-type`,`proxy-id` from ip where ip='%s' and `ip-type`=1"%dict['ip']).fetchall()[0]
-        proxies.append(c.execute("select * from `%s` where `id`=%s"%(proxy[0], proxy[1])).fetchall()[0])
-        delays = c.execute("select delay from `delay` where success=1 and `proxy-type`='%s' and `proxy-id`=%s"%(proxy[0], proxy[1])).fetchall()
-        nameParam = [(code2name[dict['country']] if dict['country'] in code2name else dict['country']), dict['rank'], int(dict['download']), (int(sum([x[0] for x in delays])/len(delays)) if len(delays)>0 else 0)]
-        netflix = c.execute("select result,`country-code` from `region` where ip='%s'"%dict['ip']).fetchall()
-        if len(netflix) == 0:
-            nameParam.append('')
-        else:
-            nameParam.append(' 奈飞自制剧' if netflix[0][0] == 'Originals Only' else (' 奈飞%s'%(code2name[netflix[0][1]] if netflix[0][1] in code2name else netflix[0][1]) if netflix[0][0] == 'Yes' else ''))
-        nameParams.append(nameParam)
+    for key in output:
+        for i, ip in enumerate(output[key]):
+            proxies.append(dbRead("select * from `%s` where `id`=%s"%(proxyTypeIdDelay[ip][0], proxyTypeIdDelay[ip][1]))[0])
+            nameParam = [code2name(key), i + 1, int(download[ip]), int(proxyTypeIdDelay[ip][2]), netflix[ip]]
+            nameParams.append(nameParam)
+    
     result = dumpProxies(proxies, '{2}{3} {4}Mbps {5}ms{6}', nameParams)
     configPath = os.path.join(path, 'ClashConfigRaw.yml')
     yaml.safe_dump(result, open(configPath, 'w', encoding='UTF-8'), allow_unicode=True)
 
 def testUnblockNefflix(proxies):
     def test():
-        headers={
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0',
-        }
+        headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'}
         try:
             r = requests.get("https://www.netflix.com/title/81215567", headers=headers, proxies=proxySet, timeout=(5, 10))
         except Exception:
@@ -541,26 +573,18 @@ def testUnblockNefflix(proxies):
                 return 'Yes', 'US'
         caseDict = {404: 'Originals Only', 403: 'No', 200: 'Yes', 0: 'Failed'}
         return caseDict[r.status_code], "Failed"
-    global dbConn, c, envId
+    global envId
     for proxy in proxies:
-        sql = "select ip from `ip` where `proxy-type`='{}' and `proxy-id`={} and `env-id`={} and `ip-version`={} and `ip-type`={}".format(proxy[1], proxy[0], envId, 0, 1)
-        result = c.execute(sql).fetchall()
-        sql = "select ip from `ip` where `proxy-type`='{}' and `proxy-id`={} and `env-id`={} and `ip-version`={} and `ip-type`={}".format(proxy[1], proxy[0], envId, 1, 1)
-        result2 = c.execute(sql).fetchall()
+        result = dbRead("select ip from `ip` where `proxy-type`='{}' and `proxy-id`={} and `env-id`={} and `ip-version`={} and `ip-type`={}".format(proxy[1], proxy[0], envId, 0, 1))
+        result2 = dbRead("select ip from `ip` where `proxy-type`='{}' and `proxy-id`={} and `env-id`={} and `ip-version`={} and `ip-type`={}".format(proxy[1], proxy[0], envId, 1, 1))
         if len(result) > 0 and len(result2) == 0: 
             ip = result[0][0]
-            sql = "select ip from `speedtest` where `ip`='{}' and `ip` not in (select ip from `region`)".format(ip)
-            result3 = c.execute(sql).fetchall()
+            result3 = dbRead("select ip from `speedtest` where `ip`='{}' and `ip` not in (select ip from `region` where site='Netflix')".format(ip))
             if len(result3) == 0: continue
             clash_switchProxy(proxy[1] + ' ' + str(proxy[0]))
             print('Use:', clash_getProxiesInfo('GLOBAL')['now'])
             result, country = test()
-            sql = insertRecordSql('region', {'ip': ip, 'ip-version': 0, 'result': result, 'country-code': country, 'site': 'Netflix'})
-            print(sql)
-            c2 = dbConn.cursor()
-            c2.execute(sql)
-            c2.close()
-            dbConn.commit()
+            dbInsert('region', {'ip': ip, 'ip-version': 0, 'result': result, 'country-code': country, 'site': 'Netflix'})
         else:
             continue
 
@@ -570,18 +594,30 @@ def getGithub():
 if __name__ == "__main__":
     setPaths()
     initialDB()
+    dbInsertThread(True)
     
     #clash订阅导入
-    urls = ['https://www.proxypool.ml/clash/proxies', 'https://hello.stgod.com/clash/proxies', 'https://193.123.234.61/clash/proxies', 'https://fq.lonxin.net/clash/proxies', 'https://free886.herokuapp.com/clash/proxies', 'https://149.248.8.112/clash/proxies', 'https://proxypool.fly.dev/clash/proxies', 'http://8.135.91.61/clash/proxies', 'http://antg.xyz/clash/proxies', 'https://proxy.51798.xyz/clash/proxies', 'https://sspool.herokuapp.com/clash/proxies', 'https://alexproxy003.herokuapp.com/clash/proxies', 'https://origamiboy.herokuapp.com/clash/proxies', 'https://hellopool.herokuapp.com/clash/proxies', 'http://guobang.herokuapp.com/clash/proxies', 'https://proxypool-guest997.herokuapp.com/clash/proxies', 'https://us-proxypool.herokuapp.com/clash/proxies', 'https://eu-proxypool.herokuapp.com/clash/proxies', 'https://proxypoolv2.herokuapp.com/clash/proxies']
+    #urls = ['https://www.proxypool.ml/clash/proxies', 'https://hello.stgod.com/clash/proxies', 'http://193.123.234.61/clash/proxies', 'https://fq.lonxin.net/clash/proxies', 'https://free886.herokuapp.com/clash/proxies', 'https://149.248.8.112/clash/proxies', 'https://proxypool.fly.dev/clash/proxies', 'http://8.135.91.61/clash/proxies', 'http://antg.xyz/clash/proxies', 'https://proxy.51798.xyz/clash/proxies', 'https://sspool.herokuapp.com/clash/proxies', 'https://alexproxy003.herokuapp.com/clash/proxies', 'https://origamiboy.herokuapp.com/clash/proxies', 'https://hellopool.herokuapp.com/clash/proxies', 'http://guobang.herokuapp.com/clash/proxies', 'https://proxypool-guest997.herokuapp.com/clash/proxies', 'https://us-proxypool.herokuapp.com/clash/proxies', 'https://eu-proxypool.herokuapp.com/clash/proxies', 'https://proxypoolv2.herokuapp.com/clash/proxies', 'https://emby.luoml.eu.org/clash/proxies', 'http://www.fuckgfw.tk/clash/proxies', 'https://etproxypool.ga/clash/proxies', 'https://hm2019721.ml/clash/proxies', 'https://free.kingfu.cf/clash/proxies', 'https://free.dswang.ga/clash/proxies', 'https://fq.lonxin.net/clash/proxies', 'https://www.linbaoz.com/clash/proxies', 'https://www.qunima.cc/clash/proxies', 'https://www.joemt.tk/clash/proxies', 'https://raw.githubusercontent.com/chfchf0306/clash/main/clash']
     setProxiesEnv('http://127.0.0.1:7890')
-    for url in urls:
-        print(url)
-        try:
-            r = requests.get(url, proxies=proxySet)
-        except Exception:
-            print('Failed')
-            continue
-        print(importProxies(r.text))
+    if 'urls' in dir():
+        for url in urls:
+            print(url)
+            try:
+                r = requests.get(url, proxies=proxySet)
+            except Exception:
+                try:
+                    r = requests.get(url, proxies=proxySet, verify=False)
+                except Exception:
+                    print('Http Failed')
+                    continue
+            try:
+                proxies = yaml.safe_load(r.text)
+            except Exception:
+                print('Failed')
+                continue
+            if proxies == None or 'proxies' not in proxies: continue
+            print(len(proxies['proxies']), importProxies(proxies))
+    
     
     attributes = {'ss': ['id', 'type', 'server', 'port', 'password', 'cipher', 'plugin', 'plugin-opts'], 
     'ssr': ['id', 'type', 'server', 'port', 'password', 'cipher', 'protocol', 'protocol-param', 'obfs', 'obfs-param'], 
@@ -590,17 +626,20 @@ if __name__ == "__main__":
     
     envId = 1 #浙江移动 100M
     
-    #test tcping  测过的，不测了
-    proxies = c.execute("select * from trojan where id not in (select `proxy-id` from tcping where `proxy-type`='trojan')").fetchall()
-    proxies += c.execute("select * from vmess where id not in (select `proxy-id` from tcping where `proxy-type`='vmess')").fetchall()
-    proxies += c.execute("select * from ss where id not in (select `proxy-id` from tcping where `proxy-type`='ss')").fetchall()
-    proxies += c.execute("select * from ssr where id not in (select `proxy-id` from tcping where `proxy-type`='ssr')").fetchall()
-    times = 10 #测 10 次
-    print('Tcping: %d 个节点，每个 %d 次' % (len(proxies), times))
+    #test tcping  
+    times = 10 # 没测过的，测 10 次；测试次数小于 10 的，再测 1 次；上次测试超过 4 小时的，再测 1 次
+    proxies = []
+    for proxyType in ['vmess', 'ssr', 'ss', 'trojan']:
+        proxies += dbRead("select * from `%s` where `id` not in (select `proxy-id` from `tcping` where `proxy-type`='%s')"%(proxyType,proxyType))
     proxyQueue = []
     for i in range(times):
         proxyQueue += proxies
-    multithread(testTcping, 64, proxyQueue)
+    for proxy in dbRead("SELECT * FROM (SELECT `proxy-type`, `proxy-id`, COUNT(*) as count FROM `tcping` GROUP BY `proxy-type`, `proxy-id`) WHERE count<%d;"%times):
+        proxyQueue += dbRead("select * from `%s` where `id`=%d" % (proxy[0], proxy[1]))
+    for proxy in dbRead("SELECT * FROM (SELECT `proxy-type`, `proxy-id`, MAX(time) as lasttime FROM `tcping` GROUP BY `proxy-type`, `proxy-id`) WHERE julianday('now') - julianday(lasttime)>1/6;"):
+        proxyQueue += dbRead("select * from `%s` where `id`=%d" % (proxy[0], proxy[1]))
+    print('Tcping: 100 线程，%d 个节点未测过，共需测 %d 次' % (len(proxies),len(proxyQueue)))
+    multiThread(testTcping, 100, proxyQueue)
     dbConn.commit()
     
     initClash()
@@ -608,47 +647,45 @@ if __name__ == "__main__":
     print(externalController, proxySetAddress)
     setProxiesEnv(proxySetAddress)
     
-    #test delay  测过的，不测了
-    proxies = c.execute("select * from ss where id in (select `proxy-id` from tcping where `proxy-type`='ss' and success=1) and id not in (select `proxy-id` from delay where `proxy-type`='ss')").fetchall()
-    proxies += c.execute("select * from ssr where id in (select `proxy-id` from tcping where `proxy-type`='ssr' and success=1) and id not in (select `proxy-id` from delay where `proxy-type`='ssr')").fetchall()
-    proxies += c.execute("select * from trojan where id in (select `proxy-id` from tcping where `proxy-type`='trojan' and success=1) and id not in (select `proxy-id` from delay where `proxy-type`='trojan')").fetchall()
-    proxies += c.execute("select * from vmess where id in (select `proxy-id` from tcping where `proxy-type`='vmess' and success=1) and id not in (select `proxy-id` from delay where `proxy-type`='vmess')").fetchall()
-    times = 10 #测 10 次
-    print('测延迟: %d 个节点，每个 %d 次' % (len(proxies), times))
+    #test delay  
+    times = 10 # 没测过的，测 10 次；测试次数小于 10 的，再测 1 次；上次测试超过 4 小时的，再测 1 次
+    proxies = []
+    for proxyType in ['vmess', 'ssr', 'ss', 'trojan']:
+        proxies += dbRead("select * from `%s` where `id` in (select `proxy-id` from `tcping` where `proxy-type`='%s' and success=1) and `id` not in (select `proxy-id` from `delay` where `proxy-type`='%s')"%(proxyType,proxyType,proxyType))
     proxyQueue = []
     for i in range(times):
         proxyQueue += proxies
-    multithread(testDelay, 32, proxyQueue)
+    for proxy in dbRead("SELECT * FROM (SELECT `proxy-type`, `proxy-id`, COUNT(*) as count FROM `delay` GROUP BY `proxy-type`, `proxy-id`) WHERE count<%d;"%times):
+        proxyQueue += dbRead("select * from `%s` where `id`=%d" % (proxy[0], proxy[1]))
+    for proxy in dbRead("SELECT * FROM (SELECT `proxy-type`, `proxy-id`, MAX(time) as lasttime FROM `delay` GROUP BY `proxy-type`, `proxy-id`) WHERE julianday('now') - julianday(lasttime)>1/6;"):
+        proxyQueue += dbRead("select * from `%s` where `id`=%d" % (proxy[0], proxy[1]))
+    print('测延迟: 64 线程，%d 次' % len(proxyQueue))
+    multiThread(testDelay, 64, proxyQueue)
     dbConn.commit()
     
     #get response ip 
-    proxies = c.execute("select * from ss where id in (select `proxy-id` from delay where `proxy-type`='ss' and success=1) and id not in (select `proxy-id` from ip where `proxy-type`='ss') order by id desc").fetchall()
-    proxies += c.execute("select * from ssr where id in (select `proxy-id` from delay where `proxy-type`='ssr' and success=1) and id not in (select `proxy-id` from ip where `proxy-type`='ssr') order by id desc").fetchall()
-    proxies += c.execute("select * from trojan where id in (select `proxy-id` from delay where `proxy-type`='trojan' and success=1) and id not in (select `proxy-id` from ip where `proxy-type`='trojan') order by id desc").fetchall()
-    proxies += c.execute("select * from vmess where id in (select `proxy-id` from delay where `proxy-type`='vmess' and success=1) and id not in (select `proxy-id` from ip where `proxy-type`='vmess') order by id desc").fetchall()
+    proxies = []
+    for proxyType in ['vmess', 'ssr', 'ss', 'trojan']:
+        proxies += dbRead("select * from `%s` where id in (select `proxy-id` from delay where `proxy-type`='%s' and success=1) and id not in (select `proxy-id` from ip where `proxy-type`='%s') order by id desc"%(proxyType,proxyType,proxyType))
     print('获取 IP: %d 个节点' % len(proxies))
     getIPs(proxies)
     dbConn.commit()
     
-    #test speed 
-    proxies = c.execute("select * from ss where id in (select `proxy-id` from ip where `proxy-type`='ss')").fetchall()
-    proxies += c.execute("select * from ssr where id in (select `proxy-id` from ip where `proxy-type`='ssr')").fetchall()
-    proxies += c.execute("select * from trojan where id in (select `proxy-id` from ip where `proxy-type`='trojan')").fetchall()
-    proxies += c.execute("select * from vmess where id in (select `proxy-id` from ip where `proxy-type`='vmess')").fetchall()
-    print('Speedtest: %d 个节点' % len(proxies))
-    testSpeed(proxies)
-    dbConn.commit()
+    # #test speed 
+    # proxies = []
+    # for proxyType in ['vmess', 'ssr', 'ss', 'trojan']:
+        # proxies += dbRead("select * from `%s` where id in (select `proxy-id` from ip where `proxy-type`='%s')"%(proxyType,proxyType))
+    # print('Speedtest: %d 个节点' % len(proxies))
+    # testSpeed(proxies)
+    # dbConn.commit()
     
     #test testUnblockNefflix 
-    proxies = c.execute("select * from ss where id in (select `proxy-id` from ip where `proxy-type`='ss')").fetchall()
-    proxies += c.execute("select * from ssr where id in (select `proxy-id` from ip where `proxy-type`='ssr')").fetchall()
-    proxies += c.execute("select * from trojan where id in (select `proxy-id` from ip where `proxy-type`='trojan')").fetchall()
-    proxies += c.execute("select * from vmess where id in (select `proxy-id` from ip where `proxy-type`='vmess')").fetchall()
+    proxies = []
+    for proxyType in ['vmess', 'ssr', 'ss', 'trojan']:
+        proxies += dbRead("select * from `%s` where id in (select `proxy-id` from ip where `proxy-type`='%s')"%(proxyType,proxyType))
     print('testUnblockNefflix: %d 个节点' % len(proxies))
     testUnblockNefflix(proxies)
     dbConn.commit()
-    
-    initCountryNameDict()
     
     # #print speed results
     # 
@@ -669,9 +706,8 @@ if __name__ == "__main__":
     dumpSpeedProxies()
     print('已输出可用代理')
     
-    # sql = "select * from ss where `"
-    input('执行完毕，回车结束')
     #Close clash 
     if clashPopenObj != None: clashPopenObj.kill()
+    dbInsertThread(False)
 
 
