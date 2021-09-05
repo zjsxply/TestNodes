@@ -1,4 +1,327 @@
 proxies:
+- cipher: chacha20-ietf
+  name: 中国香港1 136Mbps 504ms 奈飞自制剧
+  obfs: plain
+  password: renzhecloud
+  port: 3506
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: 183.232.56.125
+  type: ssr
+- cipher: chacha20-ietf
+  name: 中国香港2 135Mbps 304ms 奈飞自制剧
+  obfs: plain
+  password: renzhecloud
+  port: 3501
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: ultimate-ct-1.nodesub.com
+  type: ssr
+- alterId: 0
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 中国香港3 133Mbps 174ms
+  network: tcp
+  port: 9443
+  server: 120.232.214.25
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 908fb0cc-0cf3-4dc5-8868-8a2665b2c5f8
+  ws-path: /
+- alterId: 2
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 中国香港4 133Mbps 103ms 奈飞中国香港
+  network: tcp
+  port: 19120
+  server: 20.paopaoyun.xyz
+  skip-cert-verify: true
+  type: vmess
+  uuid: eb7dcdeb-bed2-3de9-b10a-4fdf78219fc8
+  ws-path: /
+- alterId: 0
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 中国香港5 132Mbps 525ms
+  network: tcp
+  port: 121
+  server: 120.232.214.25
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 908fb0cc-0cf3-4dc5-8868-8a2665b2c5f8
+  ws-path: /
+- cipher: chacha20-ietf
+  name: 中国香港6 130Mbps 433ms 奈飞Failed
+  obfs: plain
+  password: renzhecloud
+  port: 3505
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: advanced-cm-3.nodesub.com
+  type: ssr
+- alterId: 2
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 中国香港7 130Mbps 105ms 奈飞中国香港
+  network: tcp
+  port: 19119
+  server: 19.paopaoyun.xyz
+  skip-cert-verify: true
+  type: vmess
+  uuid: eb7dcdeb-bed2-3de9-b10a-4fdf78219fc8
+  ws-path: /
+- alterId: 0
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 中国香港8 129Mbps 297ms
+  network: tcp
+  port: 9444
+  server: 120.232.214.25
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 6d030d0c-8821-4e91-ba95-ef57c508ff18
+  ws-path: /
+- cipher: chacha20-ietf
+  name: 中国香港9 128Mbps 296ms 奈飞自制剧
+  obfs: plain
+  password: renzhecloud
+  port: 3504
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: cmrelay-basic-1.nodesub.com
+  type: ssr
+- alterId: 1
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 中国香港10 128Mbps 140ms 奈飞自制剧
+  network: ws
+  port: 10086
+  server: 52.175.62.204
+  skip-cert-verify: true
+  type: vmess
+  uuid: e43bc995-3990-4417-9c37-7853764aad6f
+  ws-path: /
+- alterId: 128
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 中国香港11 128Mbps 143ms 奈飞自制剧
+  network: ws
+  port: 51111
+  server: 18.162.116.217
+  skip-cert-verify: true
+  type: vmess
+  uuid: 1d546bcf-491c-42d3-a705-7f43cb844666
+  ws-path: /
+- alterId: 0
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 中国香港12 126Mbps 114ms 奈飞中国香港
+  network: tcp
+  port: 8311
+  server: 22872.cn-group-d-inbound-cnshdjsdv.loc.ddns.click
+  servername: cdn.remote-control.rscc1272900.com
+  skip-cert-verify: true
+  type: vmess
+  uuid: d65583fc-23a5-46a4-2ecd-22cbb7cca8de
+  ws-path: /device-control/stream/
+- alterId: 1
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 中国香港13 125Mbps 269ms 奈飞自制剧
+  network: ws
+  port: 443
+  server: azhk.13.lzjc.xyz
+  skip-cert-verify: true
+  type: vmess
+  uuid: 0a647779-b3ba-41e4-94c3-597f2a28fef0
+  ws-path: /
+- cipher: chacha20-ietf
+  name: 中国香港14 123Mbps 303ms 奈飞自制剧
+  obfs: plain
+  password: renzhecloud
+  port: 3507
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: ultimate-ct-1.nodesub.com
+  type: ssr
+- alterId: 2
+  cipher: chacha20-poly1305
+  name: 中国香港15 122Mbps 536ms 奈飞新加坡
+  network: ws
+  port: 10799
+  server: gzcm.sspro.nl
+  skip-cert-verify: false
+  tls: false
+  type: vmess
+  uuid: fd252902-aac0-36be-8420-a3b23fe803af
+  ws-headers:
+    Host: none
+  ws-path: /ssrgr-hk18
+- alterId: 64
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 中国香港16 121Mbps 212ms 奈飞自制剧
+  network: tcp
+  port: 10879
+  server: 34.92.71.126
+  skip-cert-verify: true
+  type: vmess
+  uuid: 362ba693-1cbc-4d10-8973-f730f0ebfe34
+  ws-path: /
+- alterId: 2
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 中国香港17 120Mbps 204ms 奈飞中国香港
+  network: tcp
+  port: 19108
+  server: 8.paopaoyun.xyz
+  skip-cert-verify: true
+  type: vmess
+  uuid: eb7dcdeb-bed2-3de9-b10a-4fdf78219fc8
+  ws-path: /
+- alterId: 0
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 中国香港18 118Mbps 175ms 奈飞自制剧
+  network: tcp
+  port: 122
+  server: 120.232.214.25
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 908fb0cc-0cf3-4dc5-8868-8a2665b2c5f8
+  ws-path: /
+- alterId: 2
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 中国香港19 116Mbps 137ms 奈飞自制剧
+  network: ws
+  port: 80
+  server: hk2.free80ml.tk
+  skip-cert-verify: true
+  type: vmess
+  uuid: 35fa01b6-aff0-3350-81d3-9185e6be42d1
+  ws-path: /
+- name: 中国香港20 116Mbps 212ms 奈飞自制剧
+  password: ea6e0d6a-2e18-3afb-82d8-2408de425832
+  port: 16001
+  server: hk1.ifl520.xyz
+  skip-cert-verify: true
+  sni: hk1.ifl520.xyz
+  type: trojan
+- cipher: chacha20-ietf
+  name: 中国香港21 107Mbps 300ms 奈飞中国香港
+  obfs: plain
+  password: renzhecloud
+  port: 3503
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: 183.232.56.125
+  type: ssr
+- cipher: chacha20-ietf
+  name: 中国香港22 104Mbps 464ms 奈飞中国香港
+  obfs: plain
+  password: renzhecloud
+  port: 3500
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: advanced-cm-3.nodesub.com
+  type: ssr
+- cipher: chacha20-ietf
+  name: 中国香港23 104Mbps 258ms 奈飞中国香港
+  obfs: plain
+  obfs-param: 8c89b160849.microsoft.com
+  password: renzhecloud
+  port: 1063
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: hkhktrenew.nodesub.com
+  type: ssr
+- cipher: chacha20-ietf
+  name: 中国香港24 98Mbps 564ms 奈飞Failed
+  obfs: plain
+  password: renzhecloud
+  port: 3509
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: 183.232.56.125
+  type: ssr
+- name: 中国香港25 81Mbps 158ms 奈飞自制剧
+  password: ea6e0d6a-2e18-3afb-82d8-2408de425832
+  port: 16005
+  server: hk2.ifl520.xyz
+  skip-cert-verify: true
+  sni: hk2.ifl520.xyz
+  type: trojan
+- alterId: 64
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 中国香港26 39Mbps 368ms 奈飞自制剧
+  network: ws
+  port: 443
+  server: 23.224.191.13
+  servername: www.64212792.xyz
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  ws-headers:
+    HOST: www.64212792.xyz
+  ws-path: /footers
+- cipher: chacha20-ietf
+  name: 中国香港27 38Mbps 300ms 奈飞中国香港
+  obfs: plain
+  password: renzhecloud
+  port: 3503
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: advanced-cm-3.nodesub.com
+  type: ssr
+- cipher: aes-256-gcm
+  name: 中国香港28 8Mbps 109ms 奈飞自制剧
+  password: PCnnH6SQSnfoS27
+  port: 8090
+  server: 118.107.244.114
+  type: ss
+- name: 中国香港29 8Mbps 379ms 奈飞自制剧
+  password: 18e513fe-f7f4-353d-84ca-bc9646fb2528mielink
+  port: 443
+  server: kaizen-hk-4.cn0.me
+  skip-cert-verify: true
+  type: trojan
+- cipher: aes-256-gcm
+  name: 中国香港30 7Mbps 111ms 奈飞自制剧
+  password: faBAoD54k87UJG7
+  port: 2375
+  server: 118.107.244.111
+  type: ss
+- cipher: aes-256-cfb
+  name: 中国香港31 1Mbps 279ms 奈飞中国香港
+  obfs: plain
+  obfs-param: ''
+  password: BR9ubV
+  port: 27235
+  protocol: origin
+  protocol-param: ''
+  server: 103.66.218.221
+  type: ssr
 - alterId: 2
   cipher: auto
   h2-opts: {}
@@ -35,11 +358,20 @@ proxies:
   type: vmess
   uuid: eb7dcdeb-bed2-3de9-b10a-4fdf78219fc8
   ws-path: /
+- cipher: chacha20-ietf
+  name: 新加坡4 131Mbps 603ms 奈飞自制剧
+  obfs: plain
+  password: renzhecloud
+  port: 6503
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: cmrelay-basic-2.nodesub.com
+  type: ssr
 - alterId: 2
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 新加坡4 130Mbps 268ms 奈飞新加坡
+  name: 新加坡5 130Mbps 268ms 奈飞新加坡
   network: tcp
   port: 19109
   server: 9.paopaoyun.xyz
@@ -51,7 +383,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 新加坡5 129Mbps 303ms 奈飞自制剧
+  name: 新加坡6 129Mbps 303ms 奈飞自制剧
   network: tcp
   port: 19112
   server: 12.paopaoyun.xyz
@@ -59,8 +391,29 @@ proxies:
   type: vmess
   uuid: eb7dcdeb-bed2-3de9-b10a-4fdf78219fc8
   ws-path: /
+- alterId: 2
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 新加坡7 127Mbps 166ms 奈飞自制剧
+  network: tcp
+  port: 19115
+  server: 15.paopaoyun.xyz
+  skip-cert-verify: true
+  type: vmess
+  uuid: eb7dcdeb-bed2-3de9-b10a-4fdf78219fc8
+  ws-path: /
 - cipher: chacha20-ietf
-  name: 新加坡6 128Mbps 448ms 奈飞自制剧
+  name: 新加坡8 127Mbps 451ms 奈飞自制剧
+  obfs: plain
+  password: renzhecloud
+  port: 6501
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: advanced-cm-3.nodesub.com
+  type: ssr
+- cipher: chacha20-ietf
+  name: 新加坡9 127Mbps 420ms 奈飞自制剧
   obfs: plain
   password: renzhecloud
   port: 6500
@@ -69,46 +422,34 @@ proxies:
   server: 120.232.215.239
   type: ssr
 - cipher: chacha20-ietf
-  name: 新加坡7 128Mbps 486ms 奈飞自制剧
+  name: 新加坡10 126Mbps 215ms 奈飞自制剧
   obfs: plain
   password: renzhecloud
-  port: 6501
+  port: 6500
   protocol: auth_aes128_sha1
   protocol-param: 160849:TljUf8
   server: advanced-cm-3.nodesub.com
   type: ssr
-- alterId: 2
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 新加坡8 127Mbps 166ms 奈飞自制剧
-  network: tcp
-  port: 19115
-  server: 15.paopaoyun.xyz
-  skip-cert-verify: true
-  type: vmess
-  uuid: eb7dcdeb-bed2-3de9-b10a-4fdf78219fc8
-  ws-path: /
 - cipher: chacha20-ietf-poly1305
-  name: 新加坡9 126Mbps 271ms 奈飞自制剧
+  name: 新加坡11 126Mbps 271ms 奈飞自制剧
   password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS
   port: 18331
   server: 13.213.251.185
   type: ss
 - cipher: chacha20-ietf
-  name: 新加坡10 125Mbps 583ms 奈飞自制剧
+  name: 新加坡12 125Mbps 650ms 奈飞自制剧
   obfs: plain
   password: renzhecloud
-  port: 6503
+  port: 6502
   protocol: auth_aes128_sha1
   protocol-param: 160849:TljUf8
-  server: 120.232.215.239
+  server: cmrelay-basic-2.nodesub.com
   type: ssr
 - alterId: 2
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 新加坡11 121Mbps 276ms 奈飞自制剧
+  name: 新加坡13 121Mbps 276ms 奈飞自制剧
   network: tcp
   port: 19113
   server: 13.paopaoyun.xyz
@@ -116,7 +457,7 @@ proxies:
   type: vmess
   uuid: eb7dcdeb-bed2-3de9-b10a-4fdf78219fc8
   ws-path: /
-- name: 新加坡12 112Mbps 266ms 奈飞自制剧
+- name: 新加坡14 112Mbps 266ms 奈飞自制剧
   password: 36ebef7d1b1d6205fd0c55f28800e674
   port: 443
   server: sg-server-01.selfupay.com
@@ -126,7 +467,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 新加坡13 111Mbps 361ms 奈飞自制剧
+  name: 新加坡15 111Mbps 361ms 奈飞自制剧
   network: ws
   port: 10085
   server: sg2.earths.team
@@ -135,18 +476,18 @@ proxies:
   uuid: e43bc995-3990-4417-9c37-7853764aad6f
   ws-path: /
 - cipher: chacha20-ietf-poly1305
-  name: 新加坡14 108Mbps 187ms 奈飞自制剧
+  name: 新加坡16 108Mbps 187ms 奈飞自制剧
   password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS
   port: 18332
   server: 54.251.230.216
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 新加坡15 106Mbps 311ms 奈飞自制剧
+  name: 新加坡17 106Mbps 311ms 奈飞自制剧
   password: G!yBwPWH3Vao
   port: 804
   server: 185.128.24.34
   type: ss
-- name: 新加坡16 98Mbps 403ms 奈飞自制剧
+- name: 新加坡18 98Mbps 403ms 奈飞自制剧
   password: ea6e0d6a-2e18-3afb-82d8-2408de425832
   port: 17001
   server: sg1.ifl520.xyz
@@ -154,17 +495,17 @@ proxies:
   sni: sg1.ifl520.xyz
   type: trojan
 - cipher: chacha20-ietf
-  name: 新加坡17 98Mbps 614ms 奈飞自制剧
+  name: 新加坡19 98Mbps 584ms 奈飞自制剧
   obfs: plain
   password: renzhecloud
-  port: 6500
+  port: 6504
   protocol: auth_aes128_sha1
   protocol-param: 160849:TljUf8
-  server: 120.232.214.201
+  server: 120.232.215.239
   type: ssr
 - alterId: 2
   cipher: chacha20-poly1305
-  name: 新加坡18 93Mbps 562ms 奈飞自制剧
+  name: 新加坡20 93Mbps 493ms 奈飞自制剧
   network: ws
   port: 10799
   server: gzcm.sspro.nl
@@ -175,7 +516,7 @@ proxies:
   ws-headers:
     Host: none
   ws-path: /ssrgr-sg07
-- name: 新加坡19 93Mbps 628ms 奈飞自制剧
+- name: 新加坡21 93Mbps 581ms 奈飞自制剧
   password: 7836137d-2db0-4809-9b57-ed14cf2ed4ce
   port: 443
   server: www.ligonwen.cf
@@ -183,12 +524,30 @@ proxies:
   sni: www.ligonwen.cf
   type: trojan
 - cipher: chacha20-ietf-poly1305
-  name: 新加坡20 80Mbps 335ms 奈飞自制剧
+  name: 新加坡22 80Mbps 335ms 奈飞自制剧
   password: G!yBwPWH3Vao
   port: 810
   server: 37.120.151.14
   type: ss
-- name: 新加坡21 68Mbps 768ms 奈飞自制剧
+- cipher: chacha20-ietf
+  name: 新加坡23 71Mbps 209ms 奈飞自制剧
+  obfs: plain
+  password: renzhecloud
+  port: 6500
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: 120.232.215.240
+  type: ssr
+- cipher: chacha20-ietf
+  name: 新加坡24 68Mbps 527ms 奈飞自制剧
+  obfs: plain
+  password: renzhecloud
+  port: 6500
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: ultimate-ct-1.nodesub.com
+  type: ssr
+- name: 新加坡25 68Mbps 768ms 奈飞自制剧
   password: 7x42LetRa0
   port: 4443
   server: 188.166.242.117
@@ -198,7 +557,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 新加坡22 67Mbps 278ms 奈飞新加坡
+  name: 新加坡26 67Mbps 278ms 奈飞新加坡
   network: tcp
   port: 19106
   server: 6.paopaoyun.xyz
@@ -208,7 +567,7 @@ proxies:
   ws-path: /
 - alterId: 2
   cipher: chacha20-poly1305
-  name: 新加坡23 52Mbps 910ms 奈飞自制剧
+  name: 新加坡27 52Mbps 849ms 奈飞自制剧
   network: ws
   port: 10799
   server: gzcm.sspro.nl
@@ -219,150 +578,9 @@ proxies:
   ws-headers:
     Host: none
   ws-path: /ssrgr-sg3
-- cipher: chacha20-ietf
-  name: 新加坡24 14Mbps 210ms 奈飞自制剧
-  obfs: plain
-  password: renzhecloud
-  port: 6500
-  protocol: auth_aes128_sha1
-  protocol-param: 160849:TljUf8
-  server: 120.232.215.240
-  type: ssr
-- alterId: 0
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港1 133Mbps 174ms
-  network: tcp
-  port: 9443
-  server: 120.232.214.25
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 908fb0cc-0cf3-4dc5-8868-8a2665b2c5f8
-  ws-path: /
-- alterId: 2
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港2 133Mbps 103ms 奈飞中国香港
-  network: tcp
-  port: 19120
-  server: 20.paopaoyun.xyz
-  skip-cert-verify: true
-  type: vmess
-  uuid: eb7dcdeb-bed2-3de9-b10a-4fdf78219fc8
-  ws-path: /
-- alterId: 64
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港3 133Mbps 352ms 奈飞自制剧
-  port: 80
-  server: af02.uwork.mobi
-  skip-cert-verify: true
-  type: vmess
-  uuid: 00000000-0000-0000-0000-000000000001
-  ws-path: /
-- alterId: 0
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港4 132Mbps 525ms
-  network: tcp
-  port: 121
-  server: 120.232.214.25
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 908fb0cc-0cf3-4dc5-8868-8a2665b2c5f8
-  ws-path: /
-- cipher: chacha20-ietf
-  name: 中国香港5 130Mbps 453ms 奈飞Failed
-  obfs: plain
-  password: renzhecloud
-  port: 3505
-  protocol: auth_aes128_sha1
-  protocol-param: 160849:TljUf8
-  server: advanced-cm-3.nodesub.com
-  type: ssr
-- alterId: 2
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港6 130Mbps 105ms 奈飞中国香港
-  network: tcp
-  port: 19119
-  server: 19.paopaoyun.xyz
-  skip-cert-verify: true
-  type: vmess
-  uuid: eb7dcdeb-bed2-3de9-b10a-4fdf78219fc8
-  ws-path: /
-- alterId: 0
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港7 129Mbps 297ms
-  network: tcp
-  port: 9444
-  server: 120.232.214.25
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 6d030d0c-8821-4e91-ba95-ef57c508ff18
-  ws-path: /
-- alterId: 1
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港8 128Mbps 140ms 奈飞自制剧
-  network: ws
-  port: 10086
-  server: 52.175.62.204
-  skip-cert-verify: true
-  type: vmess
-  uuid: e43bc995-3990-4417-9c37-7853764aad6f
-  ws-path: /
-- alterId: 128
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港9 128Mbps 143ms 奈飞自制剧
-  network: ws
-  port: 51111
-  server: 18.162.116.217
-  skip-cert-verify: true
-  type: vmess
-  uuid: 1d546bcf-491c-42d3-a705-7f43cb844666
-  ws-path: /
-- alterId: 0
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港10 126Mbps 114ms 奈飞中国香港
-  network: tcp
-  port: 8311
-  server: 22872.cn-group-d-inbound-cnshdjsdv.loc.ddns.click
-  servername: cdn.remote-control.rscc1272900.com
-  skip-cert-verify: true
-  type: vmess
-  uuid: d65583fc-23a5-46a4-2ecd-22cbb7cca8de
-  ws-path: /device-control/stream/
-- alterId: 1
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港11 125Mbps 281ms 奈飞自制剧
-  network: ws
-  port: 443
-  server: azhk.13.lzjc.xyz
-  skip-cert-verify: true
-  type: vmess
-  uuid: 0a647779-b3ba-41e4-94c3-597f2a28fef0
-  ws-path: /
 - alterId: 2
   cipher: chacha20-poly1305
-  name: 中国香港12 122Mbps 602ms 奈飞新加坡
+  name: 新加坡28 48Mbps 703ms 奈飞自制剧
   network: ws
   port: 10799
   server: gzcm.sspro.nl
@@ -372,158 +590,9 @@ proxies:
   uuid: fd252902-aac0-36be-8420-a3b23fe803af
   ws-headers:
     Host: none
-  ws-path: /ssrgr-hk18
-- alterId: 64
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港13 121Mbps 212ms 奈飞自制剧
-  network: tcp
-  port: 10879
-  server: 34.92.71.126
-  skip-cert-verify: true
-  type: vmess
-  uuid: 362ba693-1cbc-4d10-8973-f730f0ebfe34
-  ws-path: /
-- alterId: 2
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港14 120Mbps 204ms 奈飞中国香港
-  network: tcp
-  port: 19108
-  server: 8.paopaoyun.xyz
-  skip-cert-verify: true
-  type: vmess
-  uuid: eb7dcdeb-bed2-3de9-b10a-4fdf78219fc8
-  ws-path: /
-- alterId: 2
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港15 116Mbps 137ms 奈飞自制剧
-  network: ws
-  port: 80
-  server: hk2.free80ml.tk
-  skip-cert-verify: true
-  type: vmess
-  uuid: 35fa01b6-aff0-3350-81d3-9185e6be42d1
-  ws-path: /
-- name: 中国香港16 116Mbps 212ms 奈飞自制剧
-  password: ea6e0d6a-2e18-3afb-82d8-2408de425832
-  port: 16001
-  server: hk1.ifl520.xyz
-  skip-cert-verify: true
-  sni: hk1.ifl520.xyz
-  type: trojan
+  ws-path: /ssrgr-sg01
 - cipher: chacha20-ietf
-  name: 中国香港17 107Mbps 300ms 奈飞中国香港
-  obfs: plain
-  password: renzhecloud
-  port: 3501
-  protocol: auth_aes128_sha1
-  protocol-param: 160849:TljUf8
-  server: advanced-cm-1.nodesub.com
-  type: ssr
-- cipher: chacha20-ietf
-  name: 中国香港18 104Mbps 501ms 奈飞中国香港
-  obfs: plain
-  password: renzhecloud
-  port: 3500
-  protocol: auth_aes128_sha1
-  protocol-param: 160849:TljUf8
-  server: 120.232.214.158
-  type: ssr
-- cipher: chacha20-ietf
-  name: 中国香港19 104Mbps 258ms 奈飞中国香港
-  obfs: plain
-  obfs-param: 8c89b160849.microsoft.com
-  password: renzhecloud
-  port: 1063
-  protocol: auth_aes128_sha1
-  protocol-param: 160849:TljUf8
-  server: hkhktrenew.nodesub.com
-  type: ssr
-- name: 中国香港20 81Mbps 158ms 奈飞自制剧
-  password: ea6e0d6a-2e18-3afb-82d8-2408de425832
-  port: 16005
-  server: hk2.ifl520.xyz
-  skip-cert-verify: true
-  sni: hk2.ifl520.xyz
-  type: trojan
-- cipher: chacha20-ietf
-  name: 中国香港21 61Mbps 650ms 奈飞Failed
-  obfs: plain
-  password: renzhecloud
-  port: 3509
-  protocol: auth_aes128_sha1
-  protocol-param: 160849:TljUf8
-  server: 183.232.56.125
-  type: ssr
-- alterId: 64
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港22 39Mbps 368ms 奈飞自制剧
-  network: ws
-  port: 443
-  server: 23.224.191.13
-  servername: www.64212792.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-headers:
-    HOST: www.64212792.xyz
-  ws-path: /footers
-- cipher: chacha20-ietf
-  name: 中国香港23 38Mbps 483ms 奈飞中国香港
-  obfs: plain
-  password: renzhecloud
-  port: 3504
-  protocol: auth_aes128_sha1
-  protocol-param: 160849:TljUf8
-  server: 120.232.214.158
-  type: ssr
-- cipher: aes-256-gcm
-  name: 中国香港24 8Mbps 109ms 奈飞自制剧
-  password: PCnnH6SQSnfoS27
-  port: 8090
-  server: 118.107.244.114
-  type: ss
-- name: 中国香港25 8Mbps 379ms 奈飞自制剧
-  password: 18e513fe-f7f4-353d-84ca-bc9646fb2528mielink
-  port: 443
-  server: kaizen-hk-4.cn0.me
-  skip-cert-verify: true
-  type: trojan
-- cipher: aes-256-gcm
-  name: 中国香港26 7Mbps 111ms 奈飞自制剧
-  password: faBAoD54k87UJG7
-  port: 2375
-  server: 118.107.244.111
-  type: ss
-- cipher: aes-256-cfb
-  name: 中国香港27 1Mbps 279ms 奈飞中国香港
-  obfs: plain
-  obfs-param: ''
-  password: BR9ubV
-  port: 27235
-  protocol: origin
-  protocol-param: ''
-  server: 103.66.218.221
-  type: ssr
-- cipher: chacha20-ietf
-  name: 日本1 129Mbps 371ms 奈飞Failed
-  obfs: plain
-  password: renzhecloud
-  port: 4504
-  protocol: auth_aes128_sha1
-  protocol-param: 160849:TljUf8
-  server: cmrelay-basic-2.nodesub.com
-  type: ssr
-- cipher: chacha20-ietf
-  name: 日本2 128Mbps 1055ms 奈飞日本
+  name: 日本1 128Mbps 916ms 奈飞日本
   obfs: plain
   password: renzhecloud
   port: 4505
@@ -532,7 +601,7 @@ proxies:
   server: cmrelay-basic-2.nodesub.com
   type: ssr
 - cipher: chacha20-ietf
-  name: 日本3 124Mbps 215ms 奈飞日本
+  name: 日本2 124Mbps 213ms 奈飞日本
   obfs: plain
   password: renzhecloud
   port: 4504
@@ -540,11 +609,33 @@ proxies:
   protocol-param: 160849:TljUf8
   server: 120.232.215.239
   type: ssr
+- alterId: 0
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 日本3 123Mbps 322ms
+  network: tcp
+  port: 113
+  server: 120.232.214.25
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 6280ab7f-8a8a-47fe-b036-ff2922154981
+  ws-path: /
+- cipher: chacha20-ietf
+  name: 日本4 120Mbps 344ms 奈飞Failed
+  obfs: plain
+  password: renzhecloud
+  port: 4504
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: cmrelay-basic-2.nodesub.com
+  type: ssr
 - alterId: 64
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 日本4 118Mbps 715ms 奈飞日本
+  name: 日本5 118Mbps 658ms 奈飞日本
   port: 80
   server: af01.uwork.mobi
   skip-cert-verify: true
@@ -553,7 +644,7 @@ proxies:
   ws-path: /
 - alterId: 1
   cipher: auto
-  name: 日本5 117Mbps 573ms 奈飞自制剧
+  name: 日本6 117Mbps 508ms 奈飞自制剧
   network: ws
   port: 8443
   server: db.vpnbro.ml
@@ -564,7 +655,7 @@ proxies:
   ws-headers:
     Host: db.vpnbro.ml
   ws-path: /v2ray
-- name: 日本6 116Mbps 380ms 奈飞自制剧
+- name: 日本7 116Mbps 380ms 奈飞自制剧
   password: ea6e0d6a-2e18-3afb-82d8-2408de425832
   port: 15001
   server: jp1.ifl520.xyz
@@ -575,7 +666,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 日本7 115Mbps 358ms 奈飞自制剧
+  name: 日本8 115Mbps 358ms 奈飞自制剧
   network: ws
   port: 1016
   server: jp2.uuv2.co.uk
@@ -588,7 +679,7 @@ proxies:
     HOST: jp2.uuv2.co.uk
   ws-path: /TG@mftizi
 - cipher: chacha20-ietf
-  name: 日本8 115Mbps 215ms 奈飞日本
+  name: 日本9 115Mbps 215ms 奈飞日本
   obfs: plain
   obfs-param: 8c89b160849.microsoft.com
   password: renzhecloud
@@ -601,7 +692,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 日本9 115Mbps 356ms 奈飞日本
+  name: 日本10 115Mbps 356ms 奈飞日本
   network: ws
   port: 8585
   server: jp1.earths.team
@@ -610,13 +701,13 @@ proxies:
   uuid: e43bc995-3990-4417-9c37-7853764aad6f
   ws-path: /
 - cipher: aes-256-gcm
-  name: 日本10 114Mbps 196ms 奈飞日本
+  name: 日本11 114Mbps 196ms 奈飞日本
   password: jdjhdijhfuihduifhuifheuwifdhuiewhdio
   port: 11451
   server: 35.73.227.22
   type: ss
 - cipher: aes-256-cfb
-  name: 日本11 112Mbps 256ms 奈飞自制剧
+  name: 日本12 112Mbps 256ms 奈飞自制剧
   obfs: tls1.2_ticket_auth
   password: 3H2aN5Gnm
   port: 8081
@@ -624,7 +715,7 @@ proxies:
   server: 13.231.43.203
   type: ssr
 - cipher: chacha20-ietf
-  name: 日本12 110Mbps 194ms 奈飞日本
+  name: 日本13 110Mbps 194ms 奈飞日本
   obfs: plain
   password: renzhecloud
   port: 4503
@@ -634,7 +725,7 @@ proxies:
   type: ssr
 - alterId: 2
   cipher: chacha20-poly1305
-  name: 日本13 102Mbps 645ms 奈飞自制剧
+  name: 日本14 102Mbps 575ms 奈飞自制剧
   network: ws
   port: 10799
   server: gzcm.sspro.nl
@@ -645,7 +736,7 @@ proxies:
   ws-headers:
     Host: none
   ws-path: /ssrgr-jp3
-- name: 日本14 99Mbps 391ms 奈飞自制剧
+- name: 日本15 99Mbps 391ms 奈飞自制剧
   password: ea6e0d6a-2e18-3afb-82d8-2408de425832
   port: 15003
   server: jp2.ifl520.xyz
@@ -653,7 +744,7 @@ proxies:
   sni: jp2.ifl520.xyz
   type: trojan
 - cipher: chacha20-ietf
-  name: 日本15 98Mbps 612ms 奈飞日本
+  name: 日本16 98Mbps 564ms 奈飞日本
   obfs: plain
   password: renzhecloud
   port: 4501
@@ -662,7 +753,16 @@ proxies:
   server: ultimate-ct-1.nodesub.com
   type: ssr
 - cipher: chacha20-ietf
-  name: 日本16 60Mbps 494ms 奈飞日本
+  name: 日本17 66Mbps 232ms 奈飞日本
+  obfs: plain
+  password: renzhecloud
+  port: 4500
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: ultimate-ct-1.nodesub.com
+  type: ssr
+- cipher: chacha20-ietf
+  name: 日本18 60Mbps 502ms 奈飞日本
   obfs: plain
   password: renzhecloud
   port: 4500
@@ -671,7 +771,7 @@ proxies:
   server: 120.232.214.201
   type: ssr
 - cipher: chacha20-ietf-poly1305
-  name: 日本17 29Mbps 821ms 奈飞自制剧
+  name: 日本19 29Mbps 821ms 奈飞自制剧
   password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS
   port: 18337
   server: 154.17.22.153
@@ -680,7 +780,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 日本18 24Mbps 290ms 奈飞自制剧
+  name: 日本20 24Mbps 290ms 奈飞自制剧
   network: ws
   port: 29617
   server: sn1234.xyz
@@ -692,7 +792,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 日本19 3Mbps 1317ms 奈飞自制剧
+  name: 日本21 3Mbps 1317ms 奈飞自制剧
   network: ws
   port: 443
   server: 3.112.189.36
@@ -704,7 +804,7 @@ proxies:
     Host: jp2.octopusvpn.team
   ws-path: /octopusvpn/
 - cipher: rc4-md5
-  name: 日本20 0Mbps 222ms 奈飞日本
+  name: 日本22 0Mbps 222ms 奈飞日本
   obfs: plain
   password: passfw2xs4e!
   port: 8333
@@ -746,8 +846,8 @@ proxies:
   type: ss
 - cipher: aes-256-gcm
   name: 中国台湾4 101Mbps 80ms
-  password: t2JnnFqjDMmzWurseJPgBsYY
-  port: 47553
+  password: LkFAzkzXkSCRYa2CsRdL8cGb
+  port: 34815
   server: 103.152.151.20
   type: ss
 - cipher: aes-256-gcm
@@ -775,7 +875,7 @@ proxies:
   server: 2.58.242.133
   type: ss
 - cipher: aes-256-gcm
-  name: 中国台湾9 100Mbps 87ms
+  name: 中国台湾9 100Mbps 89ms
   password: pjeDhAJGuML8xKUxcjRqq6a9
   port: 35371
   server: 103.152.151.68
@@ -790,7 +890,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 中国台湾11 94Mbps 213ms 奈飞中国台湾
+  name: 中国台湾11 94Mbps 214ms 奈飞中国台湾
   network: tcp
   port: 10086
   server: vtwonet-tw-a.qjnodeip.xyz
@@ -806,7 +906,7 @@ proxies:
   type: ss
 - alterId: 0
   cipher: auto
-  name: 中国台湾13 14Mbps 915ms 奈飞自制剧
+  name: 中国台湾13 14Mbps 803ms 奈飞自制剧
   port: 28879
   server: 35.201.218.125
   skip-cert-verify: false
@@ -814,7 +914,7 @@ proxies:
   type: vmess
   uuid: 8f55c99d-d400-47d5-a949-638204907e0b
 - cipher: chacha20-ietf
-  name: 中国台湾14 11Mbps 197ms 奈飞中国台湾
+  name: 中国台湾14 11Mbps 191ms 奈飞中国台湾
   obfs: plain
   password: renzhecloud
   port: 3025
@@ -823,7 +923,7 @@ proxies:
   server: 120.232.214.201
   type: ssr
 - cipher: chacha20-ietf
-  name: 中国台湾15 10Mbps 167ms 奈飞中国台湾
+  name: 中国台湾15 10Mbps 276ms 奈飞中国台湾
   obfs: plain
   password: renzhecloud
   port: 3025
@@ -845,7 +945,7 @@ proxies:
   ws-path: /
 - alterId: 2
   cipher: chacha20-poly1305
-  name: 印度1 107Mbps 916ms 奈飞自制剧
+  name: 印度1 107Mbps 800ms 奈飞自制剧
   network: ws
   port: 10799
   server: gzcm.sspro.nl
@@ -902,14 +1002,14 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 印度8 16Mbps 1688ms
+  name: 印度8 16Mbps 1642ms
   network: ws
   port: 443
   server: in01.v2net.top
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: 2C42D52D-79DE-B0F4-E5AC-FD554BC757E5
+  uuid: 98C330C9-18E2-4383-7671-244300271813
   ws-path: /ray
 - cipher: aes-256-gcm
   name: 印度9 12Mbps 299ms
@@ -918,9 +1018,9 @@ proxies:
   server: 165.231.253.147
   type: ss
 - cipher: aes-256-gcm
-  name: 印度10 3Mbps 379ms
-  password: Y9GcTPemHMKEkrfGQPJqFDNr
-  port: 49653
+  name: 印度10 3Mbps 383ms
+  password: apqQgXJyVDsdJMAYV4xspRFK
+  port: 48089
   server: 103.39.132.187
   type: ss
 - cipher: aes-256-gcm
@@ -929,17 +1029,8 @@ proxies:
   port: 50232
   server: 27.131.164.92
   type: ss
-- cipher: chacha20-ietf
-  name: 美国1 99Mbps 735ms 奈飞美国
-  obfs: plain
-  password: renzhecloud
-  port: 5500
-  protocol: auth_aes128_sha1
-  protocol-param: 160849:TljUf8
-  server: advanced-cm-2.nodesub.com
-  type: ssr
 - cipher: aes-256-cfb
-  name: 美国2 99Mbps 431ms 奈飞自制剧
+  name: 美国1 99Mbps 431ms 奈飞自制剧
   obfs: http_simple
   password: a02660
   port: 11394
@@ -947,7 +1038,7 @@ proxies:
   server: 138.68.39.4
   type: ssr
 - cipher: chacha20-ietf
-  name: 美国3 99Mbps 432ms 奈飞美国
+  name: 美国2 99Mbps 432ms 奈飞美国
   obfs: plain
   password: renzhecloud
   port: 5503
@@ -956,7 +1047,7 @@ proxies:
   server: cmrelay-basic-2.nodesub.com
   type: ssr
 - cipher: aes-256-cfb
-  name: 美国4 96Mbps 437ms 奈飞自制剧
+  name: 美国3 96Mbps 437ms 奈飞自制剧
   obfs: http_simple
   password: a02660
   port: 11394
@@ -964,46 +1055,49 @@ proxies:
   server: 138.197.232.58
   type: ssr
 - cipher: aes-256-gcm
-  name: 美国5 96Mbps 192ms
-  password: wrCaGtrUbzeRqQLdc8Kmk3Nd
-  port: 49126
+  name: 美国4 96Mbps 201ms
+  password: BdRWC38L5JUDMTYNNxJGcUwB
+  port: 49396
   server: 185.242.5.147
   type: ss
-- cipher: chacha20-ietf
-  name: 美国6 96Mbps 614ms 奈飞美国
-  obfs: plain
-  password: renzhecloud
-  port: 5500
-  protocol: auth_aes128_sha1
-  protocol-param: 160849:TljUf8
-  server: 120.232.215.239
-  type: ssr
 - cipher: aes-256-gcm
-  name: 美国7 95Mbps 222ms
+  name: 美国5 95Mbps 222ms
   password: Vt5pBJFwdtNB26cJbTXxm88Z
   port: 47027
   server: 212.102.44.83
   type: ss
 - cipher: aes-256-gcm
-  name: 美国8 95Mbps 179ms
+  name: 美国6 95Mbps 179ms
   password: YgusH2MWA8PWc3p2VDsR7AVv
   port: 31764
   server: 185.124.240.171
   type: ss
 - cipher: aes-256-gcm
-  name: 美国9 94Mbps 188ms
+  name: 美国7 94Mbps 188ms
   password: x23Z4LGkGDkThZ9Kaz4DURQp
   port: 40093
   server: 79.110.54.115
   type: ss
 - cipher: aes-256-gcm
-  name: 美国10 93Mbps 221ms
+  name: 美国8 93Mbps 221ms
   password: Y9GcTPemHMKEkrfGQPJqFDNr
   port: 49653
   server: 212.102.44.66
   type: ss
+- cipher: aes-256-gcm
+  name: 美国9 93Mbps 218ms
+  password: CMduaFXddcQbwNAAs7xFDnc8
+  port: 33148
+  server: 212.102.44.86
+  type: ss
+- cipher: aes-256-gcm
+  name: 美国10 92Mbps 257ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 104.200.131.170
+  type: ss
 - cipher: chacha20-ietf
-  name: 美国11 90Mbps 452ms 奈飞美国
+  name: 美国11 91Mbps 448ms 奈飞美国
   obfs: plain
   password: renzhecloud
   port: 5501
@@ -1012,13 +1106,13 @@ proxies:
   server: 120.232.214.200
   type: ssr
 - cipher: chacha20-ietf
-  name: 美国12 90Mbps 732ms 奈飞美国
+  name: 美国12 90Mbps 626ms 奈飞美国
   obfs: plain
   password: renzhecloud
-  port: 5500
+  port: 5501
   protocol: auth_aes128_sha1
   protocol-param: 160849:TljUf8
-  server: cmrelay-basic-2.nodesub.com
+  server: advanced-cm-2.nodesub.com
   type: ssr
 - cipher: aes-256-cfb
   name: 美国13 82Mbps 438ms 奈飞自制剧
@@ -1029,7 +1123,7 @@ proxies:
   server: 68.183.250.212
   type: ssr
 - cipher: chacha20-ietf
-  name: 美国14 80Mbps 588ms 奈飞美国
+  name: 美国14 80Mbps 571ms 奈飞美国
   obfs: plain
   password: renzhecloud
   port: 5504
@@ -1037,43 +1131,25 @@ proxies:
   protocol-param: 160849:TljUf8
   server: 120.232.215.239
   type: ssr
-- cipher: chacha20-ietf
-  name: 美国15 78Mbps 472ms 奈飞美国
-  obfs: plain
-  password: renzhecloud
-  port: 5502
-  protocol: auth_aes128_sha1
-  protocol-param: 160849:TljUf8
-  server: 120.232.215.239
-  type: ssr
-- name: 美国16 76Mbps 650ms 奈飞自制剧
+- name: 美国15 76Mbps 650ms 奈飞自制剧
   password: 36ebef7d1b1d6205fd0c55f28800e674
   port: 443
   server: usa-server-02.selfupay.com
   skip-cert-verify: true
   type: trojan
 - cipher: aes-256-cfb
-  name: 美国17 74Mbps 664ms 奈飞美国
+  name: 美国16 74Mbps 664ms 奈飞美国
   obfs: tls1.2_ticket_auth
   password: YFVrXZgRo
   port: 8081
   protocol: origin
   server: 18.236.120.96
   type: ssr
-- cipher: chacha20-ietf
-  name: 美国18 71Mbps 444ms 奈飞美国
-  obfs: plain
-  password: renzhecloud
-  port: 5500
-  protocol: auth_aes128_sha1
-  protocol-param: 160849:TljUf8
-  server: 120.232.214.200
-  type: ssr
 - alterId: 0
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国19 65Mbps 567ms 奈飞美国
+  name: 美国17 65Mbps 567ms 奈飞美国
   network: tcp
   port: 8301
   server: 22872.cn-group-d-inbound-cnshdjsdv.loc.ddns.click
@@ -1086,7 +1162,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国20 65Mbps 768ms 奈飞自制剧
+  name: 美国18 65Mbps 768ms 奈飞自制剧
   network: ws
   port: 10085
   server: us1.earths.team
@@ -1098,7 +1174,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国21 59Mbps 1037ms 奈飞自制剧
+  name: 美国19 59Mbps 1037ms 奈飞自制剧
   network: ws
   port: 13723
   server: usa5b-node.3366test.com
@@ -1111,7 +1187,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国22 58Mbps 792ms 奈飞自制剧
+  name: 美国20 58Mbps 792ms 奈飞自制剧
   network: ws
   port: 443
   server: 104.21.36.65
@@ -1122,11 +1198,20 @@ proxies:
   ws-headers:
     Host: rn.ddns1312.top
   ws-path: /233blog
+- cipher: chacha20-ietf
+  name: 美国21 52Mbps 694ms 奈飞美国
+  obfs: plain
+  password: renzhecloud
+  port: 5500
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: advanced-cm-2.nodesub.com
+  type: ssr
 - alterId: 0
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国23 50Mbps 733ms 奈飞美国
+  name: 美国22 50Mbps 733ms 奈飞美国
   network: ws
   port: 11451
   server: inap.yaoxinyang.xyz
@@ -1134,6 +1219,15 @@ proxies:
   type: vmess
   uuid: 42b5e1a5-4c5a-4dd9-a2ea-c7cab281a84a
   ws-path: /
+- cipher: chacha20-ietf
+  name: 美国23 49Mbps 444ms 奈飞美国
+  obfs: plain
+  password: renzhecloud
+  port: 5500
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: 120.232.214.200
+  type: ssr
 - alterId: 64
   cipher: auto
   name: 美国24 48Mbps 1467ms 奈飞自制剧
@@ -1147,11 +1241,29 @@ proxies:
   ws-headers:
     Host: www.75287890.xyz
   ws-path: /path/310910211916
+- cipher: chacha20-ietf
+  name: 美国25 42Mbps 569ms 奈飞美国
+  obfs: plain
+  password: renzhecloud
+  port: 5502
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: 120.232.215.239
+  type: ssr
+- cipher: chacha20-ietf
+  name: 美国26 29Mbps 579ms 奈飞美国
+  obfs: plain
+  password: renzhecloud
+  port: 5500
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: 120.232.215.239
+  type: ssr
 - alterId: 64
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国25 27Mbps 1091ms 奈飞自制剧
+  name: 美国27 27Mbps 1091ms 奈飞自制剧
   network: ws
   port: 443
   server: 67.21.72.41
@@ -1167,7 +1279,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国26 25Mbps 1080ms 奈飞自制剧
+  name: 美国28 25Mbps 1080ms 奈飞自制剧
   network: ws
   port: 443
   server: v2.coding996.com
@@ -1180,7 +1292,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国27 22Mbps 1061ms 奈飞自制剧
+  name: 美国29 22Mbps 1061ms 奈飞自制剧
   network: ws
   port: 443
   server: v1.coding996.com
@@ -1193,7 +1305,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国28 19Mbps 1058ms 奈飞美国
+  name: 美国30 19Mbps 1058ms 奈飞美国
   network: ws
   port: 443
   server: v6.coding996.com
@@ -1206,7 +1318,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国29 19Mbps 1042ms 奈飞自制剧
+  name: 美国31 19Mbps 1042ms 奈飞自制剧
   network: ws
   port: 443
   server: 144.34.165.210
@@ -1215,7 +1327,7 @@ proxies:
   type: vmess
   uuid: 478055cc-fdb8-404e-b730-c32faa2c7ca1
   ws-path: /asdfasdf
-- name: 美国30 15Mbps 1237ms 奈飞自制剧
+- name: 美国32 15Mbps 1237ms 奈飞自制剧
   password: opentunnel.net-rtdsretc
   port: 443
   server: ust-1.opensvr.net
@@ -1225,7 +1337,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国31 11Mbps 1062ms 奈飞自制剧
+  name: 美国33 11Mbps 1062ms 奈飞自制剧
   network: ws
   port: 443
   server: 104.16.160.114
@@ -1237,7 +1349,7 @@ proxies:
     Host: vincent-jackson2021.ga
   ws-path: /The-Great-Awakening_vws
 - cipher: aes-256-cfb
-  name: 美国32 9Mbps 456ms 奈飞自制剧
+  name: 美国34 9Mbps 456ms 奈飞自制剧
   password: lanluojing320
   port: 32095
   server: 49.51.188.31
@@ -1246,7 +1358,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国33 9Mbps 1077ms 奈飞自制剧
+  name: 美国35 9Mbps 1077ms 奈飞自制剧
   network: ws
   port: 443
   server: 23.224.101.101
@@ -1262,7 +1374,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国34 9Mbps 988ms 奈飞自制剧
+  name: 美国36 9Mbps 988ms 奈飞自制剧
   network: ws
   port: 443
   server: 23.224.30.36
@@ -1275,16 +1387,20 @@ proxies:
     HOST: www.01902367.xyz
   ws-path: /path/310910211916
 - cipher: aes-256-cfb
-  name: 美国35 8Mbps 513ms 奈飞美国
+  name: 美国37 8Mbps 521ms 奈飞美国
+  obfs: plain
+  obfs-param: WWW.YOUNEED.WIN
   password: eIW0Dnk69454e6nSwuspv9DmS201tQ0D
   port: 8099
+  protocol: origin
+  protocol-param: WWW.YOUNEED.WIN
   server: 185.186.245.44
-  type: ss
+  type: ssr
 - alterId: 64
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国36 7Mbps 961ms 奈飞自制剧
+  name: 美国38 7Mbps 961ms 奈飞自制剧
   network: ws
   port: 443
   server: 67.21.89.227
@@ -1300,7 +1416,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国37 7Mbps 985ms 奈飞自制剧
+  name: 美国39 7Mbps 985ms 奈飞自制剧
   network: ws
   port: 80
   server: wx2.jjyun.ren
@@ -1308,11 +1424,20 @@ proxies:
   type: vmess
   uuid: e5b55048-1b8e-4ebf-bc8e-5d70e9dc9e98
   ws-path: /jjyun
+- cipher: chacha20-ietf
+  name: 美国40 4Mbps 752ms 奈飞美国
+  obfs: plain
+  password: renzhecloud
+  port: 5501
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: 120.232.215.239
+  type: ssr
 - alterId: 0
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国38 3Mbps 1337ms 奈飞自制剧
+  name: 美国41 3Mbps 1337ms 奈飞自制剧
   network: ws
   port: 443
   server: uss222.liuwei01.tk
@@ -1324,7 +1449,7 @@ proxies:
   ws-headers:
     HOST: uss222.liuwei01.tk
   ws-path: /liuwei
-- name: 美国39 1Mbps 1233ms 奈飞自制剧
+- name: 美国42 1Mbps 1233ms 奈飞自制剧
   password: fe74a1aa-4849-4239-838e-1e7d9f6e975d
   port: 8443
   server: t1.ssrsub.one
@@ -1334,7 +1459,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国40 1Mbps 688ms 奈飞自制剧
+  name: 美国43 1Mbps 688ms 奈飞自制剧
   network: tcp
   port: 53273
   server: 198.200.51.37
@@ -1343,7 +1468,7 @@ proxies:
   uuid: b92a7868-0bf1-11ec-b252-00163cdca817
   ws-path: /
 - cipher: aes-256-cfb
-  name: 美国41 0Mbps 563ms 奈飞自制剧
+  name: 美国44 0Mbps 563ms 奈飞自制剧
   password: lanluojing320
   port: 32095
   server: 49.51.188.47
@@ -1352,7 +1477,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国42 0Mbps 884ms 奈飞自制剧
+  name: 美国45 0Mbps 884ms 奈飞自制剧
   network: ws
   port: 1113
   server: us03.xqkj.cloud
@@ -1373,7 +1498,7 @@ proxies:
   server: 84.17.53.212
   type: ss
 - cipher: aes-256-gcm
-  name: 瑞士3 66Mbps 477ms
+  name: 瑞士3 66Mbps 480ms
   password: J2M953QbkCvvzx3vYWdyBQ4K
   port: 50225
   server: 45.12.222.245
@@ -1475,9 +1600,9 @@ proxies:
   server: 37.120.217.149
   type: ss
 - cipher: aes-256-gcm
-  name: 德国10 51Mbps 513ms
-  password: enctdKyJfSu76VqznKwTt6Ap
-  port: 37473
+  name: 德国10 51Mbps 507ms
+  password: Kquv5UhvZXNMemAQy8DxZ7qn
+  port: 38620
   server: 193.29.106.61
   type: ss
 - cipher: aes-256-gcm
@@ -1647,7 +1772,7 @@ proxies:
   server: 66.115.147.77
   type: ss
 - cipher: aes-128-gcm
-  name: 加拿大11 19Mbps 627ms 奈飞自制剧
+  name: 加拿大11 19Mbps 539ms 奈飞自制剧
   password: suo.yt/ssrsub
   plugin: obfs
   plugin-opts:
@@ -1777,7 +1902,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 马来西亚1 63Mbps 1306ms 奈飞马来西亚
+  name: 马来西亚1 63Mbps 1363ms 奈飞马来西亚
   network: ws
   port: 30014
   server: ngzyd-1.okex-tradebot.xyz
@@ -1984,7 +2109,7 @@ proxies:
   server: 37.120.235.59
   type: ss
 - cipher: aes-128-gcm
-  name: 俄罗斯联邦1 14Mbps 952ms 奈飞自制剧
+  name: 俄罗斯联邦1 14Mbps 994ms 奈飞自制剧
   password: suo.yt/ssrsub
   plugin: obfs
   plugin-opts:
@@ -2089,6 +2214,12 @@ proxies:
   skip-cert-verify: false
   sni: t4.ssrsub.one
   type: trojan
+- cipher: aes-256-gcm
+  name: 俄罗斯联邦10 0Mbps 519ms 奈飞自制剧
+  password: dongtaiwang.com
+  port: 20022
+  server: 45.147.200.214
+  type: ss
 - cipher: aes-256-gcm
   name: 意大利1 51Mbps 534ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
@@ -2399,6 +2530,15 @@ proxies:
   type: vmess
   uuid: e43bc995-3990-4417-9c37-7853764aad6f
   ws-path: /
+- cipher: chacha20-ietf
+  name: 韩国9 0Mbps 549ms 奈飞自制剧
+  obfs: plain
+  password: renzhecloud
+  port: 7501
+  protocol: auth_aes128_sha1
+  protocol-param: 160849:TljUf8
+  server: 120.232.215.240
+  type: ssr
 - cipher: aes-256-gcm
   name: 澳大利亚1 46Mbps 485ms
   password: YyCBeDdYX4cadHpCkkmdJLq8
@@ -2628,6 +2768,22 @@ proxies:
   port: 39772
   server: 45.9.249.245
   type: ss
+- cipher: aes-256-cfb
+  name: 中国厦门1 18Mbps 144ms
+  password: GUTGQJ
+  port: 43552
+  server: 120.41.41.56
+  type: ss
+- cipher: aes-256-cfb
+  name: 中国厦门2 0Mbps 151ms
+  obfs: plain
+  obfs-param: ''
+  password: GUTGQJ
+  port: 43552
+  protocol: origin
+  protocol-param: ''
+  server: 120.41.41.215
+  type: ssr
 - cipher: aes-256-gcm
   name: 巴西1 17Mbps 832ms
   password: yUXad7DGF8L5cTShEpnp2N6z
@@ -2736,16 +2892,6 @@ proxies:
   port: 33992
   server: 194.150.167.28
   type: ss
-- cipher: aes-256-cfb
-  name: 中国厦门1 0Mbps 151ms
-  obfs: plain
-  obfs-param: ''
-  password: GUTGQJ
-  port: 43552
-  protocol: origin
-  protocol-param: ''
-  server: 120.41.41.215
-  type: ssr
 - cipher: aes-256-gcm
   name: 北马其顿1 0Mbps 1097ms
   password: aYNeKDMzYQYw4KbUbJA8Wszq
