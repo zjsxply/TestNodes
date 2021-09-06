@@ -3,7 +3,20 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 中国香港1 132Mbps 182ms
+  name: 中国香港1 133Mbps 171ms
+  network: tcp
+  port: 9443
+  server: 120.232.214.25
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 6d030d0c-8821-4e91-ba95-ef57c508ff18
+  ws-path: /
+- alterId: 0
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 中国香港2 132Mbps 179ms
   network: tcp
   port: 121
   server: 120.232.214.25
@@ -16,20 +29,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 中国香港2 129Mbps 193ms
-  network: tcp
-  port: 9444
-  server: 120.232.214.25
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 6d030d0c-8821-4e91-ba95-ef57c508ff18
-  ws-path: /
-- alterId: 0
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港3 126Mbps 264ms 奈飞中国香港
+  name: 中国香港3 126Mbps 243ms 奈飞中国香港
   network: tcp
   port: 8310
   server: 22872.cn-group-d-inbound-cnshdjsdv.loc.ddns.click
@@ -42,7 +42,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 中国香港4 123Mbps 137ms
+  name: 中国香港4 123Mbps 136ms
   network: ws
   port: 80
   server: 52.229.154.191
@@ -54,7 +54,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 中国香港5 121Mbps 132ms 奈飞自制剧
+  name: 中国香港5 121Mbps 186ms 奈飞自制剧
   network: tcp
   port: 10879
   server: 34.92.71.126
@@ -62,58 +62,31 @@ proxies:
   type: vmess
   uuid: 362ba693-1cbc-4d10-8973-f730f0ebfe34
   ws-path: /
-- alterId: 0
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港6 118Mbps 188ms 奈飞自制剧
-  network: tcp
-  port: 122
-  server: 120.232.214.25
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 908fb0cc-0cf3-4dc5-8868-8a2665b2c5f8
-  ws-path: /
-- alterId: 2
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港7 116Mbps 139ms 奈飞自制剧
-  network: ws
-  port: 80
-  server: hk2.free80ml.tk
-  skip-cert-verify: true
-  type: vmess
-  uuid: 35fa01b6-aff0-3350-81d3-9185e6be42d1
-  ws-path: /
-- name: 中国香港8 116Mbps 204ms 奈飞自制剧
+- name: 中国香港6 116Mbps 204ms 奈飞自制剧
   password: ea6e0d6a-2e18-3afb-82d8-2408de425832
   port: 16001
   server: hk1.ifl520.xyz
   skip-cert-verify: true
   sni: hk1.ifl520.xyz
   type: trojan
-- alterId: 0
+- alterId: 1
   cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港9 110Mbps 162ms 奈飞自制剧
+  name: 中国香港7 90Mbps 390ms 奈飞自制剧
   network: ws
-  port: 80
-  server: 18.167.94.242
-  servername: pull.free.video.10010.com
-  skip-cert-verify: true
+  port: 21212
+  server: az.v2.dior.bar
+  skip-cert-verify: false
+  tls: false
   type: vmess
-  uuid: cec85927-8a7a-4866-df8c-27ed589de0ce
+  uuid: c3cd5c42-9527-4777-973d-a9d33b30bb9a
   ws-headers:
-    HOST: pull.free.video.10010.com
-  ws-path: /TS/recharge/tzUrl.html
+    Host: edith.xiaohongshu.com
+  ws-path: /
 - alterId: 2
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 中国香港10 88Mbps 137ms
+  name: 中国香港8 88Mbps 135ms
   network: ws
   port: 80
   server: 13.94.7.205
@@ -121,38 +94,34 @@ proxies:
   type: vmess
   uuid: db3954ee-c19e-46a7-8a13-8e7befcfcd80
   ws-path: /
-- name: 中国香港11 81Mbps 160ms 奈飞自制剧
+- alterId: 0
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 中国香港9 84Mbps 214ms
+  network: tcp
+  port: 23333
+  server: vtwonet-hk-a.qjnodeip.xyz
+  skip-cert-verify: true
+  type: vmess
+  uuid: 98C330C9-18E2-4383-7671-244300271813
+  ws-path: /
+- name: 中国香港10 81Mbps 158ms 奈飞自制剧
   password: ea6e0d6a-2e18-3afb-82d8-2408de425832
   port: 16005
   server: hk2.ifl520.xyz
   skip-cert-verify: true
   sni: hk2.ifl520.xyz
   type: trojan
-- alterId: 64
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国香港12 39Mbps 343ms 奈飞自制剧
-  network: ws
-  port: 443
-  server: 23.224.191.13
-  servername: www.64212792.xyz
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  ws-headers:
-    HOST: www.64212792.xyz
-  ws-path: /footers
 - cipher: chacha20-ietf-poly1305
-  name: 新加坡1 126Mbps 243ms 奈飞自制剧
+  name: 新加坡1 126Mbps 287ms 奈飞自制剧
   password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS
   port: 18331
   server: 13.213.251.185
   type: ss
 - alterId: 2
   cipher: chacha20-poly1305
-  name: 新加坡2 122Mbps 479ms 奈飞新加坡
+  name: 新加坡2 122Mbps 456ms 奈飞新加坡
   network: ws
   port: 10799
   server: gzcm.sspro.nl
@@ -163,32 +132,26 @@ proxies:
   ws-headers:
     Host: none
   ws-path: /ssrgr-hk18
-- name: 新加坡3 119Mbps 526ms 奈飞自制剧
+- name: 新加坡3 119Mbps 479ms 奈飞自制剧
   password: ea6e0d6a-2e18-3afb-82d8-2408de425832
   port: 17005
   server: sg3.ifl520.xyz
   skip-cert-verify: false
   sni: sg3.ifl520.xyz
   type: trojan
-- name: 新加坡4 112Mbps 288ms 奈飞自制剧
+- name: 新加坡4 112Mbps 285ms 奈飞自制剧
   password: 36ebef7d1b1d6205fd0c55f28800e674
   port: 443
   server: sg-server-01.selfupay.com
   skip-cert-verify: true
   type: trojan
 - cipher: chacha20-ietf-poly1305
-  name: 新加坡5 108Mbps 302ms 奈飞自制剧
+  name: 新加坡5 108Mbps 291ms 奈飞自制剧
   password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS
   port: 18332
   server: 54.251.230.216
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 新加坡6 106Mbps 310ms 奈飞自制剧
-  password: G!yBwPWH3Vao
-  port: 809
-  server: 185.128.24.34
-  type: ss
-- name: 新加坡7 98Mbps 382ms 奈飞自制剧
+- name: 新加坡6 98Mbps 376ms 奈飞自制剧
   password: ea6e0d6a-2e18-3afb-82d8-2408de425832
   port: 17001
   server: sg1.ifl520.xyz
@@ -196,20 +159,20 @@ proxies:
   sni: sg1.ifl520.xyz
   type: trojan
 - cipher: aes-256-gcm
-  name: 新加坡8 96Mbps 293ms
+  name: 新加坡7 96Mbps 268ms
   password: YgusH2MWA8PWc3p2VDsR7AVv
   port: 31764
   server: 156.146.56.135
   type: ss
 - cipher: aes-256-gcm
-  name: 新加坡9 95Mbps 92ms
-  password: z6pH3RyttkRWhJ5tpRyt6dYk
-  port: 41676
+  name: 新加坡8 95Mbps 91ms
+  password: aYNeKDMzYQYw4KbUbJA8Wszq
+  port: 31944
   server: 156.146.56.137
   type: ss
 - alterId: 2
   cipher: chacha20-poly1305
-  name: 新加坡10 93Mbps 431ms 奈飞自制剧
+  name: 新加坡9 93Mbps 402ms 奈飞自制剧
   network: ws
   port: 10799
   server: gzcm.sspro.nl
@@ -220,7 +183,7 @@ proxies:
   ws-headers:
     Host: none
   ws-path: /ssrgr-sg07
-- name: 新加坡11 93Mbps 508ms 奈飞自制剧
+- name: 新加坡10 93Mbps 473ms 奈飞自制剧
   password: 7836137d-2db0-4809-9b57-ed14cf2ed4ce
   port: 443
   server: www.ligonwen.cf
@@ -228,12 +191,12 @@ proxies:
   sni: www.ligonwen.cf
   type: trojan
 - cipher: chacha20-ietf-poly1305
-  name: 新加坡12 80Mbps 323ms 奈飞自制剧
+  name: 新加坡11 80Mbps 316ms 奈飞自制剧
   password: G!yBwPWH3Vao
   port: 810
   server: 37.120.151.14
   type: ss
-- name: 新加坡13 68Mbps 768ms 奈飞自制剧
+- name: 新加坡12 68Mbps 766ms 奈飞自制剧
   password: 7x42LetRa0
   port: 4443
   server: 188.166.242.117
@@ -241,7 +204,7 @@ proxies:
   type: trojan
 - alterId: 2
   cipher: chacha20-poly1305
-  name: 新加坡14 52Mbps 907ms 奈飞自制剧
+  name: 新加坡13 52Mbps 891ms 奈飞自制剧
   network: ws
   port: 10799
   server: gzcm.sspro.nl
@@ -254,7 +217,7 @@ proxies:
   ws-path: /ssrgr-sg3
 - alterId: 2
   cipher: chacha20-poly1305
-  name: 新加坡15 48Mbps 815ms 奈飞自制剧
+  name: 新加坡14 48Mbps 806ms 奈飞自制剧
   network: ws
   port: 10799
   server: gzcm.sspro.nl
@@ -269,7 +232,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 日本1 123Mbps 294ms
+  name: 日本1 123Mbps 292ms
   network: tcp
   port: 113
   server: 120.232.214.25
@@ -282,7 +245,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 日本2 118Mbps 314ms 奈飞日本
+  name: 日本2 118Mbps 292ms 奈飞日本
   network: tcp
   port: 80
   server: af01.uwork.mobi
@@ -292,7 +255,7 @@ proxies:
   ws-path: /
 - alterId: 1
   cipher: auto
-  name: 日本3 117Mbps 462ms 奈飞自制剧
+  name: 日本3 117Mbps 397ms 奈飞自制剧
   network: ws
   port: 8443
   server: db.vpnbro.ml
@@ -301,9 +264,9 @@ proxies:
   type: vmess
   uuid: 8bbf1628-12a0-4839-9975-1108377c2d9f
   ws-headers:
-    Host: db.vpnbro.ml
+    Host: ''
   ws-path: /v2ray
-- name: 日本4 116Mbps 343ms 奈飞自制剧
+- name: 日本4 116Mbps 332ms 奈飞自制剧
   password: ea6e0d6a-2e18-3afb-82d8-2408de425832
   port: 15001
   server: jp1.ifl520.xyz
@@ -314,7 +277,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 日本5 115Mbps 366ms 奈飞自制剧
+  name: 日本5 115Mbps 364ms 奈飞自制剧
   network: ws
   port: 1016
   server: jp2.uuv2.co.uk
@@ -327,43 +290,41 @@ proxies:
     HOST: jp2.uuv2.co.uk
   ws-path: /TG@mftizi
 - cipher: aes-256-gcm
-  name: 日本6 114Mbps 192ms 奈飞日本
+  name: 日本6 114Mbps 271ms 奈飞日本
   password: jdjhdijhfuihduifhuifheuwifdhuiewhdio
   port: 11451
   server: 35.73.227.22
   type: ss
-- name: 日本7 113Mbps 512ms 奈飞自制剧
+- name: 日本7 113Mbps 611ms 奈飞自制剧
   password: 7622e286-0c41-412e-8381-1fe7a2da2c91
   port: 8443
   server: t6.ssrsub.one
   skip-cert-verify: true
   type: trojan
 - cipher: aes-256-cfb
-  name: 日本8 112Mbps 257ms 奈飞自制剧
+  name: 日本8 112Mbps 264ms 奈飞自制剧
   obfs: tls1.2_ticket_auth
   password: 3H2aN5Gnm
   port: 8081
   protocol: origin
   server: 13.231.43.203
   type: ssr
-- alterId: 2
+- alterId: 1
   cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 日本9 103Mbps 457ms
+  name: 日本9 103Mbps 336ms
   network: ws
-  port: 58805
-  server: 52.175.16.90
-  servername: t.me/vpnhat
-  skip-cert-verify: true
+  port: 80
+  server: 13.208.92.125
+  skip-cert-verify: false
+  tls: false
   type: vmess
   uuid: acee9a77-5023-4793-8c3b-46b464ba10b6
   ws-headers:
-    HOST: t.me/vpnhat
+    Host: ''
   ws-path: /
 - alterId: 2
   cipher: chacha20-poly1305
-  name: 日本10 102Mbps 508ms 奈飞自制剧
+  name: 日本10 102Mbps 479ms 奈飞自制剧
   network: ws
   port: 10799
   server: gzcm.sspro.nl
@@ -374,7 +335,7 @@ proxies:
   ws-headers:
     Host: none
   ws-path: /ssrgr-jp3
-- name: 日本11 99Mbps 364ms 奈飞自制剧
+- name: 日本11 99Mbps 348ms 奈飞自制剧
   password: ea6e0d6a-2e18-3afb-82d8-2408de425832
   port: 15003
   server: jp2.ifl520.xyz
@@ -382,40 +343,29 @@ proxies:
   sni: jp2.ifl520.xyz
   type: trojan
 - cipher: chacha20-ietf-poly1305
-  name: 日本12 29Mbps 785ms 奈飞自制剧
+  name: 日本12 29Mbps 839ms 奈飞自制剧
   password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS
   port: 18337
   server: 154.17.22.153
   type: ss
 - alterId: 1
   cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 日本13 15Mbps 306ms 奈飞自制剧
+  name: 日本13 15Mbps 236ms 奈飞自制剧
   network: ws
   port: 10020
   server: aws.mooncloud.bike
-  skip-cert-verify: true
+  skip-cert-verify: false
+  tls: false
   type: vmess
   uuid: 87e1a810-f15f-4688-86b2-4185c71f974f
-  ws-path: /
-- alterId: 0
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 中国台湾1 112Mbps 273ms
-  network: tcp
-  port: 8300
-  server: vtwonet-tw-b.qjnodeip.xyz
-  skip-cert-verify: true
-  type: vmess
-  uuid: 98C330C9-18E2-4383-7671-244300271813
+  ws-headers:
+    Host: ''
   ws-path: /
 - alterId: 1
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 中国台湾2 107Mbps 416ms 奈飞自制剧
+  name: 中国台湾1 107Mbps 385ms 奈飞自制剧
   network: ws
   port: 6000
   server: 000007.bujidao.org
@@ -427,58 +377,64 @@ proxies:
     HOST: bujidao.cccccc.cc
   ws-path: /xiaodao
 - cipher: aes-256-gcm
-  name: 中国台湾3 104Mbps 191ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
+  name: 中国台湾2 104Mbps 189ms
+  password: xpQwyV4W5FdA6NMANJJx73US
+  port: 38033
   server: 2.58.241.29
   type: ss
 - cipher: aes-256-gcm
-  name: 中国台湾4 101Mbps 82ms
-  password: gJYzm3TLbdL495ryQptaJXQk
-  port: 32558
+  name: 中国台湾3 101Mbps 82ms
+  password: txmK9WhwP6WPhP7hqSBLVxpN
+  port: 34687
   server: 103.152.151.20
   type: ss
 - cipher: aes-256-gcm
-  name: 中国台湾5 101Mbps 82ms
+  name: 中国台湾4 101Mbps 83ms
   password: DKXfWwc4ebscpXTKpbt85rSH
   port: 38742
   server: 2.58.242.45
   type: ss
 - cipher: aes-256-gcm
-  name: 中国台湾6 101Mbps 77ms
+  name: 中国台湾5 101Mbps 78ms
   password: x23Z4LGkGDkThZ9Kaz4DURQp
   port: 40093
   server: 2.58.242.51
   type: ss
 - cipher: aes-256-gcm
-  name: 中国台湾7 100Mbps 83ms
+  name: 中国台湾6 100Mbps 84ms
   password: n8w4StnbVD9dmXYn4Ajt87EA
   port: 31572
   server: 103.152.151.21
   type: ss
 - cipher: aes-256-gcm
-  name: 中国台湾8 100Mbps 82ms
+  name: 中国台湾7 100Mbps 82ms
   password: ugyBkSEFxVEmUYSHyvxmWNj9
   port: 40220
   server: 2.58.242.133
   type: ss
 - cipher: aes-256-gcm
-  name: 中国台湾9 100Mbps 91ms
-  password: yUXad7DGF8L5cTShEpnp2N6z
-  port: 36460
-  server: 103.152.151.68
-  type: ss
-- cipher: aes-256-gcm
-  name: 中国台湾10 100Mbps 84ms
+  name: 中国台湾8 100Mbps 84ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 2.58.242.155
+  type: ss
+- cipher: aes-256-gcm
+  name: 中国台湾9 100Mbps 78ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 2.58.242.53
+  type: ss
+- cipher: aes-256-gcm
+  name: 中国台湾10 99Mbps 114ms
+  password: LkFAzkzXkSCRYa2CsRdL8cGb
+  port: 34815
+  server: 103.152.151.85
   type: ss
 - alterId: 0
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 中国台湾11 94Mbps 207ms 奈飞中国台湾
+  name: 中国台湾11 94Mbps 205ms 奈飞中国台湾
   network: tcp
   port: 10086
   server: vtwonet-tw-a.qjnodeip.xyz
@@ -487,17 +443,15 @@ proxies:
   uuid: 98C330C9-18E2-4383-7671-244300271813
   ws-path: /
 - cipher: rc4-md5
-  name: 中国台湾12 37Mbps 376ms 奈飞自制剧
-  obfs: plain
+  name: 中国台湾12 37Mbps 365ms 奈飞自制剧
   password: passfw2xs4e!
   port: 8333
-  protocol: origin
-  protocol-param: t.me/SSRSUB
-  server: 117.28.243.187
-  type: ssr
+  server: p5.22332e.com
+  type: ss
 - alterId: 0
   cipher: auto
-  name: 中国台湾13 14Mbps 719ms 奈飞自制剧
+  name: 中国台湾13 14Mbps 576ms 奈飞自制剧
+  network: tcp
   port: 28879
   server: 35.201.218.125
   skip-cert-verify: false
@@ -506,7 +460,7 @@ proxies:
   uuid: 8f55c99d-d400-47d5-a949-638204907e0b
 - alterId: 2
   cipher: chacha20-poly1305
-  name: 印度1 107Mbps 782ms 奈飞自制剧
+  name: 印度1 107Mbps 754ms 奈飞自制剧
   network: ws
   port: 10799
   server: gzcm.sspro.nl
@@ -518,31 +472,31 @@ proxies:
     Host: none
   ws-path: /ssrgr-in02
 - cipher: aes-256-gcm
-  name: 印度2 78Mbps 481ms
-  password: b2jDPHUQxCNa2KmGHZjy7C4B
-  port: 50024
+  name: 印度2 78Mbps 472ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
   server: 103.94.27.101
   type: ss
 - cipher: aes-256-gcm
-  name: 印度3 71Mbps 599ms
-  password: n8w4StnbVD9dmXYn4Ajt87EA
-  port: 31572
-  server: in.free-v2ray.tk
+  name: 印度3 71Mbps 363ms
+  password: t2JnnFqjDMmzWurseJPgBsYY
+  port: 47553
+  server: 103.94.27.182
   type: ss
 - cipher: aes-256-gcm
-  name: 印度4 60Mbps 317ms
+  name: 印度4 60Mbps 314ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 103.39.132.189
   type: ss
-- name: 印度5 37Mbps 968ms 奈飞自制剧
+- name: 印度5 37Mbps 967ms 奈飞自制剧
   password: 7x42LetRa0
   port: 1443
   server: 159.89.168.0
   skip-cert-verify: true
   type: trojan
 - cipher: aes-256-gcm
-  name: 印度6 24Mbps 687ms
+  name: 印度6 24Mbps 658ms
   password: x23Z4LGkGDkThZ9Kaz4DURQp
   port: 40093
   server: 137.59.52.107
@@ -551,7 +505,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 印度7 16Mbps 1622ms
+  name: 印度7 16Mbps 1566ms
   network: ws
   port: 443
   server: in01.v2net.top
@@ -561,108 +515,132 @@ proxies:
   uuid: 98C330C9-18E2-4383-7671-244300271813
   ws-path: /ray
 - cipher: aes-256-gcm
-  name: 印度8 12Mbps 291ms
-  password: gJYzm3TLbdL495ryQptaJXQk
-  port: 32558
+  name: 印度8 12Mbps 287ms
+  password: WBLAbN6AwtV5avBx73hFRLB3
+  port: 35200
   server: 165.231.253.147
   type: ss
 - cipher: aes-256-gcm
-  name: 印度9 3Mbps 387ms
-  password: apqQgXJyVDsdJMAYV4xspRFK
-  port: 48089
+  name: 印度9 3Mbps 421ms
+  password: Vt5pBJFwdtNB26cJbTXxm88Z
+  port: 47027
   server: 103.39.132.187
   type: ss
 - cipher: aes-256-gcm
-  name: 印度10 2Mbps 786ms
+  name: 印度10 2Mbps 785ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 103.156.50.99
   type: ss
 - cipher: aes-256-gcm
-  name: 泰国1 105Mbps 270ms
-  password: CjchzpwdSjRtDjezYMwx9BKM
-  port: 50232
+  name: 泰国1 105Mbps 257ms
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  port: 31572
   server: 27.131.164.92
   type: ss
+- cipher: aes-256-cfb
+  name: 美国1 99Mbps 433ms 奈飞自制剧
+  obfs: http_simple
+  password: a02660
+  port: 11394
+  protocol: origin
+  server: 138.68.39.4
+  type: ssr
+- cipher: aes-256-cfb
+  name: 美国2 96Mbps 435ms 奈飞自制剧
+  obfs: http_simple
+  obfs-param: ''
+  password: a02660
+  port: 11394
+  protocol: origin
+  protocol-param: ''
+  server: 138.197.232.58
+  type: ssr
 - cipher: aes-256-gcm
-  name: 美国1 96Mbps 198ms
+  name: 美国3 96Mbps 200ms
   password: 4ejJ8n5ddLuYDUHGXJre2ufJ
   port: 48938
   server: 185.242.5.147
   type: ss
 - cipher: aes-256-gcm
-  name: 美国2 95Mbps 222ms
-  password: kD9vkjnE6dsUzwQfvKkPkQAd
-  port: 37588
+  name: 美国4 95Mbps 222ms
+  password: x23Z4LGkGDkThZ9Kaz4DURQp
+  port: 40093
   server: 212.102.44.83
   type: ss
 - cipher: aes-256-gcm
-  name: 美国3 95Mbps 187ms
+  name: 美国5 95Mbps 184ms
   password: Y9GcTPemHMKEkrfGQPJqFDNr
   port: 49653
   server: 185.124.240.171
   type: ss
 - cipher: aes-256-gcm
-  name: 美国4 94Mbps 187ms
+  name: 美国6 94Mbps 186ms
   password: x23Z4LGkGDkThZ9Kaz4DURQp
   port: 40093
   server: 79.110.54.115
   type: ss
 - cipher: aes-256-gcm
-  name: 美国5 93Mbps 222ms
-  password: Y9GcTPemHMKEkrfGQPJqFDNr
-  port: 49653
+  name: 美国7 93Mbps 223ms
+  password: CMduaFXddcQbwNAAs7xFDnc8
+  port: 33148
   server: 212.102.44.66
   type: ss
 - cipher: aes-256-gcm
-  name: 美国6 93Mbps 220ms
-  password: z6pH3RyttkRWhJ5tpRyt6dYk
-  port: 41676
+  name: 美国8 93Mbps 221ms
+  password: wrCaGtrUbzeRqQLdc8Kmk3Nd
+  port: 49126
   server: 212.102.44.86
   type: ss
 - cipher: aes-256-gcm
-  name: 美国7 92Mbps 257ms
+  name: 美国9 92Mbps 257ms
   password: YyCBeDdYX4cadHpCkkmdJLq8
   port: 43893
   server: 104.200.131.170
   type: ss
 - cipher: aes-256-gcm
-  name: 美国8 92Mbps 256ms
-  password: YgusH2MWA8PWc3p2VDsR7AVv
-  port: 31764
+  name: 美国10 92Mbps 257ms
+  password: FWrXcxPZjJxAN89xLgqY3Acp
+  port: 44236
   server: 104.200.131.172
   type: ss
-- cipher: aes-256-gcm
-  name: 美国9 91Mbps 253ms
-  password: wEsFcHCvbL4eJkL4DZQa7RgR
-  port: 45746
-  server: 104.200.131.245
-  type: ss
-- cipher: aes-256-gcm
-  name: 美国10 90Mbps 221ms
-  password: LkFAzkzXkSCRYa2CsRdL8cGb
-  port: 34815
-  server: 212.102.44.71
-  type: ss
-- name: 美国11 76Mbps 673ms 奈飞自制剧
+- cipher: aes-256-cfb
+  name: 美国11 82Mbps 431ms 奈飞自制剧
+  obfs: http_simple
+  obfs-param: ''
+  password: a02660
+  port: 11394
+  protocol: origin
+  protocol-param: ''
+  server: 68.183.250.212
+  type: ssr
+- name: 美国12 76Mbps 671ms 奈飞自制剧
   password: 36ebef7d1b1d6205fd0c55f28800e674
   port: 443
   server: usa-server-02.selfupay.com
   skip-cert-verify: true
   type: trojan
 - cipher: aes-256-cfb
-  name: 美国12 74Mbps 669ms 奈飞美国
+  name: 美国13 74Mbps 670ms 奈飞美国
   obfs: tls1.2_ticket_auth
   password: YFVrXZgRo
   port: 8081
   protocol: origin
   server: 18.236.120.96
   type: ssr
+- cipher: aes-256-cfb
+  name: 美国14 70Mbps 452ms 奈飞自制剧
+  obfs: http_simple
+  password: a02660
+  port: 11394
+  protocol: origin
+  server: 138.197.236.28
+  type: ssr
 - alterId: 0
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国13 65Mbps 600ms 奈飞美国
+  name: 美国15 65Mbps 577ms 奈飞美国
   network: tcp
   port: 8301
   server: 22872.cn-group-a-inbound-291shaud8n.loc.ddns.click
@@ -671,57 +649,39 @@ proxies:
   type: vmess
   uuid: baadd565-840a-1027-aee0-9bad9d0294c1
   ws-path: /device-control/stream/
-- alterId: 10
+- alterId: 0
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国14 59Mbps 990ms 奈飞自制剧
+  name: 美国16 58Mbps 802ms 奈飞自制剧
   network: ws
-  port: 13723
-  server: 128.14.157.112
-  servername: en.tgchannels.org/channel/vpnpool
+  port: 443
+  server: ip.codeforces.live
+  servername: rn.ddns1312.top
   skip-cert-verify: true
   tls: true
   type: vmess
-  uuid: a90597c1-bab3-4217-ad6f-0838675c8634
+  uuid: e6397eda-dd27-4832-a693-b3fb156ec0f3
   ws-headers:
-    HOST: en.tgchannels.org/channel/vpnpool
-  ws-path: /ray
-- alterId: 64
+    HOST: rn.ddns1312.top
+  ws-path: /233blog
+- alterId: 0
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国15 48Mbps 1073ms 奈飞自制剧
+  name: 美国17 50Mbps 737ms 奈飞美国
   network: ws
-  port: 443
-  server: 173.82.150.26
-  skip-cert-verify: false
-  tls: true
+  port: 11451
+  server: inap.yaoxinyang.xyz
+  skip-cert-verify: true
   type: vmess
-  uuid: 1a116d02-5fca-47fa-a2a1-6e8d0f2f71cc
-  ws-headers:
-    Host: www.75287890.xyz
-  ws-path: /path/310910211916
-- alterId: 64
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 美国16 27Mbps 950ms 奈飞自制剧
-  network: ws
-  port: 443
-  server: www.17080100.xyz
-  skip-cert-verify: false
-  tls: true
-  type: vmess
-  uuid: 2566d00f-218c-48f7-9a36-13d3d6f1a724
-  ws-headers:
-    Host: www.17080100.xyz
-  ws-path: /path/310910211916
+  uuid: 42b5e1a5-4c5a-4dd9-a2ea-c7cab281a84a
+  ws-path: /
 - alterId: 4
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国17 25Mbps 1047ms 奈飞自制剧
+  name: 美国18 25Mbps 1049ms 奈飞自制剧
   network: ws
   port: 443
   server: v2.coding996.com
@@ -734,7 +694,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国18 22Mbps 1061ms 奈飞自制剧
+  name: 美国19 22Mbps 1064ms 奈飞自制剧
   network: ws
   port: 443
   server: v1.coding996.com
@@ -747,7 +707,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国19 19Mbps 946ms 奈飞美国
+  name: 美国20 19Mbps 995ms 奈飞美国
   network: ws
   port: 443
   server: v6.coding996.com
@@ -756,8 +716,8 @@ proxies:
   type: vmess
   uuid: 1e7aca54-979a-40b0-9d1c-d7ef65a3d665
   ws-path: /wechat
-- name: 美国20 15Mbps 1215ms 奈飞自制剧
-  password: opentunnel.net-rtdsretc
+- name: 美国21 15Mbps 1241ms 奈飞自制剧
+  password: opentunnel.net-urewjdkw
   port: 443
   server: ust-1.opensvr.net
   skip-cert-verify: false
@@ -766,7 +726,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 美国21 11Mbps 1077ms 奈飞自制剧
+  name: 美国22 11Mbps 1077ms 奈飞自制剧
   network: ws
   port: 443
   server: 104.16.160.114
@@ -778,13 +738,13 @@ proxies:
     Host: vincent-jackson2021.ga
   ws-path: /The-Great-Awakening_vws
 - cipher: aes-256-gcm
-  name: 瑞士1 77Mbps 516ms
+  name: 瑞士1 77Mbps 517ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 84.17.53.219
   type: ss
 - cipher: aes-256-gcm
-  name: 瑞士2 76Mbps 550ms
+  name: 瑞士2 76Mbps 539ms
   password: WCuz7yrfZSCQQXSNrtGPz2HT
   port: 50168
   server: 156.146.62.57
@@ -796,49 +756,49 @@ proxies:
   server: 84.17.53.212
   type: ss
 - cipher: aes-256-gcm
-  name: 瑞士4 66Mbps 483ms
+  name: 瑞士4 66Mbps 486ms
   password: J2M953QbkCvvzx3vYWdyBQ4K
   port: 50225
   server: 45.12.222.245
   type: ss
 - cipher: aes-256-gcm
-  name: 瑞士5 65Mbps 650ms
+  name: 瑞士5 65Mbps 637ms
   password: YyCBeDdYX4cadHpCkkmdJLq8
   port: 43893
   server: 84.17.53.86
   type: ss
 - cipher: aes-256-gcm
-  name: 瑞士6 53Mbps 481ms
-  password: CTK8GXFQgKYQErrghPJfZ6tk
-  port: 47121
-  server: 156.146.62.46
-  type: ss
-- cipher: aes-256-gcm
-  name: 瑞士7 52Mbps 472ms
+  name: 瑞士6 52Mbps 476ms
   password: NHwQTPLCfaTMSqTnU3mjcSxe
   port: 33998
   server: 156.146.62.39
   type: ss
 - cipher: aes-256-gcm
-  name: 瑞士8 52Mbps 461ms
-  password: CXSjgD7u7Ar7GxkZ4CgTMUsj
-  port: 45329
-  server: 156.146.62.34
-  type: ss
-- cipher: aes-256-gcm
-  name: 瑞士9 52Mbps 491ms
+  name: 瑞士7 52Mbps 493ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 156.146.62.54
   type: ss
 - cipher: aes-256-gcm
-  name: 瑞士10 51Mbps 480ms
-  password: x23Z4LGkGDkThZ9Kaz4DURQp
-  port: 40093
-  server: 156.146.62.51
+  name: 瑞士8 51Mbps 475ms
+  password: p26v2JwhQVHDHsXk66fXt56r
+  port: 42304
+  server: 156.146.62.36
   type: ss
 - cipher: aes-256-gcm
-  name: 德国1 76Mbps 481ms
+  name: 瑞士9 22Mbps 492ms
+  password: kq8xQKC3K4jYQPwLXTNbJjm6
+  port: 39720
+  server: 37.120.213.5
+  type: ss
+- cipher: aes-256-gcm
+  name: 瑞士10 3Mbps 528ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 84.17.53.227
+  type: ss
+- cipher: aes-256-gcm
+  name: 德国1 76Mbps 476ms
   password: CUndSZnYsPKcu6Kj8THVMBHD
   port: 39772
   server: 82.102.16.101
@@ -850,61 +810,61 @@ proxies:
   server: 193.29.106.219
   type: ss
 - cipher: aes-256-gcm
-  name: 德国3 68Mbps 501ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 37.120.196.53
-  type: ss
-- cipher: aes-256-gcm
-  name: 德国4 66Mbps 448ms
+  name: 德国3 66Mbps 444ms
   password: CUndSZnYsPKcu6Kj8THVMBHD
   port: 39772
   server: 193.29.106.29
   type: ss
 - cipher: aes-256-gcm
-  name: 德国5 60Mbps 512ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
+  name: 德国4 60Mbps 489ms
+  password: CTK8GXFQgKYQErrghPJfZ6tk
+  port: 47121
   server: 193.29.106.5
   type: ss
 - cipher: aes-256-gcm
-  name: 德国6 59Mbps 440ms
+  name: 德国5 59Mbps 437ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 37.120.217.131
   type: ss
 - cipher: aes-256-gcm
-  name: 德国7 58Mbps 510ms
+  name: 德国6 58Mbps 506ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 45.87.212.211
   type: ss
-- name: 德国8 52Mbps 803ms 奈飞自制剧
+- name: 德国7 52Mbps 805ms 奈飞自制剧
   password: 7x42LetRa0
   port: 4443
   server: 139.59.209.152
   skip-cert-verify: true
   type: trojan
 - cipher: aes-256-gcm
-  name: 德国9 51Mbps 505ms
+  name: 德国8 51Mbps 505ms
   password: NHwQTPLCfaTMSqTnU3mjcSxe
   port: 33998
   server: 37.120.217.149
   type: ss
 - cipher: aes-256-gcm
-  name: 德国10 51Mbps 520ms
+  name: 德国9 51Mbps 516ms
   password: CUndSZnYsPKcu6Kj8THVMBHD
   port: 39772
   server: 193.29.106.61
   type: ss
 - cipher: aes-256-gcm
-  name: 德国11 49Mbps 643ms 奈飞自制剧
+  name: 德国10 50Mbps 494ms
+  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
+  port: 48938
+  server: 193.29.106.179
+  type: ss
+- cipher: aes-256-gcm
+  name: 德国11 49Mbps 629ms 奈飞自制剧
   password: faBAoD54k87UJG7
   port: 2375
   server: 89.163.212.75
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 德国12 47Mbps 596ms 奈飞自制剧
+  name: 德国12 47Mbps 588ms 奈飞自制剧
   password: G!yBwPWH3Vao
   port: 805
   server: 51.89.99.52
@@ -913,7 +873,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 德国13 11Mbps 1251ms 奈飞自制剧
+  name: 德国13 11Mbps 1287ms 奈飞自制剧
   network: ws
   port: 80
   server: euserv6p.ezddns.tk
@@ -922,64 +882,100 @@ proxies:
   uuid: 499737a4-9f18-4e1f-fb38-437e1855fc04
   ws-path: /video
 - cipher: aes-256-gcm
-  name: 丹麦1 76Mbps 564ms
+  name: 丹麦1 76Mbps 553ms
   password: CUndSZnYsPKcu6Kj8THVMBHD
   port: 39772
   server: 45.12.221.179
   type: ss
 - cipher: aes-256-gcm
-  name: 丹麦2 74Mbps 508ms
+  name: 丹麦2 74Mbps 528ms
   password: aYNeKDMzYQYw4KbUbJA8Wszq
   port: 31944
   server: 193.29.107.123
   type: ss
 - cipher: aes-256-gcm
-  name: 丹麦3 64Mbps 528ms
+  name: 丹麦3 64Mbps 531ms
   password: YyCBeDdYX4cadHpCkkmdJLq8
   port: 43893
   server: 193.29.107.163
   type: ss
 - cipher: aes-256-gcm
-  name: 丹麦4 34Mbps 729ms
+  name: 丹麦4 34Mbps 724ms
   password: CUndSZnYsPKcu6Kj8THVMBHD
   port: 39772
   server: 37.120.194.93
   type: ss
 - cipher: aes-256-gcm
-  name: 丹麦5 34Mbps 560ms
+  name: 丹麦5 34Mbps 548ms
   password: WCuz7yrfZSCQQXSNrtGPz2HT
   port: 50168
   server: 193.29.107.181
   type: ss
 - cipher: aes-256-gcm
-  name: 丹麦6 32Mbps 728ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
+  name: 丹麦6 32Mbps 725ms
+  password: LkFAzkzXkSCRYa2CsRdL8cGb
+  port: 34815
   server: 37.120.194.115
   type: ss
 - cipher: aes-256-gcm
-  name: 丹麦7 31Mbps 759ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
+  name: 丹麦7 31Mbps 770ms
+  password: aYNeKDMzYQYw4KbUbJA8Wszq
+  port: 31944
   server: 37.120.194.125
   type: ss
 - cipher: aes-256-gcm
-  name: 丹麦8 31Mbps 717ms
+  name: 丹麦8 31Mbps 715ms
   password: CUndSZnYsPKcu6Kj8THVMBHD
   port: 39772
   server: 2.58.46.5
   type: ss
 - cipher: aes-256-gcm
-  name: 丹麦9 30Mbps 762ms
+  name: 丹麦9 30Mbps 755ms
   password: x23Z4LGkGDkThZ9Kaz4DURQp
   port: 40093
   server: 193.29.107.237
   type: ss
 - cipher: aes-256-gcm
-  name: 丹麦10 30Mbps 730ms
+  name: 丹麦10 30Mbps 728ms
   password: CUndSZnYsPKcu6Kj8THVMBHD
   port: 39772
   server: 37.120.194.101
+  type: ss
+- name: 英国1 75Mbps 678ms 奈飞自制剧
+  password: 28d98f761aca9d636f44db62544628eb
+  port: 443
+  server: uk-server-01.f7256f.cn
+  skip-cert-verify: true
+  type: trojan
+- cipher: aes-256-gcm
+  name: 英国2 62Mbps 607ms
+  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
+  port: 48938
+  server: 86.106.136.85
+  type: ss
+- cipher: aes-256-gcm
+  name: 英国3 54Mbps 591ms
+  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
+  port: 48938
+  server: 194.37.96.213
+  type: ss
+- cipher: aes-256-gcm
+  name: 英国4 50Mbps 609ms
+  password: YyCBeDdYX4cadHpCkkmdJLq8
+  port: 43893
+  server: 89.238.130.227
+  type: ss
+- cipher: aes-256-gcm
+  name: 英国5 48Mbps 537ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 89.238.130.253
+  type: ss
+- cipher: aes-256-gcm
+  name: 英国6 13Mbps 607ms
+  password: n8w4StnbVD9dmXYn4Ajt87EA
+  port: 31572
+  server: 185.108.105.55
   type: ss
 - cipher: aes-256-gcm
   name: 加拿大1 75Mbps 489ms
@@ -988,9 +984,9 @@ proxies:
   server: 198.8.92.67
   type: ss
 - cipher: aes-256-gcm
-  name: 加拿大2 74Mbps 525ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
+  name: 加拿大2 74Mbps 524ms
+  password: BdRWC38L5JUDMTYNNxJGcUwB
+  port: 49396
   server: 104.200.132.35
   type: ss
 - cipher: aes-256-gcm
@@ -1000,13 +996,13 @@ proxies:
   server: 134.195.196.118
   type: ss
 - cipher: aes-256-gcm
-  name: 加拿大4 56Mbps 469ms
+  name: 加拿大4 56Mbps 476ms
   password: WCuz7yrfZSCQQXSNrtGPz2HT
   port: 50168
   server: 208.78.41.195
   type: ss
 - cipher: aes-256-gcm
-  name: 加拿大5 54Mbps 507ms
+  name: 加拿大5 54Mbps 502ms
   password: WCuz7yrfZSCQQXSNrtGPz2HT
   port: 50168
   server: 66.115.147.92
@@ -1018,145 +1014,102 @@ proxies:
   server: 66.115.147.89
   type: ss
 - cipher: aes-256-gcm
-  name: 加拿大7 51Mbps 658ms
+  name: 加拿大7 51Mbps 653ms
   password: YyCBeDdYX4cadHpCkkmdJLq8
   port: 43893
   server: 146.70.27.37
   type: ss
 - cipher: aes-256-gcm
-  name: 加拿大8 50Mbps 436ms
+  name: 加拿大8 50Mbps 435ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 66.115.147.87
   type: ss
 - cipher: aes-256-gcm
-  name: 加拿大9 49Mbps 434ms
-  password: kD9vkjnE6dsUzwQfvKkPkQAd
-  port: 37588
-  server: 66.115.147.82
-  type: ss
-- cipher: aes-256-gcm
-  name: 加拿大10 48Mbps 432ms
+  name: 加拿大9 48Mbps 431ms
   password: suucSeVLmt6PQKAP77NtGw9x
   port: 49339
   server: 66.115.147.77
   type: ss
+- cipher: aes-256-gcm
+  name: 加拿大10 43Mbps 519ms
+  password: RtbLkxbJZpUQ6m8y4qAeLYZj
+  port: 38747
+  server: 198.8.92.84
+  type: ss
 - cipher: aes-256-cfb
-  name: 加拿大11 35Mbps 555ms 奈飞自制剧
+  name: 加拿大11 35Mbps 569ms 奈飞自制剧
   obfs: plain
-  password: https://dlj.tf/ssrsub
-  port: 22478
+  password: suo.yt/ssrsub
+  port: 28139
   protocol: origin
-  protocol-param: t.me/SSRSUB
-  server: 45.62.231.50
+  server: ssr3.ssrsub.one
   type: ssr
 - cipher: aes-256-gcm
-  name: 法国1 73Mbps 527ms
+  name: 法国1 73Mbps 525ms
   password: WCuz7yrfZSCQQXSNrtGPz2HT
   port: 50168
   server: 143.244.57.106
   type: ss
 - cipher: aes-256-gcm
-  name: 法国2 51Mbps 545ms
+  name: 法国2 51Mbps 547ms
   password: suucSeVLmt6PQKAP77NtGw9x
   port: 49339
   server: 138.199.16.137
   type: ss
 - cipher: aes-256-gcm
-  name: 法国3 49Mbps 565ms
-  password: Y9GcTPemHMKEkrfGQPJqFDNr
-  port: 49653
+  name: 法国3 49Mbps 562ms
+  password: suucSeVLmt6PQKAP77NtGw9x
+  port: 49339
   server: 143.244.57.99
   type: ss
 - cipher: aes-256-gcm
-  name: 法国4 42Mbps 480ms
+  name: 法国4 42Mbps 481ms
   password: WBLAbN6AwtV5avBx73hFRLB3
   port: 35200
   server: 217.138.207.253
   type: ss
-- name: 法国5 34Mbps 826ms 奈飞自制剧
+- name: 法国5 34Mbps 807ms 奈飞自制剧
   password: 36ebef7d1b1d6205fd0c55f28800e674
   port: 443
   server: ger-server-01.selfupay.com
   skip-cert-verify: true
   type: trojan
 - cipher: aes-256-gcm
-  name: 法国6 18Mbps 659ms
+  name: 法国6 18Mbps 656ms
   password: wEsFcHCvbL4eJkL4DZQa7RgR
   port: 45746
   server: 185.108.106.146
   type: ss
 - cipher: aes-256-gcm
-  name: 法国7 14Mbps 742ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
+  name: 法国7 14Mbps 712ms
+  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
+  port: 33992
   server: 185.108.106.26
   type: ss
 - cipher: aes-256-gcm
-  name: 法国8 14Mbps 677ms
+  name: 法国8 14Mbps 666ms
   password: WCuz7yrfZSCQQXSNrtGPz2HT
   port: 50168
   server: 185.108.106.53
   type: ss
 - cipher: aes-256-gcm
-  name: 法国9 13Mbps 644ms
-  password: YgusH2MWA8PWc3p2VDsR7AVv
-  port: 31764
-  server: 185.108.106.105
-  type: ss
-- cipher: aes-256-gcm
-  name: 法国10 11Mbps 686ms
+  name: 法国9 11Mbps 676ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 185.108.106.176
   type: ss
 - cipher: aes-256-gcm
-  name: 英国1 62Mbps 629ms
-  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
-  port: 48938
-  server: 86.106.136.85
+  name: 法国10 9Mbps 651ms
+  password: J9Y2ncrdPEC38gwydNFFGBna
+  port: 35294
+  server: 185.108.106.152
   type: ss
-- cipher: aes-256-gcm
-  name: 英国2 54Mbps 599ms
-  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
-  port: 48938
-  server: 194.37.96.213
-  type: ss
-- cipher: aes-256-gcm
-  name: 英国3 50Mbps 613ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 89.238.130.227
-  type: ss
-- cipher: aes-256-gcm
-  name: 英国4 48Mbps 533ms
-  password: CUndSZnYsPKcu6Kj8THVMBHD
-  port: 39772
-  server: 89.238.130.253
-  type: ss
-- cipher: aes-256-gcm
-  name: 英国5 13Mbps 626ms
-  password: n8w4StnbVD9dmXYn4Ajt87EA
-  port: 31572
-  server: 185.108.105.55
-  type: ss
-- alterId: 1
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 英国6 0Mbps 1617ms 奈飞自制剧
-  network: ws
-  port: 1512
-  server: ld02.xqkj.cloud
-  skip-cert-verify: true
-  type: vmess
-  uuid: 83bc7d7c-2a5d-43fc-84ef-59037f80d2a0
-  ws-path: /
 - alterId: 64
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 荷兰1 13Mbps 1058ms 奈飞自制剧
+  name: 荷兰1 13Mbps 1059ms 奈飞自制剧
   network: ws
   port: 443
   server: 46.182.107.94
@@ -1169,22 +1122,25 @@ proxies:
   ws-path: /footers
 - alterId: 64
   cipher: auto
-  name: 荷兰2 11Mbps 1078ms 奈飞自制剧
+  h2-opts: {}
+  http-opts: {}
+  name: 荷兰2 11Mbps 1081ms 奈飞自制剧
   network: ws
   port: 443
   server: 46.182.107.154
-  skip-cert-verify: false
+  servername: www.05222027.xyz
+  skip-cert-verify: true
   tls: true
   type: vmess
   uuid: 130c9f2e-42b1-4ebf-b345-e26456a061f9
   ws-headers:
-    Host: www.05222027.xyz
+    HOST: www.05222027.xyz
   ws-path: /footers
 - alterId: 64
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 荷兰3 10Mbps 1056ms 奈飞自制剧
+  name: 荷兰3 10Mbps 1052ms 奈飞自制剧
   network: ws
   port: 443
   server: 46.182.107.165
@@ -1197,67 +1153,61 @@ proxies:
     HOST: www.07890885.xyz
   ws-path: /footers
 - cipher: aes-256-gcm
-  name: 比利时1 56Mbps 688ms
+  name: 比利时1 56Mbps 693ms
   password: 4ejJ8n5ddLuYDUHGXJre2ufJ
   port: 48938
   server: 217.138.211.219
   type: ss
 - cipher: aes-256-gcm
-  name: 比利时2 33Mbps 567ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 91.90.123.115
-  type: ss
-- cipher: aes-256-gcm
-  name: 比利时3 3Mbps 894ms
+  name: 比利时2 3Mbps 882ms
   password: suucSeVLmt6PQKAP77NtGw9x
   port: 49339
   server: 188.95.55.106
   type: ss
 - cipher: aes-256-gcm
-  name: 马来西亚1 12Mbps 799ms
+  name: 马来西亚1 12Mbps 803ms
   password: kD9vkjnE6dsUzwQfvKkPkQAd
   port: 37588
   server: 42.0.30.209
   type: ss
 - cipher: aes-256-gcm
-  name: 捷克1 63Mbps 559ms
+  name: 捷克1 63Mbps 552ms
   password: YyCBeDdYX4cadHpCkkmdJLq8
   port: 43893
   server: 217.138.220.131
   type: ss
 - cipher: aes-256-gcm
-  name: 捷克2 32Mbps 676ms
+  name: 捷克2 32Mbps 677ms
   password: z6pH3RyttkRWhJ5tpRyt6dYk
   port: 41676
   server: 217.138.220.163
   type: ss
 - cipher: aes-256-gcm
-  name: 西班牙1 62Mbps 603ms
+  name: 西班牙1 62Mbps 592ms
   password: YyCBeDdYX4cadHpCkkmdJLq8
   port: 43893
   server: 89.37.95.23
   type: ss
 - cipher: aes-256-gcm
-  name: 西班牙2 59Mbps 506ms
+  name: 西班牙2 59Mbps 501ms
   password: YyCBeDdYX4cadHpCkkmdJLq8
   port: 43893
   server: 89.37.95.15
   type: ss
 - cipher: aes-256-gcm
-  name: 西班牙3 41Mbps 520ms
+  name: 西班牙3 41Mbps 575ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 37.120.148.227
   type: ss
 - cipher: aes-256-gcm
-  name: 西班牙4 35Mbps 564ms
+  name: 西班牙4 35Mbps 570ms
   password: WCuz7yrfZSCQQXSNrtGPz2HT
   port: 50168
   server: 82.102.26.237
   type: ss
 - cipher: aes-256-gcm
-  name: 西班牙5 1Mbps 1041ms
+  name: 西班牙5 1Mbps 1008ms
   password: FoOiGlkAA9yPEGP
   port: 7306
   server: 172.107.233.234
@@ -1266,7 +1216,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 中国成都1 60Mbps 198ms
+  name: 中国成都1 60Mbps 204ms
   network: tcp
   port: 49110
   server: 139.155.22.227
@@ -1275,7 +1225,7 @@ proxies:
   uuid: f7675b7e-59bf-435c-ac03-dc2482f27e5d
   ws-path: /
 - cipher: aes-256-gcm
-  name: 拉脱维亚1 58Mbps 533ms
+  name: 拉脱维亚1 58Mbps 531ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 188.92.78.152
@@ -1284,7 +1234,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 中国合肥1 58Mbps 139ms
+  name: 中国合肥1 58Mbps 140ms
   network: tcp
   port: 46006
   server: 42.157.8.162
@@ -1293,7 +1243,7 @@ proxies:
   uuid: 3959477e-55c4-453f-bc80-3b13e64891ac
   ws-path: /
 - cipher: aes-256-gcm
-  name: 爱尔兰1 57Mbps 544ms
+  name: 爱尔兰1 57Mbps 545ms
   password: n8w4StnbVD9dmXYn4Ajt87EA
   port: 31572
   server: se.free-v2ray.tk
@@ -1305,55 +1255,55 @@ proxies:
   server: 5.157.13.101
   type: ss
 - cipher: aes-256-gcm
-  name: 爱尔兰3 39Mbps 593ms
+  name: 爱尔兰3 39Mbps 589ms
   password: kD9vkjnE6dsUzwQfvKkPkQAd
   port: 37588
   server: 5.157.13.91
   type: ss
 - cipher: aes-256-gcm
-  name: 爱尔兰4 39Mbps 683ms
-  password: WCuz7yrfZSCQQXSNrtGPz2HT
-  port: 50168
-  server: 5.157.13.133
-  type: ss
-- cipher: aes-256-gcm
-  name: 爱尔兰5 38Mbps 602ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
+  name: 爱尔兰4 38Mbps 602ms
+  password: aYNeKDMzYQYw4KbUbJA8Wszq
+  port: 31944
   server: 217.138.222.53
   type: ss
 - cipher: aes-256-gcm
-  name: 爱尔兰6 38Mbps 670ms
+  name: 爱尔兰5 38Mbps 657ms
   password: WCuz7yrfZSCQQXSNrtGPz2HT
   port: 50168
   server: 5.157.13.69
   type: ss
 - cipher: aes-256-gcm
-  name: 爱尔兰7 37Mbps 596ms
+  name: 爱尔兰6 37Mbps 598ms
   password: YyCBeDdYX4cadHpCkkmdJLq8
   port: 43893
   server: 37.120.235.221
   type: ss
 - cipher: aes-256-gcm
-  name: 爱尔兰8 36Mbps 670ms
+  name: 爱尔兰7 36Mbps 663ms
   password: WCuz7yrfZSCQQXSNrtGPz2HT
   port: 50168
   server: 37.120.235.77
   type: ss
 - cipher: aes-256-gcm
-  name: 爱尔兰9 35Mbps 659ms
+  name: 爱尔兰8 35Mbps 653ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 217.138.222.45
   type: ss
 - cipher: aes-256-gcm
-  name: 爱尔兰10 35Mbps 591ms
+  name: 爱尔兰9 35Mbps 592ms
   password: YyCBeDdYX4cadHpCkkmdJLq8
   port: 43893
   server: 37.120.235.59
   type: ss
+- cipher: aes-256-gcm
+  name: 爱尔兰10 35Mbps 597ms
+  password: WCuz7yrfZSCQQXSNrtGPz2HT
+  port: 50168
+  server: 37.120.235.229
+  type: ss
 - cipher: aes-128-gcm
-  name: 俄罗斯联邦1 14Mbps 1026ms 奈飞自制剧
+  name: 俄罗斯联邦1 14Mbps 999ms 奈飞自制剧
   password: suo.yt/ssrsub
   plugin: obfs
   plugin-opts:
@@ -1364,7 +1314,7 @@ proxies:
   type: ss
 - alterId: 64
   cipher: auto
-  name: 俄罗斯联邦2 11Mbps 1425ms 奈飞自制剧
+  name: 俄罗斯联邦2 11Mbps 1433ms 奈飞自制剧
   network: ws
   port: 34888
   server: 2.56.241.149
@@ -1375,36 +1325,22 @@ proxies:
   ws-headers:
     Host: 2.56.241.149
   ws-path: /
-- alterId: 1
+- alterId: 0
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 俄罗斯联邦3 8Mbps 1102ms
+  name: 俄罗斯联邦3 4Mbps 1635ms
   network: ws
-  port: 2053
-  server: s2-ru-2194.qdns.live
-  servername: s2-ru-2194.qdns.live
-  skip-cert-verify: true
+  port: 443
+  server: ruuss444.liuwei01.tk
+  skip-cert-verify: false
   tls: true
   type: vmess
-  uuid: 9faebb59-54b2-377c-b49f-abc8dba2fe87
+  uuid: 93143f88-4e0c-438f-9b15-1774b9c4c41c
   ws-headers:
-    HOST: s2-ru-2194.qdns.live
+    Host: ruuss444.liuwei01.tk
   ws-path: /
-- alterId: 233
-  cipher: auto
-  name: 俄罗斯联邦4 4Mbps 1443ms
-  network: ws
-  port: 80
-  server: 172.67.150.130
-  skip-cert-verify: false
-  tls: false
-  type: vmess
-  uuid: 3d31728e-064d-42b8-b945-f79c008f73fc
-  ws-headers:
-    Host: free-russian01-cdn.xiaohouzi.club
-  ws-path: /
-- name: 俄罗斯联邦5 3Mbps 1666ms 奈飞自制剧
+- name: 俄罗斯联邦4 3Mbps 1666ms 奈飞自制剧
   password: fe74a1aa-4849-4239-838e-1e7d9f6e975d
   port: 8443
   server: t3.ssrsub.one
@@ -1415,7 +1351,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 俄罗斯联邦6 3Mbps 1605ms 奈飞自制剧
+  name: 俄罗斯联邦5 3Mbps 1658ms 奈飞自制剧
   network: ws
   port: 443
   server: ruuss222.liuwei01.tk
@@ -1431,7 +1367,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 俄罗斯联邦7 2Mbps 545ms 奈飞自制剧
+  name: 俄罗斯联邦6 2Mbps 542ms 奈飞自制剧
   network: tcp
   port: 26010
   server: 46.17.43.179
@@ -1439,110 +1375,104 @@ proxies:
   type: vmess
   uuid: 6d201803-0972-472b-b2a8-0667340281a3
   ws-path: /
-- name: 俄罗斯联邦8 1Mbps 1011ms 奈飞自制剧
+- name: 俄罗斯联邦7 1Mbps 1043ms 奈飞自制剧
   password: fe74a1aa-4849-4239-838e-1e7d9f6e975d
   port: 8443
   server: t4.ssrsub.one
   skip-cert-verify: true
   type: trojan
 - cipher: aes-256-gcm
-  name: 俄罗斯联邦9 0Mbps 508ms 奈飞自制剧
-  password: dongtaiwang.com
-  port: 20022
-  server: 45.147.200.214
-  type: ss
-- cipher: aes-256-gcm
-  name: 意大利1 51Mbps 544ms
+  name: 意大利1 51Mbps 541ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 37.120.207.5
   type: ss
 - cipher: aes-256-gcm
-  name: 意大利2 50Mbps 560ms
+  name: 意大利2 50Mbps 556ms
   password: CUndSZnYsPKcu6Kj8THVMBHD
   port: 39772
   server: 217.138.219.227
   type: ss
 - cipher: aes-256-gcm
-  name: 意大利3 49Mbps 551ms
-  password: DKXfWwc4ebscpXTKpbt85rSH
-  port: 38742
+  name: 意大利3 49Mbps 558ms
+  password: WCuz7yrfZSCQQXSNrtGPz2HT
+  port: 50168
   server: 37.120.207.117
   type: ss
 - cipher: aes-256-gcm
-  name: 意大利4 48Mbps 484ms
+  name: 意大利4 48Mbps 489ms
   password: NHwQTPLCfaTMSqTnU3mjcSxe
   port: 33998
   server: 82.102.26.60
   type: ss
 - cipher: aes-256-gcm
-  name: 意大利5 48Mbps 484ms
+  name: 意大利5 48Mbps 488ms
   password: txmK9WhwP6WPhP7hqSBLVxpN
   port: 34687
   server: 82.102.26.117
   type: ss
 - cipher: aes-256-gcm
-  name: 意大利6 48Mbps 481ms
+  name: 意大利6 48Mbps 489ms
   password: aYNeKDMzYQYw4KbUbJA8Wszq
   port: 31944
   server: 82.102.26.51
   type: ss
 - cipher: aes-256-gcm
-  name: 意大利7 47Mbps 475ms
+  name: 意大利7 47Mbps 481ms
   password: tBKBf4pVzNCFKdbPgvwrNXq3
   port: 42816
   server: 82.102.26.101
   type: ss
 - cipher: aes-256-gcm
-  name: 意大利8 47Mbps 479ms
-  password: CMduaFXddcQbwNAAs7xFDnc8
-  port: 33148
-  server: 82.102.26.99
-  type: ss
-- cipher: aes-256-gcm
-  name: 意大利9 47Mbps 493ms
+  name: 意大利8 47Mbps 498ms
   password: n8w4StnbVD9dmXYn4Ajt87EA
   port: 31572
   server: 82.102.26.53
   type: ss
 - cipher: aes-256-gcm
-  name: 意大利10 46Mbps 660ms
+  name: 意大利9 46Mbps 657ms
   password: DKXfWwc4ebscpXTKpbt85rSH
   port: 38742
   server: 82.102.26.94
   type: ss
 - cipher: aes-256-gcm
-  name: 波兰1 53Mbps 482ms
+  name: 意大利10 28Mbps 557ms
+  password: BdRWC38L5JUDMTYNNxJGcUwB
+  port: 49396
+  server: 217.138.219.229
+  type: ss
+- cipher: aes-256-gcm
+  name: 波兰1 53Mbps 480ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 5.187.49.189
   type: ss
 - cipher: aes-256-gcm
-  name: 波兰2 50Mbps 462ms
+  name: 波兰2 50Mbps 461ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 178.255.45.187
   type: ss
 - cipher: aes-256-gcm
-  name: 波兰3 10Mbps 697ms
+  name: 波兰3 10Mbps 683ms
   password: p26v2JwhQVHDHsXk66fXt56r
   port: 42304
   server: 5.133.8.117
   type: ss
 - cipher: aes-256-gcm
-  name: 匈牙利1 52Mbps 664ms
+  name: 匈牙利1 52Mbps 708ms
   password: YyCBeDdYX4cadHpCkkmdJLq8
   port: 43893
   server: 37.120.144.211
   type: ss
 - cipher: aes-256-gcm
-  name: 奥地利1 51Mbps 604ms
+  name: 奥地利1 51Mbps 599ms
   password: BdRWC38L5JUDMTYNNxJGcUwB
   port: 49396
   server: 5.253.207.85
   type: ss
 - cipher: aes-256-gcm
-  name: 奥地利2 49Mbps 500ms
+  name: 奥地利2 49Mbps 501ms
   password: YyCBeDdYX4cadHpCkkmdJLq8
   port: 43893
   server: 89.187.168.51
@@ -1554,25 +1484,19 @@ proxies:
   server: 89.187.168.44
   type: ss
 - cipher: aes-256-gcm
-  name: 奥地利4 48Mbps 494ms
+  name: 奥地利4 48Mbps 495ms
   password: CUndSZnYsPKcu6Kj8THVMBHD
   port: 39772
   server: 89.187.168.46
   type: ss
 - cipher: aes-256-gcm
-  name: 奥地利5 48Mbps 507ms
+  name: 奥地利5 48Mbps 508ms
   password: DKXfWwc4ebscpXTKpbt85rSH
   port: 38742
   server: 89.187.168.39
   type: ss
 - cipher: aes-256-gcm
-  name: 奥地利6 12Mbps 623ms
-  password: x23Z4LGkGDkThZ9Kaz4DURQp
-  port: 40093
-  server: 37.120.221.5
-  type: ss
-- cipher: aes-256-gcm
-  name: 塞尔维亚1 50Mbps 749ms
+  name: 塞尔维亚1 50Mbps 740ms
   password: NHwQTPLCfaTMSqTnU3mjcSxe
   port: 33998
   server: 152.89.160.213
@@ -1584,113 +1508,111 @@ proxies:
   server: 185.212.111.59
   type: ss
 - cipher: aes-256-gcm
-  name: 波斯尼亚和黑塞哥维那2 40Mbps 589ms
+  name: 波斯尼亚和黑塞哥维那2 40Mbps 579ms
   password: YyCBeDdYX4cadHpCkkmdJLq8
   port: 43893
   server: 185.164.34.250
   type: ss
 - cipher: aes-256-gcm
-  name: 波斯尼亚和黑塞哥维那3 35Mbps 659ms
+  name: 波斯尼亚和黑塞哥维那3 35Mbps 653ms
   password: 4ejJ8n5ddLuYDUHGXJre2ufJ
   port: 48938
   server: 185.99.3.146
   type: ss
 - cipher: aes-256-gcm
-  name: 波斯尼亚和黑塞哥维那4 32Mbps 588ms
+  name: 波斯尼亚和黑塞哥维那4 32Mbps 580ms
   password: BdRWC38L5JUDMTYNNxJGcUwB
   port: 49396
   server: 185.212.111.6
   type: ss
 - cipher: aes-256-gcm
-  name: 阿尔巴尼亚1 15Mbps 835ms
+  name: 阿尔巴尼亚1 15Mbps 818ms
   password: BdRWC38L5JUDMTYNNxJGcUwB
   port: 49396
   server: 31.171.154.101
   type: ss
 - cipher: aes-256-gcm
-  name: 克罗地亚1 20Mbps 610ms
+  name: 克罗地亚1 50Mbps 680ms
+  password: kD9vkjnE6dsUzwQfvKkPkQAd
+  port: 37588
+  server: 85.10.50.164
+  type: ss
+- cipher: aes-256-gcm
+  name: 克罗地亚2 20Mbps 667ms
   password: CUndSZnYsPKcu6Kj8THVMBHD
   port: 39772
   server: 85.10.50.166
   type: ss
 - cipher: aes-256-gcm
-  name: 葡萄牙1 46Mbps 616ms
-  password: Kquv5UhvZXNMemAQy8DxZ7qn
-  port: 38620
-  server: 194.39.127.163
-  type: ss
-- cipher: aes-256-gcm
-  name: 葡萄牙2 45Mbps 635ms
+  name: 葡萄牙1 45Mbps 632ms
   password: YyCBeDdYX4cadHpCkkmdJLq8
   port: 43893
   server: 185.188.61.119
   type: ss
 - cipher: aes-256-gcm
-  name: 葡萄牙3 43Mbps 777ms
-  password: yUXad7DGF8L5cTShEpnp2N6z
-  port: 36460
-  server: 194.39.127.23
-  type: ss
-- cipher: aes-256-gcm
-  name: 葡萄牙4 43Mbps 728ms
+  name: 葡萄牙2 43Mbps 720ms
   password: WCuz7yrfZSCQQXSNrtGPz2HT
   port: 50168
   server: 185.188.61.83
   type: ss
 - cipher: aes-256-gcm
-  name: 葡萄牙5 3Mbps 870ms
+  name: 葡萄牙3 3Mbps 847ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 91.205.230.140
   type: ss
 - cipher: aes-256-gcm
-  name: 葡萄牙6 2Mbps 1175ms
+  name: 葡萄牙4 2Mbps 1283ms
   password: J9Y2ncrdPEC38gwydNFFGBna
   port: 35294
   server: 5.154.174.189
   type: ss
 - cipher: aes-256-gcm
-  name: 葡萄牙7 2Mbps 896ms
+  name: 葡萄牙5 2Mbps 886ms
   password: enctdKyJfSu76VqznKwTt6Ap
   port: 37473
   server: 5.154.174.67
   type: ss
 - cipher: aes-256-gcm
-  name: 葡萄牙8 1Mbps 1294ms
+  name: 葡萄牙6 1Mbps 1199ms
   password: kD9vkjnE6dsUzwQfvKkPkQAd
   port: 37588
   server: 91.205.230.160
   type: ss
-- alterId: 0
-  cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 韩国1 39Mbps 449ms 奈飞自制剧
-  network: tcp
-  port: 110
-  server: 120.232.214.25
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  uuid: 6d030d0c-8821-4e91-ba95-ef57c508ff18
-  ws-path: /
 - alterId: 2
   cipher: auto
-  h2-opts: {}
-  http-opts: {}
-  name: 韩国2 30Mbps 430ms 奈飞自制剧
+  name: 韩国1 30Mbps 419ms 奈飞自制剧
   network: ws
   port: 58809
   server: az.zf01.ssru8.club
-  skip-cert-verify: true
+  skip-cert-verify: false
+  tls: false
   type: vmess
   uuid: acee9a77-5023-4793-8c3b-46b464ba10b6
+  ws-headers:
+    Host: ''
   ws-path: /
 - alterId: 1
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 韩国3 6Mbps 268ms 奈飞自制剧
+  name: 韩国2 10Mbps 533ms 奈飞韩国
+  network: ws
+  port: 3389
+  server: kr2.uuv2.co.uk
+  servername: kr2.uuv2.co.uk
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  uuid: 1f4c4e3d-e44d-40c4-9af8-e70dc34bf007
+  ws-headers:
+    HOST: kr2.uuv2.co.uk
+  ws-path: /TG@mftizi
+- alterId: 1
+  cipher: auto
+  h2-opts: {}
+  http-opts: {}
+  name: 韩国3 6Mbps 266ms 奈飞自制剧
   network: tcp
   port: 80
   server: 3.36.96.175
@@ -1707,7 +1629,7 @@ proxies:
   server: 45.125.247.91
   type: ss
 - cipher: aes-256-gcm
-  name: 澳大利亚2 45Mbps 660ms
+  name: 澳大利亚2 45Mbps 659ms
   password: 4ejJ8n5ddLuYDUHGXJre2ufJ
   port: 48938
   server: 45.125.247.157
@@ -1725,7 +1647,7 @@ proxies:
   server: 45.125.247.155
   type: ss
 - cipher: aes-256-gcm
-  name: 澳大利亚5 42Mbps 475ms
+  name: 澳大利亚5 42Mbps 474ms
   password: Y9GcTPemHMKEkrfGQPJqFDNr
   port: 49653
   server: 45.125.247.45
@@ -1755,20 +1677,14 @@ proxies:
   server: 144.48.38.179
   type: ss
 - cipher: aes-256-gcm
-  name: 澳大利亚10 40Mbps 572ms
+  name: 澳大利亚10 40Mbps 574ms
   password: BdRWC38L5JUDMTYNNxJGcUwB
   port: 49396
   server: 45.248.77.237
   type: ss
-- cipher: aes-256-gcm
-  name: 印度尼西亚1 45Mbps 593ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 103.120.66.214
-  type: ss
 - alterId: 64
   cipher: auto
-  name: 土耳其1 40Mbps 714ms 奈飞土耳其
+  name: 土耳其1 40Mbps 752ms 奈飞土耳其
   port: 15079
   server: 185.247.138.25
   skip-cert-verify: false
@@ -1779,7 +1695,7 @@ proxies:
   cipher: auto
   h2-opts: {}
   http-opts: {}
-  name: 土耳其2 7Mbps 1551ms
+  name: 土耳其2 7Mbps 1560ms
   network: ws
   port: 443
   server: tr01.v2net.top
@@ -1795,139 +1711,139 @@ proxies:
   server: 185.153.151.62
   type: ss
 - cipher: aes-256-gcm
-  name: 卢森堡2 32Mbps 618ms
+  name: 卢森堡2 32Mbps 615ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 185.153.151.75
   type: ss
 - cipher: aes-256-gcm
-  name: 卢森堡3 32Mbps 755ms
+  name: 卢森堡3 32Mbps 742ms
   password: J9Y2ncrdPEC38gwydNFFGBna
   port: 35294
   server: 185.153.151.100
   type: ss
 - cipher: aes-256-gcm
-  name: 卢森堡4 31Mbps 637ms
+  name: 卢森堡4 31Mbps 687ms
   password: WCuz7yrfZSCQQXSNrtGPz2HT
   port: 50168
   server: 185.153.151.187
   type: ss
 - cipher: aes-256-gcm
-  name: 卢森堡5 30Mbps 619ms
-  password: r9Q3adc3ru9sfBDPEj4yp6U6
-  port: 48794
+  name: 卢森堡5 30Mbps 622ms
+  password: suucSeVLmt6PQKAP77NtGw9x
+  port: 49339
   server: 185.153.151.78
   type: ss
 - cipher: aes-256-gcm
-  name: 卢森堡6 29Mbps 714ms
+  name: 卢森堡6 29Mbps 701ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 185.153.151.104
   type: ss
 - cipher: aes-256-gcm
-  name: 卢森堡7 29Mbps 615ms
+  name: 卢森堡7 29Mbps 722ms
   password: RtbLkxbJZpUQ6m8y4qAeLYZj
   port: 38747
   server: 185.153.151.89
   type: ss
 - cipher: aes-256-gcm
-  name: 卢森堡8 27Mbps 627ms
+  name: 卢森堡8 27Mbps 680ms
   password: WCuz7yrfZSCQQXSNrtGPz2HT
   port: 50168
   server: 185.153.151.191
   type: ss
 - cipher: aes-256-gcm
-  name: 卢森堡9 27Mbps 686ms
+  name: 卢森堡9 27Mbps 679ms
   password: x23Z4LGkGDkThZ9Kaz4DURQp
   port: 40093
   server: 185.153.151.118
   type: ss
 - cipher: aes-256-gcm
-  name: 卢森堡10 26Mbps 784ms
+  name: 卢森堡10 26Mbps 766ms
   password: WCuz7yrfZSCQQXSNrtGPz2HT
   port: 50168
   server: 185.153.151.171
   type: ss
 - cipher: aes-256-gcm
-  name: 哈萨克斯坦1 29Mbps 750ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
+  name: 哈萨克斯坦1 29Mbps 725ms
+  password: jspgz9G3VmvBMCgMUWLBaZHu
+  port: 44820
   server: 5.189.202.16
   type: ss
 - cipher: aes-256-gcm
-  name: 哥伦比亚1 25Mbps 768ms
+  name: 哥伦比亚1 25Mbps 763ms
   password: CUndSZnYsPKcu6Kj8THVMBHD
   port: 39772
   server: 194.41.112.14
   type: ss
 - cipher: aes-256-gcm
-  name: 哥伦比亚2 24Mbps 736ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 194.41.112.9
-  type: ss
-- cipher: aes-256-gcm
-  name: 哥伦比亚3 14Mbps 759ms
+  name: 哥伦比亚2 14Mbps 756ms
   password: CUndSZnYsPKcu6Kj8THVMBHD
   port: 39772
   server: 194.41.112.28
   type: ss
 - cipher: aes-256-gcm
-  name: 哥伦比亚4 2Mbps 982ms
-  password: x23Z4LGkGDkThZ9Kaz4DURQp
-  port: 40093
-  server: 45.129.32.34
-  type: ss
-- cipher: aes-256-gcm
-  name: 哥伦比亚5 2Mbps 997ms
+  name: 哥伦比亚3 2Mbps 985ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 45.129.32.13
   type: ss
 - cipher: aes-256-gcm
-  name: 哥伦比亚6 2Mbps 1352ms
+  name: 哥伦比亚4 2Mbps 1349ms
   password: suucSeVLmt6PQKAP77NtGw9x
   port: 49339
   server: 91.206.168.15
   type: ss
 - cipher: aes-256-gcm
-  name: 哥伦比亚7 2Mbps 1318ms
+  name: 哥伦比亚5 2Mbps 1270ms
   password: BdRWC38L5JUDMTYNNxJGcUwB
   port: 49396
   server: 91.206.168.3
   type: ss
 - cipher: aes-256-gcm
-  name: 哥伦比亚8 2Mbps 1305ms
+  name: 哥伦比亚6 2Mbps 1250ms
   password: 4ejJ8n5ddLuYDUHGXJre2ufJ
   port: 48938
   server: 91.206.168.5
   type: ss
 - cipher: aes-256-gcm
-  name: 哥伦比亚9 2Mbps 1178ms
+  name: 哥伦比亚7 2Mbps 1140ms
   password: BdRWC38L5JUDMTYNNxJGcUwB
   port: 49396
   server: 91.206.168.9
   type: ss
 - cipher: aes-256-gcm
-  name: 哥伦比亚10 2Mbps 1507ms
+  name: 哥伦比亚8 2Mbps 1586ms
   password: BdRWC38L5JUDMTYNNxJGcUwB
   port: 49396
   server: 91.206.168.39
   type: ss
 - cipher: aes-256-gcm
-  name: 阿拉伯联合酋长国1 19Mbps 969ms
+  name: 哥伦比亚9 2Mbps 1176ms
+  password: CUndSZnYsPKcu6Kj8THVMBHD
+  port: 39772
+  server: 91.206.168.11
+  type: ss
+- cipher: aes-256-gcm
+  name: 哥伦比亚10 2Mbps 1216ms
+  password: 4ejJ8n5ddLuYDUHGXJre2ufJ
+  port: 48938
+  server: 91.206.168.29
+  type: ss
+- cipher: aes-256-gcm
+  name: 阿拉伯联合酋长国1 19Mbps 970ms
   password: x23Z4LGkGDkThZ9Kaz4DURQp
   port: 40093
   server: 176.125.231.5
   type: ss
 - cipher: aes-256-gcm
-  name: 阿拉伯联合酋长国2 12Mbps 1149ms
-  password: enctdKyJfSu76VqznKwTt6Ap
-  port: 37473
+  name: 阿拉伯联合酋长国2 12Mbps 1147ms
+  password: YgusH2MWA8PWc3p2VDsR7AVv
+  port: 31764
   server: 45.9.249.245
   type: ss
 - cipher: aes-256-cfb
-  name: 中国厦门1 18Mbps 156ms
+  name: 中国厦门1 18Mbps 155ms
   password: GUTGQJ
   port: 43552
   server: 120.41.41.56
@@ -1943,21 +1859,21 @@ proxies:
   server: 120.41.41.215
   type: ssr
 - cipher: aes-256-gcm
-  name: 芬兰1 18Mbps 808ms
+  name: 芬兰1 18Mbps 785ms
   password: WCuz7yrfZSCQQXSNrtGPz2HT
   port: 50168
   server: 196.196.203.141
   type: ss
 - cipher: aes-256-gcm
-  name: 芬兰2 12Mbps 800ms
+  name: 芬兰2 12Mbps 797ms
   password: wrCaGtrUbzeRqQLdc8Kmk3Nd
   port: 49126
   server: 196.244.191.91
   type: ss
 - cipher: aes-256-gcm
-  name: 芬兰3 12Mbps 854ms
-  password: NHwQTPLCfaTMSqTnU3mjcSxe
-  port: 33998
+  name: 芬兰3 12Mbps 852ms
+  password: g4AfpNELpdYEeLYhM8XCX9se
+  port: 39556
   server: 196.244.191.45
   type: ss
 - cipher: aes-256-gcm
@@ -1967,103 +1883,85 @@ proxies:
   server: 196.244.191.165
   type: ss
 - cipher: aes-256-gcm
-  name: 芬兰5 12Mbps 845ms
-  password: wEsFcHCvbL4eJkL4DZQa7RgR
-  port: 45746
+  name: 芬兰5 12Mbps 844ms
+  password: Vt5pBJFwdtNB26cJbTXxm88Z
+  port: 47027
   server: 196.244.191.93
   type: ss
 - cipher: aes-256-gcm
-  name: 巴西1 17Mbps 872ms
+  name: 巴西1 17Mbps 856ms
   password: yUXad7DGF8L5cTShEpnp2N6z
   port: 36460
   server: 191.96.13.200
   type: ss
 - cipher: aes-256-gcm
-  name: 新西兰1 14Mbps 833ms
+  name: 新西兰1 14Mbps 826ms
   password: yUXad7DGF8L5cTShEpnp2N6z
   port: 36460
   server: 180.149.231.69
   type: ss
 - cipher: aes-256-gcm
-  name: 新西兰2 14Mbps 888ms
+  name: 新西兰2 14Mbps 883ms
   password: kD9vkjnE6dsUzwQfvKkPkQAd
   port: 37588
   server: 180.149.231.67
   type: ss
 - cipher: aes-256-gcm
-  name: 瑞典1 11Mbps 527ms
+  name: 瑞典1 11Mbps 523ms
   password: x23Z4LGkGDkThZ9Kaz4DURQp
   port: 40093
   server: 45.83.91.133
   type: ss
 - cipher: aes-256-gcm
-  name: 以色列1 7Mbps 888ms
+  name: 以色列1 7Mbps 889ms
   password: DKXfWwc4ebscpXTKpbt85rSH
   port: 38742
   server: 87.239.255.119
   type: ss
 - cipher: aes-256-gcm
-  name: 以色列2 3Mbps 897ms
+  name: 以色列2 3Mbps 893ms
   password: DKXfWwc4ebscpXTKpbt85rSH
   port: 38742
   server: 87.239.255.116
   type: ss
 - cipher: aes-256-gcm
-  name: 斯洛文尼亚1 4Mbps 813ms
+  name: 斯洛文尼亚1 4Mbps 785ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 195.158.249.40
   type: ss
 - cipher: aes-256-gcm
-  name: 斯洛文尼亚2 4Mbps 876ms
-  password: 8n6pwAcrrv2pj6tFY2p3TbQ6
-  port: 33992
-  server: 195.158.249.36
-  type: ss
-- cipher: aes-256-gcm
-  name: 挪威1 2Mbps 1396ms
+  name: 挪威1 2Mbps 1262ms
   password: CUndSZnYsPKcu6Kj8THVMBHD
   port: 39772
   server: 84.247.50.69
   type: ss
 - cipher: aes-256-gcm
-  name: 挪威2 0Mbps 1313ms
+  name: 挪威2 0Mbps 1241ms
   password: aYNeKDMzYQYw4KbUbJA8Wszq
   port: 31944
   server: 91.219.215.19
   type: ss
 - cipher: aes-256-gcm
-  name: 南非1 2Mbps 853ms
+  name: 南非1 2Mbps 835ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 154.127.49.230
   type: ss
 - cipher: aes-256-gcm
-  name: 爱沙尼亚1 2Mbps 925ms
+  name: 爱沙尼亚1 2Mbps 905ms
   password: p26v2JwhQVHDHsXk66fXt56r
   port: 42304
   server: 185.174.159.133
   type: ss
 - cipher: aes-256-gcm
-  name: 爱沙尼亚2 1Mbps 960ms
-  password: YyCBeDdYX4cadHpCkkmdJLq8
-  port: 43893
-  server: 185.174.159.136
-  type: ss
-- cipher: aes-256-gcm
-  name: 希腊1 2Mbps 1113ms
+  name: 希腊1 2Mbps 1198ms
   password: 8n6pwAcrrv2pj6tFY2p3TbQ6
   port: 33992
   server: 194.150.167.28
   type: ss
 - cipher: aes-256-gcm
-  name: 北马其顿1 0Mbps 1114ms
-  password: aYNeKDMzYQYw4KbUbJA8Wszq
-  port: 31944
-  server: 185.225.28.93
-  type: ss
-- cipher: aes-256-gcm
-  name: 罗马尼亚1 0Mbps 982ms
+  name: 罗马尼亚1 0Mbps 1018ms
   password: kD9vkjnE6dsUzwQfvKkPkQAd
   port: 37588
   server: 185.102.217.167

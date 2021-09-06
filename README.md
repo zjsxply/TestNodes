@@ -10,9 +10,9 @@
 
   推荐使用 `Clash`，下面的 `Clash` 订阅已按国家设好分组，分组内自动选择可用的最快节点，免受节点失效烦恼。
 
-  **Clash 订阅链接（推荐）** https://subcon.dlj.tf/sub?target=clash&new_name=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Fzjsxply%2FTestNodes%2Fmain%2FClashConfigRaw.yml&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fzjsxply%2FTestNodes%2Fmain%2Fclash-sub-convertor-config.ini
+  **Clash 订阅链接（推荐）** 短链接：https://suo.yt/gbBH3VV 原始链接：https://subcon.dlj.tf/sub?target=clash&new_name=true&url=https%3A%2F%2Fraw.githubusercontent.com%2Fzjsxply%2FTestNodes%2Fmain%2FClashConfigRaw.yml&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2Fzjsxply%2FTestNodes%2Fmain%2Fclash-sub-convertor-config.ini
 
-  **V2rayN 订阅链接** https://raw.githubusercontent.com/zjsxply/TestNodes/main/v2ray.txt （国内可访问版：https://cdn.jsdelivr.net/gh/zjsxply/TestNodes/v2ray.txt ，但略有滞后）
+  **V2rayN 订阅链接** 需翻墙版：https://raw.githubusercontent.com/zjsxply/TestNodes/main/v2ray.txt 国内可访问版，但略有滞后：https://cdn.jsdelivr.net/gh/zjsxply/TestNodes/v2ray.txt 
 
 ## 特性
 
